@@ -1,0 +1,17 @@
+{
+  "name": "unocha-basic",
+  "version": "1.0.0",
+  "description": "OCHA Basic theme",
+  "author": "UNOCHA",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-sass": "^2.0.0",
+    "grunt-sass-import": "^0.2.2",
+    "grunt-svgmin": "^4.0.0",
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

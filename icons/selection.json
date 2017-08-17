@@ -1,0 +1,98 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M838.4 374.4c0 12.8-6.4 19.2-9.6 22.4l-268.8 268.8c-12.8 12.8-28.8 19.2-48 19.2s-35.2-6.4-48-19.2l-268.8-268.8c-6.4-6.4-9.6-12.8-9.6-22.4s3.2-16 9.6-22.4c6.4-6.4 12.8-9.6 22.4-9.6s16 3.2 22.4 9.6l268.8 268.8c0 0 0 0 0 0s0 0 3.2 0 3.2 0 6.4 0l265.6-268.8c12.8-12.8 32-12.8 44.8 0 3.2 3.2 9.6 9.6 9.6 22.4z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "arrow-small-left-thick-01"
+        ],
+        "grid": 32
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 137,
+        "id": 6,
+        "prevSize": 32,
+        "code": 59736,
+        "name": "arrow-down"
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 6
+    },
+    {
+      "icon": {
+        "paths": [
+          "M621.668 653.668c-44.476 31.692-98.895 50.332-157.668 50.332-150.221 0-272-121.779-272-272s121.779-272 272-272c150.221 0 272 121.779 272 272 0 75.111-30.445 143.111-79.667 192.333l191.916 191.916c8.802 8.802 8.588 22.915-0.249 31.751-8.898 8.898-23.052 8.948-31.751 0.249l-194.581-194.581zM464 672c132.548 0 240-107.452 240-240s-107.452-240-240-240c-132.548 0-240 107.452-240 240s107.452 240 240 240v0z"
+        ],
+        "attrs": [],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "search"
+        ],
+        "grid": 32
+      },
+      "attrs": [],
+      "properties": {
+        "id": 83,
+        "order": 138,
+        "prevSize": 32,
+        "name": "search",
+        "code": 59673
+      },
+      "setIdx": 0,
+      "setId": 0,
+      "iconIdx": 83
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "unocha-icons"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "unocha-icons",
+        "majorVersion": 1,
+        "minorVersion": 0
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16
+    },
+    "historySize": 100,
+    "showCodes": true,
+    "gridSize": 16,
+    "showGrid": true
+  }
+}

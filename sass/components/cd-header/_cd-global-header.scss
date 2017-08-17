@@ -1,0 +1,93 @@
+/**
+ * Common Header Global Header styles
+ */
+
+.cd-global-header {
+  background: $primary-bg-color;
+  color: $light-text-color;
+
+  .dropdown-menu {
+    border: none;
+    background: $primary-bg-color;
+
+    a {
+      color: $light-text-color;
+
+
+      &:hover, &:focus {
+        background: $secondary-bg-color;
+      }
+    }
+
+    li {
+      border-color: rgba(255,255,255,0.7);
+    }
+  }
+}
+
+.cd-global-header__inner {
+  display: flex;
+  align-items: center;
+  height: $cd-global-header-height;
+
+  .no-flexbox & {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+}
+
+.cd-global-header__sites {
+  position: relative;
+  margin-left: -$base-unit;
+  margin-right: auto;
+
+  .no-flexbox & {
+    float: left;
+  }
+
+  .dropdown-menu {
+    min-width: 236px;
+  }
+}
+
+.cd-global-header__sites-btn {
+  color: $light-text-color;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0 $base-unit;
+  height: $cd-global-header-height;
+  @include font-size($tiny-font-size);
+
+  &:hover, &:focus {
+    background: darken($primary-bg-color, 10%);
+    outline: none;
+  }
+}
+
+.cd-global-header__nav {
+  margin-right: -$base-unit;
+
+  .no-flexbox & {
+    float: right;
+  }
+}
+
+@include media-query(sm) {
+
+  .cd-global-header__sites {
+    margin-left: 0;
+  }
+
+  .cd-global-header__sites-btn {
+    @include font-size($small-font-size);
+  }
+
+  .cd-global-header__nav {
+    margin-right: 0;
+  }
+
+}

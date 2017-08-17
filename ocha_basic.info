@@ -1,0 +1,30 @@
+name = OCHA Basic Starter Theme
+description = A minimal starter theme for OCHA sites
+screenshot = screenshot.png
+core = "7.x"
+project = "ocha_basic"
+engine = phptemplate
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = css/styles.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/bootstrap-dropdown.js
+scripts[] = js/modernizr-output.js
+
+; ========================================
+; Regions
+; ========================================
+regions[header_top] = Header top
+regions[header_search] = Header search
+regions[header_navigation] = Header navigation
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[footer_navigation] = Footer navigation
+regions[footer_logos] = Footer logos
+regions[footer_info] = Footer info
+regions[footer_license] = Footer license

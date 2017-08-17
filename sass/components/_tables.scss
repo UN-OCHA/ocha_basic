@@ -1,0 +1,75 @@
+/**
+ * Table styles
+ *
+ * Add the class 'table-responsive', plus data-attributes for headings, to make a table responsive.
+ */
+
+table {
+  width: 100%;
+  margin-bottom: $base-unit;
+
+  th, td {
+    padding: $base-unit;
+    background: $light-bg-color;
+    border-bottom: 1px solid white;
+  }
+
+  th {
+    font-family: $heading-font;
+    color: $heading-text-color;
+    text-transform: uppercase;
+  }
+}
+
+.table-responsive {
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    &:before {
+      content: attr(data-content);
+      font-weight: bold;
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: $base-unit;
+    }
+  }
+}
+
+tr.odd, tr.even {
+  background: none;
+}
+
+
+
+@include media-query(md) {
+
+  table {
+    margin-bottom: $base-unit*3;
+  }
+
+  .table-responsive {
+    th, td {
+      display: table-cell;
+      width: auto;
+
+      &:before {
+        content: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

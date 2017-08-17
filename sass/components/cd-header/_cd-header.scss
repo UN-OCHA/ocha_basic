@@ -1,0 +1,73 @@
+/**
+ * Common Header styles
+ */
+
+.cd-header {
+  margin-bottom: $base-unit*2;
+
+  button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  .container {
+    &:after {
+      content: none;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .region h2 {
+    display: none;
+  }
+
+  li.leaf {
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+}
+
+@include media-query(md) {
+
+  .cd-header {
+    margin-bottom: $base-unit*3;
+  }
+}
+
+@media print {
+
+  .cd-global-header, .cd-site-header__search, .cd-nav {
+    display: none!important;
+  }
+
+  .cd-site-header__logo {
+    width: auto!important;
+    height: auto!important;
+    text-decoration: none;
+    font-weight: bold;
+
+    .sr-only {
+      position: relative;
+      width: auto;
+      height: auto;
+
+    }
+  }
+
+}

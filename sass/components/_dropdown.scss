@@ -1,0 +1,67 @@
+/**
+ * Bootstrap dropdown styles
+ */
+
+.open {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: map-get($zindex, dropdown);
+  display: none;
+  min-width: $base-unit*12;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid $border-color;
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.25);
+
+  .open & {
+    display: block;
+  }
+
+  li {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+
+    &:last-child {
+      border: none;
+    }
+
+    a {
+      display: block;
+    }
+
+    a, button {
+      display: block;
+      padding: $base-unit*1.5;
+      text-decoration: none;
+      color: $body-text-color;
+      word-break: break-word;
+      transition: background 0.3s ease;
+
+      &:hover, &:focus {
+        background: $primary-bg-color;
+        color: $light-text-color;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+}
+
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: map-get($zindex, sidebar-underlay);
+}

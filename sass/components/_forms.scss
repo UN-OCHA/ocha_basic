@@ -1,0 +1,29 @@
+/**
+ * Form styles
+ */
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+textarea {
+  @include font-size($base-font-size);
+  padding: $base-unit;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  color: $body-text-color;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border-color: $error-border-color;
+}

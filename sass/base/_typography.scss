@@ -1,0 +1,97 @@
+/**
+ * Typography
+ */
+
+h1, h2 ,h3 ,h4 ,h5 {
+  line-height: 1.2;
+  font-weight: bold;
+  font-family: $heading-font;
+}
+
+h1 {
+  @include font-size($medium-font-size);
+  color: $heading-text-color;
+  font-weight: normal;
+}
+
+h1, h2 ,h3 ,h4 ,h5, p, ol, ul, dl {
+  margin-bottom: $base-unit;
+}
+
+h4, h5 {
+	font-weight: 400;
+}
+
+a {
+  color: $link-text-color;
+
+  &:hover, &:focus {
+    color: $active-link-text-color;
+    text-decoration: none;
+  }
+}
+
+ol, ul {
+  list-style: initial;
+  margin-left: $base-unit*3;
+}
+
+ol {
+	list-style: decimal;
+}
+
+h1, h2 ,h3 ,h4 ,h5 {
+	color: $heading-text-color;
+}
+
+h1.page-heading {
+  padding-bottom: $base-unit*1.5;
+  border-bottom: 1px solid $border-color;
+  font-weight: 300;
+}
+
+h2, h3 {
+  text-transform: uppercase
+}
+
+li {
+	margin-bottom: $base-unit/4;
+}
+
+strong {
+	font-weight: 400;
+}
+
+dt {
+	font-weight: 400;
+}
+
+dd {
+	margin-bottom: $base-unit;
+}
+
+@include media-query(sm) {
+
+	h1 {
+		@include font-size($x-large-font-size);
+	}
+
+
+	p, ul, ol, dl {
+  	@include font-size($base-font-size);
+  }
+
+  li {
+		margin-bottom: $base-unit/2;
+	}
+
+	h2 {
+    @include font-size($medium-font-size);
+    font-weight: normal;
+  }
+
+  h1, h2 ,h3 ,h4 ,h5, p, ol, ul, dl {
+    margin-bottom: $base-unit*2;
+  }
+
+}

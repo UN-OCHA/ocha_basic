@@ -1,0 +1,86 @@
+/**
+ * Base styles
+ */
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+html, input {
+  // Font size should be set at the correct percentage to match the base-font-size
+  // 16px = 100%
+  // 18px = 112.5%
+  // See http://pxtoem.com/ for conversion chart
+  font-size: 100%;
+}
+
+body {
+  font-family: $body-font;
+  @include font-size($base-font-size);
+  font-weight: 300;
+  color: $body-text-color;
+  line-height: 1.5;
+  background: white;
+
+  &.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+u {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height-xs;
+
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height-xs;
+  }
+}
+
+@include media-query(md) {
+
+  .page-wrapper {
+    margin-bottom: -$footer-height-md;
+
+    &:after {
+      height: $footer-height-md;
+    }
+  }
+
+}
+
+@media print {
+  #toolbar {
+    display: none!important;
+  }
+}
