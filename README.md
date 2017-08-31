@@ -37,7 +37,7 @@ To make changes edit the .scss files in the /sass folder, do not edit the files 
 
 Run `grunt watch` in the theme folder to have grunt watch for changes and automatically rebuild the CSS.
 
-Preferably use Jenkins to run the Grunt task on build to generate the CSS. If this isn't possible on your project, remove the css folder from the gitignore file and commit the generated CSS.
+Preferably use Jenkins to run the Grunt task on build to generate the CSS. If this is possible on your project, add the css folder to the gitignore file and delete generated CSS from the repo.
 
 ## JS
 
