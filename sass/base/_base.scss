@@ -10,9 +10,9 @@
   }
 }
 
-html, body {
-  height: 100%;
-}
+// html, body {
+//   height: 100%;
+// }
 
 html, input {
   // Font size should be set at the correct percentage to match the base-font-size
@@ -28,7 +28,6 @@ body {
   font-weight: 300;
   color: $body-text-color;
   line-height: 1.5;
-  background: white;
 
   &.no-scroll {
     overflow: hidden;
@@ -54,29 +53,6 @@ img {
 u {
   text-decoration: none;
   font-weight: bold;
-}
-
-.page-wrapper {
-  min-height: 100%;
-  margin-bottom: -$footer-height-xs;
-
-  &:after {
-    content: "";
-    display: block;
-    height: $footer-height-xs;
-  }
-}
-
-@include media-query(md) {
-
-  .page-wrapper {
-    margin-bottom: -$footer-height-md;
-
-    &:after {
-      height: $footer-height-md;
-    }
-  }
-
 }
 
 @media print {

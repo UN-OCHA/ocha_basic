@@ -3,7 +3,8 @@
  */
 
 $base-unit: 8px;
-$max-width: 1200px;
+$max-width: 1220px;
+$max-body-width: 1400px;
 
 // Footer
 $footer-height-xs: 280px;
@@ -13,5 +14,3 @@ $footer-height-md: 230px;
 $cd-global-header-height: $base-unit*5;
 $cd-site-header-height-xs: $base-unit*6;
 $cd-site-header-height-md: $base-unit*7.5;
-
-
