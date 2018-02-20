@@ -2,10 +2,6 @@
  * Bootstrap dropdown styles
  */
 
-.open {
-  position: relative;
-}
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -40,13 +36,13 @@
       display: block;
       padding: $base-unit*1.5;
       text-decoration: none;
-      color: $body-text-color;
+      color: $default-text-color;
       word-break: break-word;
       transition: background 0.3s ease;
 
       &:hover, &:focus {
         background: $primary-bg-color;
-        color: $light-text-color;
+        color: $white-text-color;
       }
     }
   }

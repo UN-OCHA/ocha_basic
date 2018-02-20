@@ -27,13 +27,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    autoprefixer: {
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions', 'iOS 8']})
+        ]
+      },
       dist: {
         files: {
           'css/styles.css': 'css/styles.css'
-        },
-        options: {
-          browsers: ['last 2 versions', 'iOS 8']
         }
       }
     },
@@ -43,27 +46,11 @@ module.exports = function(grunt) {
           'css/styles.css': 'css/styles.css'
         }
       }
-    },
-
-    modernizr: {
-      dist: {
-        crawl: false,
-        dest: 'js/modernizr-output.js',
-        tests: [
-          'flexbox',
-          'svg'
-        ],
-        options: [
-          'setClasses'
-        ],
-        uglify: true
-      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
-  grunt.loadNpmTasks("grunt-modernizr"); //not picked up by load-grunt-tasks
 
-  grunt.registerTask('default', ['sass_import','sass', 'autoprefixer', 'cssmin', 'modernizr']);
+  grunt.registerTask('default', ['sass_import','sass', 'postcss', 'cssmin']);
 
 };

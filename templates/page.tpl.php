@@ -8,13 +8,14 @@
  */
 ?>
 <div class="page-wrapper">
+  <a href="#main-content" class="skip-link"><?php print t('Skip to main content'); ?></a>
   <?php include 'header.inc'; ?>
   <?php if($messages): ?>
-    <div class="container">
+    <div class="cd-container">
       <?php print $messages; ?>
     </div>
   <?php endif; ?>
-  <div class="container" id="main-content">
+  <div class="cd-container" id="main-content">
 
   <?php if($tabs): ?>
     <?php print render($tabs); ?>

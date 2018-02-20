@@ -1,0 +1,68 @@
+/**
+ * Common Design Footer menu.
+ * Used for team and project specific links plus links to legalese.
+ */
+
+.cd-footer-menu {
+  .menu {
+    margin: 0;
+    padding-left: 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    li {
+      list-style: none;
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $white-text-color;
+    }
+  }
+}
+
+// .cd-footer-menu__item {
+
+// }
+
+@include media-query(md) {
+
+  .cd-footer-menu {
+    grid-column: 1/3;
+    -ms-grid-column-span: 3;
+
+    .menu {
+      li {
+        display: inline-block;
+        margin: 0 16px;
+      }
+    }
+  }
+
+}
+
+@include media-query(lg) {
+
+  .cd-footer-menu {
+    grid-column: auto;
+    text-align: left;
+
+    .menu {
+      text-align: left;
+
+      li {
+        margin: 0 35px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+}

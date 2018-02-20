@@ -6,7 +6,14 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 1025px,
+  lg: 1024px,
   xl: 1200px,
   xxl: 1400px
 ) !default;
+
+
+$cd-breakpoints: (
+  tablet: 768px,
+  desktop: 1024px,
+  largescreen: 1200px
+);

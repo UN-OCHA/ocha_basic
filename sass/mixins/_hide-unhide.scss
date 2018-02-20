@@ -1,0 +1,22 @@
+/**
+ * Hide content offscreen accessibly.
+ */
+@mixin hide {
+  clip: rect(0,0,0,0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * Un-hide content.
+ */
+@mixin unhide {
+  height: auto;
+  margin: 0;
+  position: static;
+  width: auto;
+}

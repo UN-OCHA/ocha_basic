@@ -6,26 +6,40 @@
 
 ?>
 
-<footer role="contentinfo" class="footer">
-  <div class="container">
-    <?php print render($page['footer_navigation']); ?>
-    <?php if ($page['footer_logos']) : ?>
-      <div class="footer__logos">
-        <?php print render($page['footer_logos']); ?>
-      </div>
-    <?php
-endif; ?>
+<footer class="cd-footer" role="contentinfo">
+  <div class="cd-container cd-footer__inner">
 
-    <div class="row footer__small-print">
-      <?php if ($page['footer_info']) : ?>
-        <div class="col-md-6">
-          <?php print render($page['footer_info']); ?>
-        </div>
-      <?php
-endif; ?>
+    <div class="cd-footer-menu cd-footer__section">
+      <?php print render($page['footer_navigation']); ?>
+    </div>
+
+    <div class="cd-footer-social cd-footer__section">
+      <a href="#" class="cd-footer-social__link">
+        <span class="sr-only">Facebook</span>
+        <span class="icon-facebook" aria-hidden="true"></span>
+      </a>
+      <a href="#" class="cd-footer-social__link">
+        <span class="sr-only">Twitter</span>
+        <span class="icon-twitter" aria-hidden="true"></span>
+      </a>
+      <a href="#" class="cd-footer-social__link">
+        <span class="sr-only">YouTube</span>
+        <span class="icon-youtube" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="cd-footer-provided-by cd-footer__section">
+      <span>Service provided by</span>
+      <span class="cd-footer-provided-by__logo">
+        <span class="sr-only">UN-OCHA</span>
+      </span>
+    </div>
+
+    <div class="cd-footer-copyright cd-footer__section">
       <?php if ($page['footer_license']) : ?>
-        <div class="col-md-6">
+        <div class="cd-footer-copyright__message">
           <?php print render($page['footer_license']); ?>
+          <span class="cd-footer-copyright__icon icon-creative-commons" aria-hidden="true"></span>
         </div>
       <?php
 endif; ?>

@@ -1,0 +1,190 @@
+/**
+ * Common Design Header User Menu
+ * Includes user centered settings and/or actions.
+ *
+ * Notes:
+ * - menu items can be links or buttons with dropdowns
+ * - dropdown menu items can be given the class .cd-user-menu__item--small to restrict their width and centre the dropdown
+ * - add class .cd-user-menu__item--mobile-icon to menu items to only show the iconon mobile.
+ */
+
+.cd-user-menu {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    display: none;
+  }
+
+  .menu {
+    margin: 0;
+
+    li {
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      &:after {
+        content: '|';
+        opacity: 0.6;
+        position: absolute;
+        right: -1px;
+        top: 8px;
+      }
+
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+
+        &:after {
+          content: none;
+        }
+      }
+
+      // To add icons to menu links
+      // This uses a fake .has-icon class, substitute this with an identifier for your icon links.
+      &.has-icon {
+        &:before {
+          content: "\e955";
+          font-family: 'unocha-icons';
+          font-size: 14px;
+          left: 10px;
+          position: absolute;
+          top: 7px;
+          vertical-align: text-top;
+        }
+
+        & > a {
+          padding-left: 28px;
+        }
+
+        // For links the should show just icons on mobile
+        &.has-icon--mobile-only {
+          & > a {
+            text-indent: -99999px;
+          }
+        }
+      }
+    }
+
+    // Child menu
+    .menu {
+      left: auto;
+      right: 0;
+      list-style: none;
+      margin: 0;
+      width: 125px;
+      padding: 12px 24px;
+
+      li {
+        display: block;
+        float: none;
+
+        &:after {
+          content: none;
+        }
+      }
+
+      a {
+        height: auto;
+        line-height: 1.2;
+        padding: 12px 0;
+
+        &.active {
+          font-weight: bold;
+          padding-right: 12px;
+          position: relative;
+
+          &:after {
+            color: $bright-blue-text-color;
+            content: "\e944";
+            font-family: 'unocha-icons';
+            position: absolute;
+            right: 0;
+            top: auto;
+          }
+        }
+      }
+    }
+
+    a {
+      background: transparent;
+      color: $white-text-color;
+      display: block;
+      height: $global-header-height;
+      line-height: $global-header-height;
+      max-width: 90px;
+      overflow: hidden;
+      padding: 0 12px;
+      position: relative;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      transition: background 0.3s ease;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-decoration-color: $purple-border;
+      }
+
+      &:focus {
+        outline: 0;
+        background: $dark-primary-bg-color;
+      }
+    }
+  }
+}
+
+@include media-query(md) {
+
+  .cd-user-menu {
+    .menu {
+
+      li {
+        // Show text for icon links
+        &.has-icon.has-icon--mobile-only {
+          a {
+            text-indent: 0;
+          }
+        }
+      }
+      a  {
+        max-width: none;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  button.cd-user-menu__item {
+    padding-right: 30px;
+
+    .icon-arrow-down {
+      right: 16px;
+    }
+  }
+
+  .cd-user-menu__item--small {
+    max-width: 70px;
+
+    .cd-user-menu__dropdown {
+      left: 30px;
+    }
+  }
+
+  .cd-user-menu__item--mobile-icon {
+
+    .cd-user-menu__icon {
+      border-bottom: 0;
+    }
+    .cd-user-menu__label {
+      @include unhide;
+    }
+  }
+
+}

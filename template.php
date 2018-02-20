@@ -13,10 +13,10 @@
 function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['#attributes']['role'] = 'search';
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search this site');
+    $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
     $form['actions']['submit'] = array(
       '#type' => 'item',
-      '#markup' => '<button type="submit" class="cd-header-search__button"><span class="sr-only">Search</span></button>',
+      '#markup' => '<button type="submit" class="cd-search__submit">Go <span class="icon-arrow-right" aria-hidden="true"></span></button>',
       '#weight' => 1000,
     );
   }

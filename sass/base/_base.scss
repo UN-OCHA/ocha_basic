@@ -10,10 +10,6 @@
   }
 }
 
-// html, body {
-//   height: 100%;
-// }
-
 html, input {
   // Font size should be set at the correct percentage to match the base-font-size
   // 16px = 100%
@@ -25,8 +21,7 @@ html, input {
 body {
   font-family: $body-font;
   @include font-size($base-font-size);
-  font-weight: 300;
-  color: $body-text-color;
+  color: $default-text-color;
   line-height: 1.5;
 
   &.no-scroll {

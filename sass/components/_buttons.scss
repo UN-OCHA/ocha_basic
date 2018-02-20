@@ -5,7 +5,7 @@
 button, input[type="submit"] {
 	-webkit-appearance: none;
 	@include font-size($base-font-size);
-	color: $body-text-color;
+	color: $default-text-color;
 	background: none;
 	border: none;
 	box-shadow: none;
@@ -15,7 +15,7 @@ button, input[type="submit"] {
 	border-radius: 4px;
 	background: $primary-bg-color;
 	text-transform: uppercase;
-	color: $light-text-color;
+	color: $white-text-color;
 	padding: $base-unit*1.5;
 	transition: background 0.3s ease;
 

@@ -1,0 +1,49 @@
+/**
+ * Common Design Footer.
+ */
+
+.cd-footer {
+  grid-row: 2/3; // position footer so visible on short pages.
+  background: $primary-bg-color;
+  color: $white-text-color;
+  padding: 48px 0 0 0;
+  text-align: center;
+
+  a {
+    border-bottom: 1px solid transparent;
+    color: $white-text-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-color: $purple-border;
+    }
+  }
+}
+
+.cd-footer__section {
+  padding-bottom: 48px;
+}
+
+@include media-query(md) {
+
+  .cd-footer {
+    .nocssgrid.no-cssgridlegacy & {
+      padding-bottom: 48px;
+    }
+  }
+
+  .cd-footer__inner {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 12px 1fr;
+    -ms-grid-rows: auto 48px auto 48px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+    grid-row-gap: 48px;
+  }
+
+  .cd-footer__section {
+    padding-bottom: 0;
+  }
+}
