@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['sass/**/*.scss'],
-        tasks: ['sass_import', 'sass', 'autoprefixer'],
+        tasks: ['sass_import', 'sass', 'postcss'],
         options: {
           spawn: false,
         }
