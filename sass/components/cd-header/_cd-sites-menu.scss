@@ -18,8 +18,7 @@
   transition: background 0.3s ease;
 
   &:focus {
-    outline: 0;
-    background: $dark-primary-bg-color;
+    outline: 0; // outline is replaced by bright underline.
   }
 }
 
@@ -38,7 +37,6 @@
 
 .cd-sites-btn__label {
   @include hide;
-  // border-bottom: 1px solid transparent;
 }
 
 .cd-sites-dropdown {
@@ -74,7 +72,7 @@
 }
 
 .cd-sites-dropdown__heading {
-  border-bottom: 1px solid $bright-border-color;
+  border-bottom: 1px solid $light-blue-border-color;
   margin: 0 0 10px 0;
   padding-bottom: 2px;
 }
@@ -87,7 +85,7 @@
   &:hover,
   &:focus {
     .cd-sites-dropdown__link-label {
-      border-color: $purple-border;
+      border-color: $bright-border-color;
     }
   }
 }
@@ -109,7 +107,7 @@
   }
 
   &:before {
-    color: $purple-border;
+    color: $light-blue-border-color;
     content: '|';
     left: -12px;
     position: absolute;
@@ -163,7 +161,7 @@
     &:focus {
       .cd-sites-btn__label {
         text-decoration: underline;
-        text-decoration-color: $purple-border;
+        text-decoration-color: $bright-border-color;
       }
     }
   }

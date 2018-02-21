@@ -1,11 +1,6 @@
 /**
  * Common Design Header User Menu
  * Includes user centered settings and/or actions.
- *
- * Notes:
- * - menu items can be links or buttons with dropdowns
- * - dropdown menu items can be given the class .cd-user-menu__item--small to restrict their width and centre the dropdown
- * - add class .cd-user-menu__item--mobile-icon to menu items to only show the iconon mobile.
  */
 
 .cd-user-menu {
@@ -29,8 +24,8 @@
       position: relative;
 
       &:after {
+        color: $light-blue-border-color;
         content: '|';
-        opacity: 0.6;
         position: absolute;
         right: -1px;
         top: 8px;
@@ -130,7 +125,7 @@
       &:hover,
       &:focus {
         text-decoration: underline;
-        text-decoration-color: $purple-border;
+        text-decoration-color: $bright-border-color;
       }
 
       &:focus {
@@ -176,15 +171,4 @@
       left: 30px;
     }
   }
-
-  .cd-user-menu__item--mobile-icon {
-
-    .cd-user-menu__icon {
-      border-bottom: 0;
-    }
-    .cd-user-menu__label {
-      @include unhide;
-    }
-  }
-
 }
