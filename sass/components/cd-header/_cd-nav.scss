@@ -69,6 +69,10 @@
       margin: 0;
       padding: 0;
 
+      &.open {
+        background: $dark-bg-color;
+      }
+
       & > a,
       & > button {
         font-weight: bold;
@@ -78,8 +82,6 @@
 
     // Child nav
     .menu {
-      background: $dark-bg-color;
-
       a,
       button {
         color: $dark-text-color;
@@ -188,12 +190,13 @@
       &:last-child {
         & > .menu {
           left: auto;
-          right: 0;
+          right: -1px;
         }
       }
 
       &.open {
         position: relative;
+        background: $mid-bg-color;
 
         & > a,
         & > button {
@@ -232,7 +235,7 @@
 
         &:hover,
         &:focus {
-          background: $light-bg-color;
+          background: $mid-bg-color;
         }
 
         &.active,
@@ -248,7 +251,7 @@
     // Child nav
     .menu {
       background: $mid-bg-color;
-      left: 0;
+      left: -1px;
       margin: 0;
       max-width: 300px;
       min-width: 200px;
@@ -265,20 +268,38 @@
       li {
         border: none;
         float: none;
+
+        &.open {
+          background: $dark-bg-color;
+        }
       }
 
       a {
         height: auto;
         line-height: 1.2;
         padding: 15px 30px;
+
+        &:hover,
+        &:focus {
+          background: $dark-bg-color;
+        }
       }
 
       // Grandchild nav
       .menu {
+        background: $dark-bg-color;
         left: auto;
-        padding-top: 0;
+        padding: 0;
         position: relative;
         top: auto;
+
+        a {
+          &:hover,
+          &:focus {
+            background: darken($dark-bg-color, 5%);
+          }
+        }
+
       }
     }
   }
