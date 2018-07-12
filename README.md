@@ -16,7 +16,6 @@ A minimal starter theme for OCHA sites.
 * Favicons and manifest file
 * Sass
 * Autoprefixer
-* Modernizr
 * Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
 * that's it!
 
@@ -69,7 +68,9 @@ http://realfavicongenerator.net/ is a good tool for generating these.
 
 ## Modernizr
 
-The Modernizr file is has detects for svg, cssgrid, cssgridlegacy and mediaqueries.
+We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
+
+After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
 
 ## Using with panels
 
