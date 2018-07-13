@@ -14,7 +14,6 @@ stylesheets[all][] = css/styles.css
 ; Scripts
 ; ========================================
 scripts[] = js/bootstrap-dropdown.js
-scripts[] = js/modernizr-output.js
 
 ; ========================================
 ; Regions
@@ -28,3 +27,11 @@ regions[footer_navigation] = Footer navigation
 regions[footer_logos] = Footer logos
 regions[footer_info] = Footer info
 regions[footer_license] = Footer license
+
+; ========================================
+; Modernizr Test API
+; ========================================
+modernizr[tests][] = cssgrid_cssgridlegacy
+modernizr[tests][] = mediaqueries
+modernizr[tests][] = svg
+modernizr[tests][] = setclasses
