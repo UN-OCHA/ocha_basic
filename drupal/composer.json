@@ -4,13 +4,6 @@
     "type": "project",
     "require": {
         "php": ">=5.6",
-        "ext-curl": "*",
-        "ext-gd": "*",
-        "ext-json": "*",
-        "ext-openssl": "*",
-        "ext-pdo": "*",
-        "ext-pdo_mysql": "*",
-        "ext-xml": "*",
         "drupal/drupal": "7.59"
     },
     "require-dev": {
@@ -20,7 +13,7 @@
         "drupal-composer/preserve-paths": "^0.1",
         "drupal/coder": "^7.2",
         "phpmd/phpmd": "^2.6",
-        "sebastian/phpcpd": "^4.0"
+        "sebastian/phpcpd": "^3.0"
     },
     "authors": [
         {
