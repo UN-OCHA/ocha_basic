@@ -3,3 +3,4 @@
 **/.DS_Store
 /drupal/*
 !/drupal/composer.*
+!/drupal/custom
