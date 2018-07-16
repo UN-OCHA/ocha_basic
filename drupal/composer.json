@@ -1,0 +1,69 @@
+{
+    "name": "unocha/skeleton",
+    "description": "The UN-OCHA composer drupal project skeleton",
+    "type": "project",
+    "require": {
+        "php": ">=5.6",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-xml": "*",
+        "drupal/drupal": "7.59"
+    },
+    "require-dev": {
+        "drush/drush": "~8.0",
+        "hussainweb/drupal-composer-helper": "^1.0-beta3",
+        "cweagans/composer-patches": "^1.6.0",
+        "drupal-composer/preserve-paths": "^0.1",
+        "drupal/coder": "^7.2",
+        "phpmd/phpmd": "^2.6",
+        "sebastian/phpcpd": "^4.0"
+    },
+    "authors": [
+        {
+            "name": "Peter Lieverdink",
+            "email": "peterl@humanitarianresponse.info"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
+    "minimum-stability": "stable",
+    "extra": {
+        "drupal-composer-helper": {
+            "web-prefix": "html",
+            "set-d7-paths": true
+        },
+        "enable-patching": true,
+        "installer-paths": {
+            "html/": [
+                "type:drupal-core"
+            ]
+        },
+        "preserve-paths": [
+            "html/sites/all/libraries",
+            "html/sites/all/modules/custom",
+            "html/sites/all/modules/features",
+            "html/sites/all/themes/custom",
+            "html/sites/all/translations",
+            "html/sites/default"
+        ],
+        "patches-file": "composer.patches.json",
+        "composer-exit-on-patch-failure": true
+    },
+    "prefer-stable": true,
+    "conflict": {
+        "drupal/core": "8.*"
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
