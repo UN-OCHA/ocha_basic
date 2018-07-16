@@ -71,6 +71,9 @@ function ocha_basic_preprocess_html(&$vars) {
  * Implements hook_pwa_manifest_alter().
  */
 function ocha_basic_pwa_manifest_alter(&$manifest) {
+  // Hard-code a theme-color into the manifest.
+  $manifest['theme_color'] = '#026CB6';
+
   // Override the PWA default icons with OCHA defaults.
   //
   // If you are using this theme as a starterkit feel free to manually adjust
