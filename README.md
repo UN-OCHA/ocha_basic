@@ -2,7 +2,7 @@
 
 A minimal starter theme for OCHA sites.
 
-## What this theme provides:
+## This theme contains
 
 * Common Header
 * Common Footer
@@ -18,6 +18,11 @@ A minimal starter theme for OCHA sites.
 * Autoprefixer
 * Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
 * that's it!
+
+## Integrations with other Drupal modules
+
+* [Modernizr](https://www.drupal.org/project/modernizr)
+* [PWA](https://www.drupal.org/project/pwa)
 
 ## Getting started
 
@@ -71,6 +76,10 @@ http://realfavicongenerator.net/ is a good tool for generating these.
 We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
 
 After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
+
+## PWA
+
+We support the [PWA Drupal module](https://www.drupal.org/project/pwa). The `hook_pwa_manifest_alter()` hook is implemented in `template.php` with our default colors/icons, which can be overridden using the normal PWA admin UI.
 
 ## Using with panels
 
