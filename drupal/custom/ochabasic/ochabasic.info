@@ -10,5 +10,6 @@ dependencies[] = jquery_update
 dependencies[] = features
 dependencies[] = module_filter
 dependencies[] = modernizr
+dependencies[] = paranoia
 dependencies[] = views
 dependencies[] = strongarm
