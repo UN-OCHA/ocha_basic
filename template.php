@@ -56,15 +56,7 @@ function ocha_basic_preprocess_html(&$vars) {
       ),
     );
     drupal_add_html_head($fav_16, 'favicon-16x16');
-    $manifest = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => base_path() . path_to_theme() .'/manifest.json',
-        'rel' => 'manifest'
-      ),
-    );
-    drupal_add_html_head($manifest, 'manifest');
-     $safari_pinned_tab = array(
+    $safari_pinned_tab = array(
       '#tag' => 'link',
       '#attributes' => array(
         'href' => base_path() . path_to_theme() .'/safari-pinned-tab.svg',
@@ -75,3 +67,28 @@ function ocha_basic_preprocess_html(&$vars) {
     drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
 }
 
+/**
+ * Implements hook_pwa_manifest_alter().
+ */
+function ocha_basic_pwa_manifest_alter(&$manifest) {
+  // Hard-code a theme-color into the manifest.
+  $manifest['theme_color'] = '#026CB6';
+
+  // Override the PWA default icons with OCHA defaults.
+  //
+  // If you are using this theme as a starterkit feel free to manually adjust
+  // this code block, otherwise copy this hook into your subtheme and customize
+  // to your heart's content.
+  $manifest['icons'] = [
+    [
+      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/android-chrome-512x512.png'),
+      'sizes' => '512x512',
+      'type' => 'image/png',
+    ],
+    [
+      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/android-chrome-192x192.png'),
+      'sizes' => '192x192',
+      'type' => 'image/png',
+    ],
+  ];
+}
