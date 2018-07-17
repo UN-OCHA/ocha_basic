@@ -1,8 +1,9 @@
 {
   "name": "unocha-basic",
   "version": "1.0.0",
-  "description": "OCHA Basic theme",
-  "author": "UNOCHA",
+  "description": "OCHA Basic theme. Use as a starterkit and apply customizations directly your copy.",
+  "repository": "git@github.com:UN-OCHA/ocha_basic.git",
+  "author": "UN OCHA",
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "grunt": "^1.0.2",
