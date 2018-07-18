@@ -39,7 +39,7 @@ A minimal starter theme for OCHA sites.
 
 This project uses [Sass](http://sass-lang.com/). To make changes edit the `.scss` files in the `sass/` folder, do NOT edit the files in `css/` directly.
 
-Run `gulp dev` in the theme folder to have grunt watch for changes and automatically rebuild the CSS.
+Run `gulp dev` in the theme folder to have gulp watch for changes and automatically rebuild the CSS.
 
 Preferably use Jenkins to run the Gulp task on build to generate the CSS. If this is possible on your project, add the `css/` folder to the `.gitignore` file and delete generated CSS from the repo.
 
