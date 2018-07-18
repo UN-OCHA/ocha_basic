@@ -31,8 +31,9 @@ A minimal starter theme for OCHA sites.
 2. If you want to renamne the theme, change the folder name, the filename of the .info file and find and replace for `ocha_basic` in the theme folder.
 3. In the theme folder:
 4. Install the dependencies: `npm install`
-5. Run the simple gulp task to build the CSS: `gulp build`
-6. In the Drupal Admin, go to Appearance, find 'OCHA Basic Starter Theme' (or whatever you've renamed it to), and select 'Enable and set default'
+5. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
+6. Run the simple gulp task to build the CSS: `gulp build`
+7. In the Drupal Admin, go to Appearance, find 'OCHA Basic Starter Theme' (or whatever you've renamed it to), and select 'Enable and set default'
 
 ## CSS
 
