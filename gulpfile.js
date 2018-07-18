@@ -73,6 +73,7 @@ gulp.task('dev:sass', () => {
         browsers: ['>0.333%', 'iOS 8'],
         cascade: false,
       }),
+      cssnano(),
     ]))
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.write('./')))
     .pipe(gulp.dest('css/'))
