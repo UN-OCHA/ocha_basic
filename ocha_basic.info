@@ -1,5 +1,5 @@
-name = OCHA Basic Starter Theme
-description = A minimal starter theme for OCHA sites
+name = OCHA Basic Starterkit
+description = OCHA Basic theme. Use as a starterkit and apply customizations directly your copy.
 screenshot = screenshot.png
 core = "7.x"
 project = "ocha_basic"
