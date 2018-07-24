@@ -7,7 +7,7 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-<div class="page-wrapper">
+<div class="cd-page-wrapper">
   <a href="#main-content" class="skip-link"><?php print t('Skip to main content'); ?></a>
   <?php include 'header.inc'; ?>
   <?php if($messages): ?>
