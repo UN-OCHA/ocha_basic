@@ -92,3 +92,32 @@ function ocha_basic_pwa_manifest_alter(&$manifest) {
     ],
   ];
 }
+
+// remove default class from menu ul
+function ocha_basic_menu_tree(array $variables) {
+  return '<ul>' . $variables['tree'] . '</ul>';
+}
+
+function ocha_basic_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  // This is the part that removes or changes the last class.
+  if (!empty($element['#attributes']['class'])) {
+    foreach ($element['#attributes']['class'] as $key => $class) {
+      if ($class == 'leaf') {
+        unset($element['#attributes']['class']);
+      }
+      if ($class == 'expanded') {
+        // To change the class.
+        $element['#attributes']['class'][$key] = 'cd-dropdown-toggle';
+      }
+    }
+  }
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
