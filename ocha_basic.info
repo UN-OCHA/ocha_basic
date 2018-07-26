@@ -6,6 +6,11 @@ project = "ocha_basic"
 engine = phptemplate
 
 ; ========================================
+; Remove Drupal core stylesheets
+; ========================================
+stylesheets[all][] = unset/system.menus.css
+
+; ========================================
 ; Stylesheets
 ; ========================================
 stylesheets[all][] = css/styles.css
