@@ -1,0 +1,40 @@
+/**
+ * Dropdown styles for nested drupal menus.
+ */
+.cd-nav {
+  .expanded {
+
+    // Hide child nav
+    & > ul {
+      display: none;
+    }
+
+    // Add down arrow
+    & > a {
+      position: relative;
+      &:after {
+        margin-left: 2px;
+        color: #EB5C6D;
+        content: '\e958';
+        display: inline-block;
+        font-family: 'unocha-icons';
+        margin-left: 4px;
+      }
+    }
+
+    &.open {
+
+      & > ul {
+        display: block;
+        z-index: map-get($zindex, dropdown);
+      }
+
+      // Change to up arrow
+      & > a {
+        &:after {
+          content: '\e957';
+        }
+      }
+    }
+  }
+}
