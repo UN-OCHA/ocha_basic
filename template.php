@@ -27,6 +27,15 @@ function ocha_basic_preprocess_search_block_form(&$vars) {
 }
 
 function ocha_basic_preprocess_html(&$vars) {
+    $viewport = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'name' => 'viewport',
+        'content' => 'width=device-width, initial-scale=1.0',
+      ),
+    );
+    drupal_add_html_head($viewport, 'viewport');
+
     $apple = array(
       '#tag' => 'link',
       '#attributes' => array(
@@ -36,6 +45,7 @@ function ocha_basic_preprocess_html(&$vars) {
       ),
     );
     drupal_add_html_head($apple, 'apple-touch-icon');
+
     $fav_32 = array(
       '#tag' => 'link',
       '#attributes' => array(
@@ -46,6 +56,7 @@ function ocha_basic_preprocess_html(&$vars) {
       ),
     );
     drupal_add_html_head($fav_32, 'favicon-32x32');
+
     $fav_16 = array(
       '#tag' => 'link',
       '#attributes' => array(
@@ -56,6 +67,7 @@ function ocha_basic_preprocess_html(&$vars) {
       ),
     );
     drupal_add_html_head($fav_16, 'favicon-16x16');
+
     $safari_pinned_tab = array(
       '#tag' => 'link',
       '#attributes' => array(
