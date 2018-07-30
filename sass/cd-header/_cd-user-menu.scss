@@ -19,6 +19,7 @@
     position: relative;
 
     &:last-child {
+      li,
       .cd-user-menu__item {
         padding-right: 0;
 
@@ -30,6 +31,7 @@
   }
 }
 
+.cd-user-menu > li a,
 .cd-user-menu__item {
   background: transparent;
   color: $cd-white-text-color;
