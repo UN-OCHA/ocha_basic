@@ -1,9 +1,7 @@
-/**
- * Common Design Footer.
- */
+// Common Design Footer.
 
 .cd-footer {
-  grid-row: 3/3; // position footer so visible on short pages.
+  grid-row: 3/3; // Position footer so visible on short pages.
   background: $cd-primary-bg-color;
   color: $cd-white-text-color;
   padding: 48px 0 0 0;
@@ -31,7 +29,6 @@
   .cd-footer__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .cd-footer__section {
