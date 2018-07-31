@@ -69,12 +69,10 @@ dd {
 	margin-bottom: $base-unit;
 }
 
-@include media-query(sm) {
-
+@include min-width(sm) {
 	h1 {
 		@include font-size($x-large-font-size);
 	}
-
 
 	p, ul, ol, dl {
   	@include font-size($base-font-size);

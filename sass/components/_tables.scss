@@ -51,8 +51,7 @@ tr.odd, tr.even {
 
 
 
-@include media-query(md) {
-
+@include min-width(md) {
   table {
     margin-bottom: $base-unit*3;
   }
