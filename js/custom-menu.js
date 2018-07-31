@@ -3,8 +3,8 @@
  * Bootstrap dropdown on main menu.
  */
 
-(function ($) {
-  Drupal.behaviors.exampleModule = {
+(function ($, Drupal) {
+  Drupal.behaviors.cdMenu = {
     attach: function (context, settings) {
 
       $('.cd-dropdown .expanded a').on('click', function (e) {
@@ -15,4 +15,4 @@
 
     }
   };
-}(jQuery));
+}(jQuery, Drupal));
