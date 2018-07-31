@@ -2,7 +2,6 @@ name = OCHA Basic Starterkit
 description = OCHA Basic theme. Use as a starterkit and apply customizations directly your copy.
 screenshot = screenshot.png
 core = "7.x"
-project = "ocha_basic"
 engine = phptemplate
 
 ; ========================================

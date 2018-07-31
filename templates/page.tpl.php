@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Returns the HTML for a single Drupal page.
@@ -15,21 +16,21 @@
       <?php print $messages; ?>
     </div>
   <?php endif; ?>
-  
+
   <div class="cd-container" id="main-content">
 
-  <?php if($tabs): ?>
-    <?php print render($tabs); ?>
+    <?php if($tabs): ?>
+      <?php print render($tabs); ?>
+    <?php endif; ?>
 
-  <?php endif; ?>
+    <?php if ($title): ?>
+      <h1 class="page-heading"><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($page['content']); ?>
 
-
-        <?php if ($title): ?><h1 class="page-heading"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($page['content']); ?>
-
-      <?php if ($page['sidebar_first']): ?>
-          <?php print render($page['sidebar_first']); ?>
-      <?php endif; ?>
+    <?php if ($page['sidebar_first']): ?>
+      <?php print render($page['sidebar_first']); ?>
+    <?php endif; ?>
 
   </div>
 </div>

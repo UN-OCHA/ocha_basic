@@ -9,7 +9,7 @@
 <footer class="cd-footer" role="contentinfo">
   <div class="cd-container cd-footer__inner">
 
-  <!-- <?php print render($page['footer_navigation']); ?> -->
+  <?php print render($page['footer_navigation']); ?>
 
   <?php if ($secondary_menu): ?>
     <?php print theme('links__menu_footer_menu',
