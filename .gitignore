@@ -10,6 +10,6 @@ localConfig.json
 **/.DS_Store
 
 # drupal stuff
-/drupal/*
-!/drupal/composer.*
-!/drupal/custom
+/html/*
+!/html/sites/all/modules/custom
+!/html/sites/all/themes/custom

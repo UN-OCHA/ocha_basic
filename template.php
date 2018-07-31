@@ -30,7 +30,15 @@ function ochabasic_preprocess_search_block_form(&$vars) {
 /**
  * Implements hook_preprocess_html().
  */
-function ochabasic_preprocess_html(&$vars) {
+function ocha_basic_preprocess_html(&$vars) {
+  $viewport = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
+
   $apple = array(
     '#tag' => 'link',
     '#attributes' => array(
@@ -39,7 +47,7 @@ function ochabasic_preprocess_html(&$vars) {
       'sizes' => '180x180',
     ),
   );
-  drupal_add_html_head($apple, 'apple-touch-icon');
+
   $fav_32 = array(
     '#tag' => 'link',
     '#attributes' => array(
@@ -49,7 +57,7 @@ function ochabasic_preprocess_html(&$vars) {
       'type' => 'image/png',
     ),
   );
-  drupal_add_html_head($fav_32, 'favicon-32x32');
+
   $fav_16 = array(
     '#tag' => 'link',
     '#attributes' => array(
@@ -59,7 +67,7 @@ function ochabasic_preprocess_html(&$vars) {
       'type' => 'image/png',
     ),
   );
-  drupal_add_html_head($fav_16, 'favicon-16x16');
+
   $safari_pinned_tab = array(
     '#tag' => 'link',
     '#attributes' => array(
@@ -68,6 +76,11 @@ function ochabasic_preprocess_html(&$vars) {
       'color' => '#5bbad5',
     ),
   );
+
+  drupal_add_html_head($viewport, 'viewport');
+  drupal_add_html_head($apple, 'apple-touch-icon');
+  drupal_add_html_head($fav_32, 'favicon-32x32');
+  drupal_add_html_head($fav_16, 'favicon-16x16');
   drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
 }
 
