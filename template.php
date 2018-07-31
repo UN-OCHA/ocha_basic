@@ -8,7 +8,7 @@
 /**
  * Implements hook_preprocess_page().
  */
-function ochabasic_form_alter(&$form, &$form_state, $form_id) {
+function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['#attributes']['role'] = 'search';
     $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
@@ -23,7 +23,7 @@ function ochabasic_form_alter(&$form, &$form_state, $form_id) {
 /**
  * Implements hook_preprocess_search_block_form().
  */
-function ochabasic_preprocess_search_block_form(&$vars) {
+function ocha_basic_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
 
@@ -87,7 +87,7 @@ function ocha_basic_preprocess_html(&$vars) {
 /**
  * Implements hook_pwa_manifest_alter().
  */
-function ochabasic_pwa_manifest_alter(&$manifest) {
+function ocha_basic_pwa_manifest_alter(&$manifest) {
   // Hard-code a theme-color into the manifest.
   $manifest['theme_color'] = '#026CB6';
 
