@@ -17,8 +17,8 @@
         "drupal/modernizr": "3.11",
         "drupal/paranoia": "1.7",
         "drupal/views": "3.20",
-        "drupal/strongarm": "2.0"
-
+        "drupal/strongarm": "2.0",
+        "hussainweb/drupal-composer-helper": "~1.0@beta"
     },
     "authors": [
         {
