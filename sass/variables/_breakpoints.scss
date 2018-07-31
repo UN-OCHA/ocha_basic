@@ -1,7 +1,6 @@
-/**
- * Grid breakpoints
- */
-
+//
+// Grid Breakpoints
+//
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -11,9 +10,11 @@ $grid-breakpoints: (
   xxl: 1400px
 ) !default;
 
-
+//
+// CD Breakpoints correspond to the following grid breakpoints:
+//
 $cd-breakpoints: (
-  tablet: 768px,
-  desktop: 1024px,
-  largescreen: 1200px
+  tablet: #{map-get($grid-breakpoints, 'md')},
+  desktop: #{map-get($grid-breakpoints, 'lg')},
+  xlarge: #{map-get($grid-breakpoints, 'xl')}
 );

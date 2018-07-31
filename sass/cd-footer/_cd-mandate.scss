@@ -31,8 +31,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-mandate {
     max-width: 780px;
     flex: 1 1 50%;

@@ -28,8 +28,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-footer-copyright {
     flex: 0 1 350px;
     align-items: flex-start;

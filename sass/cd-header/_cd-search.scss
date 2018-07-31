@@ -145,8 +145,7 @@
 
 }
 
-@media (min-width: map-get($cd-breakpoints, tablet)) {
-
+@include tablet {
   .cd-search__form-inner {
     margin: 0 auto;
     max-width: $cd-max-width;
@@ -163,8 +162,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, desktop)) {
-
+@include desktop {
   .cd-search_btn-text {
     display: block;
   }
@@ -174,8 +172,7 @@
   }
 }
 
-@media (min-width: map-get($cd-breakpoints, largescreen)) {
-
+@include xlarge {
   .cd-search__form {
     left: 8px;
     right: 8px;
