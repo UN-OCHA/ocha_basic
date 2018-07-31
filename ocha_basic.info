@@ -2,8 +2,12 @@ name = OCHA Basic Starterkit
 description = OCHA Basic theme. Use as a starterkit and apply customizations directly your copy.
 screenshot = screenshot.png
 core = "7.x"
-project = "ocha_basic"
 engine = phptemplate
+
+; ========================================
+; Remove Drupal core stylesheets
+; ========================================
+stylesheets[all][] = unset/system.menus.css
 
 ; ========================================
 ; Stylesheets
@@ -14,6 +18,7 @@ stylesheets[all][] = css/styles.css
 ; Scripts
 ; ========================================
 scripts[] = js/bootstrap-dropdown.js
+scripts[] = js/custom-menu.js
 
 ; ========================================
 ; Regions

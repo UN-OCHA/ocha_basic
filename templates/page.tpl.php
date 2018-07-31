@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Returns the HTML for a single Drupal page.
@@ -15,25 +16,22 @@
       <?php print $messages; ?>
     </div>
   <?php endif; ?>
+
   <div class="cd-container" id="main-content">
 
-  <?php if($tabs): ?>
-    <?php print render($tabs); ?>
+    <?php if($tabs): ?>
+      <?php print render($tabs); ?>
+    <?php endif; ?>
 
-  <?php endif; ?>
+    <?php if ($title): ?>
+      <h1 class="page-heading"><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($page['content']); ?>
 
-    <div class="row">
-      <div class="<?php if ($page['sidebar_first']): ?>col-md-8<?php else: ?>col-xs-12<?php endif; ?>">
-        <?php if ($title): ?><h1 class="page-heading"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($page['content']); ?>
-      </div>
+    <?php if ($page['sidebar_first']): ?>
+      <?php print render($page['sidebar_first']); ?>
+    <?php endif; ?>
 
-      <?php if ($page['sidebar_first']): ?>
-        <div class="col-md-4">
-          <?php print render($page['sidebar_first']); ?>
-        </div>
-      <?php endif; ?>
-    </div>
   </div>
 </div>
 <?php include 'footer.inc'; ?>

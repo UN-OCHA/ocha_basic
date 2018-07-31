@@ -9,24 +9,24 @@
 }
 
 .cd-site-logo {
-  background: url('../images/ocha-logo-mobile.svg') center no-repeat;
+  background: url('../logos/ocha-logo-mobile.svg') center no-repeat;
   display: block;
   float: left;
-  height: $site-header-height;
+  height: $cd-site-header-height;
   width: 52px;
 
   .no-svg & {
-    background: url('../images/ocha-logo-mobile.png') center no-repeat;
+    background: url('../logos/ocha-logo-mobile.png') center no-repeat;
   }
 }
 
-@include media-query(md) {
+@media (min-width: map-get($cd-breakpoints, tablet)) {
   .cd-site-logo {
-    background: url('../images/ocha-logo.svg') center no-repeat;
+    background: url('../logos/ocha-logo.svg') center no-repeat;
     width: 186px; // width may need to be adjusted depending on logo width.
 
     .no-svg & {
-      background: url('../images/ocha-logo-mobile.png') center no-repeat;
+      background: url('../logos/ocha-logo-mobile.png') center no-repeat;
     }
   }
 }

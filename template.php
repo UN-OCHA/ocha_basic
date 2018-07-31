@@ -2,14 +2,12 @@
 
 /**
  * @file
- * Template overrides as well as (pre-)process and alter hooks for the
- * OCHA Basic theme.
+ * Template overrides, (pre-)process and alter hooks for the OCHA Basic theme.
  */
 
 /**
  * Implements hook_preprocess_page().
  */
-
 function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['#attributes']['role'] = 'search';
@@ -22,62 +20,68 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+/**
+ * Implements hook_preprocess_search_block_form().
+ */
 function ocha_basic_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
 
+/**
+ * Implements hook_preprocess_html().
+ */
 function ocha_basic_preprocess_html(&$vars) {
-    $viewport = array(
-      '#tag' => 'meta',
-      '#attributes' => array(
-        'name' => 'viewport',
-        'content' => 'width=device-width, initial-scale=1.0',
-      ),
-    );
+  $viewport = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ),
+  );
 
-    $apple = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => base_path() . path_to_theme() .'/apple-touch-icon.png',
-        'rel' => 'apple-touch-icon',
-        'sizes' => '180x180'
-      ),
-    );
+  $apple = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => base_path() . path_to_theme() . '/apple-touch-icon.png',
+      'rel' => 'apple-touch-icon',
+      'sizes' => '180x180',
+    ),
+  );
 
-    $fav_32 = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => base_path() . path_to_theme() .'/favicon-32x32.png',
-        'rel' => 'icon',
-        'sizes' => '32x32',
-        'type' => 'image/png'
-      ),
-    );
+  $fav_32 = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => base_path() . path_to_theme() . '/favicon-32x32.png',
+      'rel' => 'icon',
+      'sizes' => '32x32',
+      'type' => 'image/png',
+    ),
+  );
 
-    $fav_16 = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => base_path() . path_to_theme() .'/favicon-16x16.png',
-        'rel' => 'icon',
-        'sizes' => '16x16',
-        'type' => 'image/png'
-      ),
-    );
+  $fav_16 = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => base_path() . path_to_theme() . '/favicon-16x16.png',
+      'rel' => 'icon',
+      'sizes' => '16x16',
+      'type' => 'image/png',
+    ),
+  );
 
-    $safari_pinned_tab = array(
-      '#tag' => 'link',
-      '#attributes' => array(
-        'href' => base_path() . path_to_theme() .'/safari-pinned-tab.svg',
-        'rel' => 'mask-icon',
-        'color' => '#5bbad5'
-      ),
-    );
+  $safari_pinned_tab = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'href' => base_path() . path_to_theme() . '/safari-pinned-tab.svg',
+      'rel' => 'mask-icon',
+      'color' => '#5bbad5',
+    ),
+  );
 
-    drupal_add_html_head($viewport, 'viewport');
-    drupal_add_html_head($apple, 'apple-touch-icon');
-    drupal_add_html_head($fav_32, 'favicon-32x32');
-    drupal_add_html_head($fav_16, 'favicon-16x16');
-    drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
+  drupal_add_html_head($viewport, 'viewport');
+  drupal_add_html_head($apple, 'apple-touch-icon');
+  drupal_add_html_head($fav_32, 'favicon-32x32');
+  drupal_add_html_head($fav_16, 'favicon-16x16');
+  drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
 }
 
 /**

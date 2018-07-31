@@ -3,17 +3,16 @@
  */
 
 html {
-  background: $site-bg-color;
+  background: $cd-site-bg-color;
   height: 100%;
   margin: 0;
   margin-left: calc(100vw - 100%); //prevents scrollbar changing page width in IE.
-  padding: 0 $site-padding;
 }
 
 body {
-  background: $white-bg-color;
+  background: $cd-white-bg-color;
   margin: 0 auto;
-  max-width: $max-body-width;
+  max-width: $cd-max-body-width;
   min-height: 100%;
   padding: 0;
 
@@ -23,36 +22,34 @@ body {
   grid-template-rows: 1fr auto;
 }
 
-.cd-header,
-.cd-footer {
-  @include font-size($tiny-font-size);
-
-  p,
-  ul {
-    @include font-size($tiny-font-size);
-  }
-}
-
 .cd-container {
   @include clearfix;
   box-sizing: border-box;
-  padding: 0 $container-padding;
+  padding: 0 $cd-container-padding;
   margin: 0 auto;
-  max-width: $max-width;
+  max-width: $cd-max-width;
 }
 
-@include media-query(md) {
+@media (min-width: map-get($cd-breakpoints, tablet)) {
 
   .cd-container {
-    padding: 0 $container-padding-tablet;
+    padding: 0 $cd-container-padding-tablet;
   }
 
 }
 
-@include media-query(xl) {
+@media (min-width: map-get($cd-breakpoints, desktop)) {
+
+  html {
+    padding: 0 $cd-site-padding;
+  }
+
+}
+
+@media (min-width: map-get($cd-breakpoints, largescreen)) {
 
   .cd-container {
-    padding: 0 $container-padding-largescreen;
+    padding: 0 $cd-container-padding-largescreen;
   }
 
 }

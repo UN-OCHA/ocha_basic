@@ -2,7 +2,7 @@
  * Common Design Footer social links.
  */
 
-.cd-footer .cd-footer-social__link {
+a.cd-footer-social__link {
   background: transparent;
   border: 1px solid $cd-white-border;
   border-radius: 100%;
@@ -17,29 +17,22 @@
 
   &:hover,
   &:focus {
-    background: $white-bg-color;
+    background: $cd-white-bg-color;
     border-color: $cd-white-border;
-    color: $heading-text-color;
+    color: $cd-blue-text-color;
   }
 }
 
-@include media-query(md) {
-
+@media (min-width: map-get($cd-breakpoints, tablet)) {
   .cd-footer-social {
-    grid-column: 1/3;
-    -ms-grid-row: 3;
-    -ms-grid-column-span: 3;
+    flex: 1 0 100%;
   }
-
 }
 
-@include media-query(lg) {
+@media (min-width: map-get($cd-breakpoints, desktop)) {
 
   .cd-footer-social {
-    -ms-grid-column: 3;
-    -ms-grid-row: 1;
-    grid-column: auto;
-    text-align: right;
+    flex: 0 1 auto;
   }
 
   a.cd-footer-social__link {
