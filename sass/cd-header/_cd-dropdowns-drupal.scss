@@ -4,12 +4,12 @@
 .cd-nav {
   .expanded {
 
-    // Hide child nav
+    // Hide child nav.
     & > ul {
       display: none;
     }
 
-    // Add down arrow
+    // Add down arrow.
     & > a {
       position: relative;
       &:after {
@@ -29,7 +29,7 @@
         z-index: map-get($zindex, dropdown);
       }
 
-      // Change to up arrow
+      // Change to up arrow.
       & > a {
         &:after {
           content: '\e957';
