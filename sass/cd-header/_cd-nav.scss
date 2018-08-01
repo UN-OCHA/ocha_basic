@@ -12,7 +12,7 @@
 
 .cd-site-header__nav-toggle {
   background: transparent;
-  border: 0;
+  border: 0 none $cd-border-color;
   border-left: 1px solid $cd-border-color;
   border-right: 1px solid $cd-border-color;
   font-size: map-get($cd-font-sizes, medium);
@@ -171,16 +171,6 @@ ul.cd-nav__grandchild-nav {
     right: 0;
     top: $cd-site-header-height;
     width: 300px;
-  }
-}
-
-@include tablet {
-  .cd-site-header__nav-toggle {
-    border-right: 1px solid $cd-border-color;
-
-    .open & {
-      margin-right: 0;
-    }
   }
 }
 
