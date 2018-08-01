@@ -11,6 +11,8 @@
 function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['#attributes']['role'] = 'search';
+    $form['#attributes']['class'][] = 'cd-search__form';
+    $form['#attributes']['aria-labelledby'][] = 'cd-search-btn';
     $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
     $form['actions']['submit'] = array(
       '#type' => 'item',
