@@ -19,6 +19,7 @@ stylesheets[all][] = css/styles.css
 ; ========================================
 scripts[] = js/bootstrap-dropdown.js
 scripts[] = js/custom-menu.js
+scripts[] = js/custom-search.js
 
 ; ========================================
 ; Regions

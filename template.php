@@ -11,12 +11,18 @@
 function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['#attributes']['role'] = 'search';
+    $form['#attributes']['class'][] = 'cd-search__form';
+    $form['#attributes']['aria-labelledby'][] = 'cd-search-btn';
     $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
+    $form['search_block_form']['#attributes']['class'][] = 'cd-search__input';
     $form['actions']['submit'] = array(
-      '#type' => 'item',
-      '#markup' => '<button type="submit" class="cd-search__submit">Go <span class="icon-arrow-right" aria-hidden="true"></span></button>',
+      '#type' => 'submit',
+      '#prefix' => '<button type="submit" id="edit-submit" name="op" class="cd-search__submit form-submit"><span class="icon-search" aria-hidden="true"></span><span class="cd-sr-only">Search</span>',
+      '#suffix' => '</button>',
+      '#markup' => '',
       '#weight' => 1000,
     );
+    $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
   }
 }
 
