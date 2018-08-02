@@ -19,7 +19,7 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
       '#type' => 'submit',
       '#prefix' => '<button type="submit" id="edit-submit" name="op" class="cd-search__submit form-submit"><span class="icon-search" aria-hidden="true"></span><span class="cd-sr-only">Search</span>',
       '#suffix' => '</button>',
-      '#markup' => '', // This line is required to force the element to render
+      '#markup' => '',
       '#weight' => 1000,
     );
     $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
