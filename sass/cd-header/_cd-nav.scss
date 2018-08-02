@@ -4,11 +4,15 @@
 
 .cd-site-header__nav-holder {
   float: left;
+
+  .cssgrid.flexbox & {
+    float: none;
+  }
 }
 
 .cd-site-header__nav-toggle {
   background: transparent;
-  border: 0;
+  border: 0 none $cd-border-color;
   border-left: 1px solid $cd-border-color;
   border-right: 1px solid $cd-border-color;
   font-size: map-get($cd-font-sizes, medium);
@@ -100,7 +104,6 @@
   &.open {
     background: $cd-white-bg-color;
 
-    & > a,
     & > button {
       color: $cd-dark-text-color;
 
@@ -144,7 +147,6 @@ ul.cd-nav__child-nav {
 .cd-nav > ul > li > ul > li > ul,
 ul.cd-nav__grandchild-nav {
   padding-bottom: 5px;
-
   a,
   button {
     font-weight: 200;
@@ -169,16 +171,6 @@ ul.cd-nav__grandchild-nav {
     right: 0;
     top: $cd-site-header-height;
     width: 300px;
-  }
-}
-
-@include tablet {
-  .cd-site-header__nav-toggle {
-    border-right: 1px solid $cd-border-color;
-
-    .open & {
-      margin-right: 0;
-    }
   }
 }
 
@@ -211,7 +203,6 @@ ul.cd-nav__grandchild-nav {
     }
 
     &:last-child {
-      .cd-nav > ul > li > ul,
       ul.cd-nav__child-nav {
         left: auto;
         right: -1px;
@@ -255,7 +246,6 @@ ul.cd-nav__grandchild-nav {
       background: transparent;
       display: flex;
       height: $cd-site-header-height;
-      line-height: $cd-site-header-height;
       padding: 0 14px;
       position: relative;
       transition: background 0.3s ease;

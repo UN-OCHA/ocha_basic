@@ -5,7 +5,7 @@
 
     <div class="cd-site-header__actions">
 
-      <?php #include 'cd-search.inc'; ?>
+      <?php include 'cd-search.inc'; ?>
 
       <?php include 'cd-navigation.inc'; ?>
 
