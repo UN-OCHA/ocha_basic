@@ -9,7 +9,7 @@
  */
 ?>
 <div class="page-wrapper">
-  <a href="#main-content" class="skip-link"><?php print t('Skip to main content'); ?></a>
+  <a href="#main-content" class="skip-link element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
   <?php include 'header.inc'; ?>
   <?php if($messages): ?>
     <div class="cd-container">
