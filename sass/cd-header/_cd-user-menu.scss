@@ -208,3 +208,17 @@ button.cd-user-menu__item {
     text-transform: uppercase;
   }
 }
+#cd-lang-dropdown {
+  .cd-user-menu__dropdown-link {
+    &::after {
+      content: none;
+    }
+    &.active::after {
+      color: $cd-bright-blue-text-color;
+      content: '\e944';
+      font-family: 'unocha-icons';
+      position: absolute;
+      right: 0;
+    }
+  }
+}
