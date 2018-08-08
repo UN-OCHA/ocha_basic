@@ -1,12 +1,12 @@
 <?php
-
 /**
  * @file
- * Template overrides, (pre-)process and alter hooks for the OCHA Basic theme.
+ * Template overrides, preprocess, and alter hooks for the OCHA Basic theme.
  */
 
+
 /**
- * Implements hook_preprocess_page().
+ * Implements hook_form_alter().
  */
 function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
@@ -26,12 +26,14 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+
 /**
  * Implements hook_preprocess_search_block_form().
  */
 function ocha_basic_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
+
 
 /**
  * Implements hook_preprocess_html().
@@ -89,6 +91,19 @@ function ocha_basic_preprocess_html(&$vars) {
   drupal_add_html_head($fav_16, 'favicon-16x16');
   drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
 }
+
+
+/**
+ * Implements template_preprocess_page().
+ */
+function ocha_basic_preprocess_page(&$vars) {
+  // Assemble list of active languages in this installation.
+  $lang_list = language_list('enabled');
+  foreach($lang_list['1'] as $avail_lang) {
+    $vars['available_languages'][] = $avail_lang;
+  }
+}
+
 
 /**
  * Implements hook_pwa_manifest_alter().
