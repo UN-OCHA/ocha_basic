@@ -9,4 +9,4 @@ export NODE_ENV='production'
 
 # build assets
 gulp build
-git add css js
+git add css/styles.css
