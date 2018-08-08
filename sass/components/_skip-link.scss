@@ -1,18 +1,35 @@
-/**
- * Skip link styles
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Drupal: Skip link
+//——————————————————————————————————————————————————————————————————————————————
 
-a.skip-link {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
-  height: 1px;
-	@include font-size($tiny-font-size);
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 50;
+  width: auto;
+  transform: translateX(-50%);
+}
 
-	&:focus {
-		height: auto;
-    position: static;
-    clip: auto;
-    overflow: visible;
-	}
+.skip-link,
+.skip-link:link,
+.skip-link:visited {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: inline-block;
+  font-size: 0.94em;
+  font-family: sans-serif;
+  line-height: 1.7;
+  padding: 1px 10px 2px 10px;
+  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.skip-link.element-invisible.element-focusable {
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    position: absolute !important; // override core !important
+  }
 }
