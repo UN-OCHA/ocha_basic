@@ -1,3 +1,6 @@
+<?php
+  global $language;
+?>
 <ul class="cd-user-menu">
 <li>
   <a href="#" class="cd-user-menu__item cd-user-menu__item--mobile-icon">
@@ -7,20 +10,20 @@
 </li>
 <li>
   <button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-lang-toggle">
-    <span class="cd-user-menu__label">EN</span>
+    <span class="cd-user-menu__label"><?php print $language->language; ?></span>
     <span class="icon-arrow-down" aria-hidden="true"></span>
   </button>
   <ul class="cd-global-header__dropdown cd-dropdown cd-user-menu__dropdown" id="cd-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-lang-toggle">
-    <li>
-      <a href="#" class="cd-user-menu__dropdown-link active">
-        <span class="cd-user-menu__dropdown-link-label">English</span>
-      </a>
-    </li>
-    <li>
-      <a href="#" class="cd-user-menu__dropdown-link">
-        <span class="cd-user-menu__dropdown-link-label">French</span>
-      </a>
-    </li>
+    <?php
+      $lang_list = language_list('enabled');
+      foreach($lang_list['1'] as $lang):
+    ?>
+      <li>
+        <a href="<?php print $lang->language; ?>" class="cd-user-menu__dropdown-link <?php if ($lang->language == $language->language) { print 'active'; } ?>">
+          <span class="cd-user-menu__dropdown-link-label"><?php print $lang->name; ?></span>
+        </a>
+      </li>
+    <?php endforeach ?>
   </ul>
 </li>
 <li>
