@@ -14,6 +14,7 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
     $form['#attributes']['class'][] = 'cd-search__form';
     $form['#attributes']['aria-labelledby'][] = 'cd-search-btn';
     $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
+    $form['search_block_form']['#attributes']['autocomplete'][] = 'off';
     $form['search_block_form']['#attributes']['class'][] = 'cd-search__input';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
