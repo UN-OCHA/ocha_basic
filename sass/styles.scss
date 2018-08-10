@@ -1,31 +1,31 @@
 // Common Design
-@import '../sass/cd-variables';
-@import '../sass/cd-extends';
-@import '../sass/cd-mixins';
-@import '../sass/cd-reset';
-@import '../sass/cd-icons';
+@import '../sass/cd/cd-variables';
+@import '../sass/cd/cd-extends';
+@import '../sass/cd/cd-mixins';
+@import '../sass/cd/cd-reset';
+@import '../sass/cd/cd-icons';
 
 // Layout
-@import '../sass/cd-layout/cd-layout';
+@import '../sass/cd/cd-layout/cd-layout';
 
 // Header
-@import '../sass/cd-header/cd-header';
-@import '../sass/cd-header/cd-dropdowns';
-@import '../sass/cd-header/cd-dropdowns-drupal';
-@import '../sass/cd-header/cd-logo';
-@import '../sass/cd-header/cd-nav';
-@import '../sass/cd-header/cd-search';
-@import '../sass/cd-header/cd-search-drupal';
-@import '../sass/cd-header/cd-sites-menu';
-@import '../sass/cd-header/cd-user-menu';
+@import '../sass/cd/cd-header/cd-header';
+@import '../sass/cd/cd-header/cd-dropdowns';
+@import '../sass/cd/cd-header/cd-dropdowns-drupal';
+@import '../sass/cd/cd-header/cd-logo';
+@import '../sass/cd/cd-header/cd-nav';
+@import '../sass/cd/cd-header/cd-search';
+@import '../sass/cd/cd-header/cd-search-drupal';
+@import '../sass/cd/cd-header/cd-sites-menu';
+@import '../sass/cd/cd-header/cd-user-menu';
 
 // Footer
-@import '../sass/cd-footer/cd-footer';
-@import '../sass/cd-footer/cd-footer-copyright';
-@import '../sass/cd-footer/cd-footer-menu';
-@import '../sass/cd-footer/cd-mandate';
-@import '../sass/cd-footer/cd-footer-social';
-@import '../sass/cd-footer/cd-soft-footer';
+@import '../sass/cd/cd-footer/cd-footer';
+@import '../sass/cd/cd-footer/cd-footer-copyright';
+@import '../sass/cd/cd-footer/cd-footer-menu';
+@import '../sass/cd/cd-footer/cd-mandate';
+@import '../sass/cd/cd-footer/cd-footer-social';
+@import '../sass/cd/cd-footer/cd-soft-footer';
 
 
 //——————————————————————————————————————————————————————————————————————————————
