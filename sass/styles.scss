@@ -1,24 +1,3 @@
-@import '../sass/variables/_breakpoints';
-@import '../sass/variables/_colours';
-@import '../sass/variables/_font-sizes';
-@import '../sass/variables/_fonts';
-@import '../sass/variables/_measurements';
-@import '../sass/variables/_z-index';
-@import '../sass/mixins/_clearfix';
-@import '../sass/mixins/_font-size';
-@import '../sass/mixins/_hide-unhide';
-@import '../sass/mixins/_media-queries';
-// @import '../sass/base/_a-reset';
-// @import '../sass/base/_base';
-@import '../sass/base/_grid';
-@import '../sass/base/_helpers';
-// @import '../sass/base/_typography';
-// @import '../sass/components/_buttons';
-// @import '../sass/components/_dropdown';
-// @import '../sass/components/_forms';
-@import '../sass/components/_skip-link';
-@import '../sass/components/_tables';
-
 // Common Design
 @import '../sass/cd-variables';
 @import '../sass/cd-extends';
@@ -47,3 +26,17 @@
 @import '../sass/cd-footer/cd-mandate';
 @import '../sass/cd-footer/cd-footer-social';
 @import '../sass/cd-footer/cd-soft-footer';
+
+
+//——————————————————————————————————————————————————————————————————————————————
+
+// @import '../sass/base/_a-reset';
+@import '../sass/base/_base';
+@import '../sass/base/_grid';
+@import '../sass/base/_helpers';
+@import '../sass/base/_typography';
+@import '../sass/components/_buttons';
+@import '../sass/components/_dropdown';
+@import '../sass/components/_forms';
+@import '../sass/components/_skip-link';
+@import '../sass/components/_tables';

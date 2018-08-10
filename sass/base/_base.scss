@@ -19,9 +19,9 @@ html, input {
 }
 
 body {
-  font-family: $body-font;
-  @include font-size($base-font-size);
-  color: $default-text-color;
+  font-family: $cd-font;
+  @include font-size($cd-font-size-base);
+  color: $cd-dark-grey;
   line-height: 1.5;
 
   &.no-scroll {

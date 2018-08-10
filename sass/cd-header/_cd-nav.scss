@@ -15,7 +15,7 @@
   border: 0 none $cd-border-color;
   border-left: 1px solid $cd-border-color;
   border-right: 1px solid $cd-border-color;
-  font-size: map-get($cd-font-sizes, medium);
+  @include font-size($cd-font-size-small);
   font-weight: bold;
   color: $cd-default-text-color;
   height: $cd-site-header-height;
