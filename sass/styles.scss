@@ -1,42 +1,42 @@
 // Common Design
-@import '../sass/cd/cd-variables';
-@import '../sass/cd/cd-extends';
-@import '../sass/cd/cd-mixins';
-@import '../sass/cd/cd-reset';
-@import '../sass/cd/cd-icons';
+@import 'cd/cd-variables';
+@import 'cd/cd-extends';
+@import 'cd/cd-mixins';
+@import 'cd/cd-reset';
+@import 'cd/cd-icons';
 
 // Layout
-@import '../sass/cd/cd-layout/cd-layout';
+@import 'cd/cd-layout/cd-layout';
 
 // Header
-@import '../sass/cd/cd-header/cd-header';
-@import '../sass/cd/cd-header/cd-dropdowns';
-@import '../sass/cd/cd-header/cd-dropdowns-drupal';
-@import '../sass/cd/cd-header/cd-logo';
-@import '../sass/cd/cd-header/cd-nav';
-@import '../sass/cd/cd-header/cd-search';
-@import '../sass/cd/cd-header/cd-search-drupal';
-@import '../sass/cd/cd-header/cd-sites-menu';
-@import '../sass/cd/cd-header/cd-user-menu';
+@import 'cd/cd-header/cd-header';
+@import 'cd/cd-header/cd-dropdowns';
+@import 'cd/cd-header/cd-dropdowns-drupal';
+@import 'cd/cd-header/cd-logo';
+@import 'cd/cd-header/cd-nav';
+@import 'cd/cd-header/cd-search';
+@import 'cd/cd-header/cd-search-drupal';
+@import 'cd/cd-header/cd-sites-menu';
+@import 'cd/cd-header/cd-user-menu';
 
 // Footer
-@import '../sass/cd/cd-footer/cd-footer';
-@import '../sass/cd/cd-footer/cd-footer-copyright';
-@import '../sass/cd/cd-footer/cd-footer-menu';
-@import '../sass/cd/cd-footer/cd-mandate';
-@import '../sass/cd/cd-footer/cd-footer-social';
-@import '../sass/cd/cd-footer/cd-soft-footer';
+@import 'cd/cd-footer/cd-footer';
+@import 'cd/cd-footer/cd-footer-copyright';
+@import 'cd/cd-footer/cd-footer-menu';
+@import 'cd/cd-footer/cd-mandate';
+@import 'cd/cd-footer/cd-footer-social';
+@import 'cd/cd-footer/cd-soft-footer';
 
 
 //——————————————————————————————————————————————————————————————————————————————
 
-// @import '../sass/base/_a-reset';
-@import '../sass/base/_base';
-@import '../sass/base/_grid';
-@import '../sass/base/_helpers';
-@import '../sass/base/_typography';
-@import '../sass/components/_buttons';
-@import '../sass/components/_dropdown';
-@import '../sass/components/_forms';
-@import '../sass/components/_skip-link';
-@import '../sass/components/_tables';
+// @import 'base/_a-reset';
+@import 'base/_base';
+@import 'base/_grid';
+@import 'base/_helpers';
+@import 'base/_typography';
+@import 'components/_buttons';
+@import 'components/_dropdown';
+@import 'components/_forms';
+@import 'components/_skip-link';
+@import 'components/_tables';
