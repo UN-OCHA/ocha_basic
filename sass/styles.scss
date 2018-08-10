@@ -1,34 +1,5 @@
 // Common Design
-@import 'cd/cd-variables';
-@import 'cd/cd-extends';
-@import 'cd/cd-mixins';
-@import 'cd/cd-reset';
-@import 'cd/cd-icons';
-
-// Layout
-@import 'cd/cd-layout/cd-layout';
-
-// Header
-@import 'cd/cd-header/cd-header';
-@import 'cd/cd-header/cd-dropdowns';
-@import 'cd/cd-header/cd-dropdowns-drupal';
-@import 'cd/cd-header/cd-logo';
-@import 'cd/cd-header/cd-nav';
-@import 'cd/cd-header/cd-search';
-@import 'cd/cd-header/cd-search-drupal';
-@import 'cd/cd-header/cd-sites-menu';
-@import 'cd/cd-header/cd-user-menu';
-
-// Footer
-@import 'cd/cd-footer/cd-footer';
-@import 'cd/cd-footer/cd-footer-copyright';
-@import 'cd/cd-footer/cd-footer-menu';
-@import 'cd/cd-footer/cd-mandate';
-@import 'cd/cd-footer/cd-footer-social';
-@import 'cd/cd-footer/cd-soft-footer';
-
-
-//——————————————————————————————————————————————————————————————————————————————
+@import 'cd/cd';
 
 // @import 'base/_a-reset';
 @import 'base/_base';
