@@ -1,27 +1,29 @@
-/**
- * Grid system
- *
- * Generate semantic grid columns with these mixins.
- * Adapted from Bootstrap v4 https://github.com/twbs/bootstrap/tree/v4-dev/scss
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+// Adapted from Bootstrap v4 https://github.com/twbs/bootstrap/tree/v4-dev/scss
+//
+// @TODO: replace with Singularity or CSS Grid
+//——————————————————————————————————————————————————————————————————————————————
 
 $grid-columns: 12 !default;
 
 @mixin make-container() {
   margin-left: auto;
   margin-right: auto;
-  max-width: $max-width;
+  max-width: $cd-max-width;
   @include clearfix;
 }
 
 @mixin make-row() {
-  margin-right: $base-unit* -2;
-  margin-left:  $base-unit* -2;
+  margin-right: $cd-base-unit* -2;
+  margin-left:  $cd-base-unit* -2;
 }
 
 @mixin make-gutters() {
-  padding-left: $base-unit*2;
-  padding-right: $base-unit*2;
+  padding-left: $cd-base-unit*2;
+  padding-right: $cd-base-unit*2;
 }
 
 @mixin make-col-ready() {
@@ -76,7 +78,7 @@ $grid-columns: 12 !default;
         @extend %grid-column;
       }
     }
-    @include media-query($breakpoint) {
+    @include min-width($breakpoint) {
 
       @for $i from 1 through $columns {
         .col-#{$breakpoint}-#{$i} {
@@ -108,9 +110,9 @@ $grid-columns: 12 !default;
   @include make-container();
   @include make-gutters();
 
-  @include media-query(xl) {
-    padding-left: $base-unit*5;
-    padding-right: $base-unit*5;
+  @include min-width(xl) {
+    padding-left: $cd-base-unit*5;
+    padding-right: $cd-base-unit*5;
   }
 }
 

@@ -64,7 +64,7 @@ gulp.task('dev:bs', () => {
 gulp.task('dev:sass', () => {
   bs.notify(`Compiling Sass...`);
 
-  return gulp.src(['css/styles.scss'])
+  return gulp.src(['sass/styles.scss'])
     .pipe(plumber())
     .pipe(gulpif(process.env.NODE_ENV !== 'production', sourcemaps.init()))
     .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
@@ -120,7 +120,7 @@ gulp.task('dev', ['dev:sass', /*'dev:js',*/ 'dev:bs', 'watch']);
 //——————————————————————————————————————————————————————————————————————————————
 gulp.task('watch', () => {
   // gulp.watch(['js/*.js'], ['dev:js']);
-  gulp.watch(['css/*.scss', 'sass/**/*.scss'], ['dev:sass']);
+  gulp.watch(['sass/**/*.scss'], ['dev:sass']);
 });
 
 

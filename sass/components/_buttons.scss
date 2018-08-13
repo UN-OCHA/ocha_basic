@@ -4,23 +4,23 @@
 
 button, input[type="submit"] {
 	-webkit-appearance: none;
-	@include font-size($base-font-size);
-	color: $default-text-color;
+	@include font-size($cd-font-size-base);
+	color: $cd-dark-grey;
 	background: none;
 	border: none;
 	box-shadow: none;
-	font-family: $body-font;
+	font-family: $cd-font;
 }
 
 .btn-primary, .form-actions input[type="submit"] {
 	border-radius: 4px;
-	background: $primary-bg-color;
+	background: $cd-ocha-blue;
 	text-transform: uppercase;
-	color: $white-text-color;
-	padding: $base-unit*1.5;
+	color: $cd-white;
+	padding: $cd-base-unit*1.5;
 	transition: background 0.3s ease;
 
 	&:hover, &:focus {
-		background: darken($primary-bg-color, 10%);
+		background: darken($cd-ocha-blue, 10%);
 	}
 }

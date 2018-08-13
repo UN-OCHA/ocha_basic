@@ -1,13 +1,12 @@
-/**
- * Base styles
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Base styles
+//——————————————————————————————————————————————————————————————————————————————
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  &:before, &:after {
-    box-sizing: border-box;
-  }
 }
 
 html, input {
@@ -15,13 +14,13 @@ html, input {
   // 16px = 100%
   // 18px = 112.5%
   // See http://pxtoem.com/ for conversion chart
-  font-size: 100%;
+  font-size: (16 / $cd-font-size-base * 100) + %;
 }
 
 body {
-  font-family: $body-font;
-  @include font-size($base-font-size);
-  color: $default-text-color;
+  font-family: $cd-font;
+  @include font-size($cd-font-size-base);
+  color: $cd-dark-grey;
   line-height: 1.5;
 
   &.no-scroll {
@@ -32,22 +31,9 @@ body {
   }
 }
 
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
 img {
   max-width: 100%;
   height: auto;
-}
-
-u {
-  text-decoration: none;
-  font-weight: bold;
 }
 
 @media print {

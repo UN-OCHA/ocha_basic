@@ -1,0 +1,35 @@
+<ul class="cd-user-menu">
+<li>
+  <a href="#" class="cd-user-menu__item cd-user-menu__item--mobile-icon">
+    <span class="cd-user-menu__icon icon-user" aria-hidden="true"></span>
+    <span class="cd-user-menu__label">Option</span>
+  </a>
+</li>
+<li>
+  <button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-lang-toggle">
+    <span class="cd-user-menu__label"><?php print $language->language; ?></span>
+    <span class="icon-arrow-down" aria-hidden="true"></span>
+  </button>
+  <ul class="cd-global-header__dropdown cd-dropdown cd-user-menu__dropdown" id="cd-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-lang-toggle">
+    <?php foreach($available_languages as $avail_lang): ?>
+      <li>
+        <a href="<?php print $avail_lang->language; ?>" class="cd-user-menu__dropdown-link <?php if ($avail_lang->language == $language->language) { print 'active'; } ?>">
+          <span class="cd-user-menu__dropdown-link-label"><?php print $avail_lang->name; ?></span>
+        </a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+</li>
+<li>
+  <a href="#" class="cd-user-menu__item">
+    <span class="cd-user-menu__icon icon-user" aria-hidden="true"></span>
+    <span class="cd-user-menu__label">Option</span>
+  </a>
+</li>
+</ul>
+
+<?php /* if ($page['header_top']): ?>
+  <div class="cd-user-menu">
+    <?php print render($page['header_top']); ?>
+  </div>
+<?php endif; */ ?>

@@ -1,28 +1,28 @@
-/**
- * Table styles
- *
- * Add the class 'table-responsive', plus data-attributes for headings, to make a table responsive.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Table styles
+//
+// Add the class 'table-responsive', plus data-attributes for headings, to make
+// a table responsive.
+//——————————————————————————————————————————————————————————————————————————————
 
 table {
   width: 100%;
-  margin-bottom: $base-unit;
+  margin-bottom: $cd-base-unit;
 
   th, td {
-    padding: $base-unit;
-    background: $light-bg-color;
+    padding: $cd-base-unit;
+    background: $cd-light-bluey-grey;
     border-bottom: 1px solid white;
   }
 
   th {
-    color: $heading-text-color;
+    color: $cd-ocha-blue;
     text-transform: uppercase;
     text-align: left;
   }
 }
 
 .table-responsive {
-
   th {
     display: none;
   }
@@ -40,7 +40,7 @@ table {
     }
 
     &:last-child {
-      margin-bottom: $base-unit;
+      margin-bottom: $cd-base-unit;
     }
   }
 }
@@ -51,10 +51,9 @@ tr.odd, tr.even {
 
 
 
-@include media-query(md) {
-
+@include min-width('md') {
   table {
-    margin-bottom: $base-unit*3;
+    margin-bottom: $cd-base-unit*3;
   }
 
   .table-responsive {
