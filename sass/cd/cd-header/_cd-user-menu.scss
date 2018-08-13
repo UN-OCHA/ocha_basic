@@ -1,12 +1,15 @@
-/**
- * Common Design Header User Menu
- * Includes user centered settings and/or actions.
- *
- * Notes:
- * - menu items can be links or buttons with dropdowns
- * - dropdown menu items can be given the class .cd-user-menu__item--small to restrict their width and centre the dropdown
- * - add class .cd-user-menu__item--mobile-icon to menu items to only show the iconon mobile.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: User Menu
+//
+// Includes user-centered settings and/or actions.
+//
+// Notes:
+// - menu items can be links or buttons with dropdowns
+// - dropdown menu items can be given the class .cd-user-menu__item--small to
+//   restrict their width and centre the dropdown
+// - add class .cd-user-menu__item--mobile-icon to menu items to only show the
+//   icon on mobile.
+//——————————————————————————————————————————————————————————————————————————————
 
 .cd-user-menu {
   float: right;
