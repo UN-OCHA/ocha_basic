@@ -14,7 +14,7 @@ html, input {
   // 16px = 100%
   // 18px = 112.5%
   // See http://pxtoem.com/ for conversion chart
-  font-size: 100%;
+  font-size: 16 / $cd-font-size-base + %;
 }
 
 body {

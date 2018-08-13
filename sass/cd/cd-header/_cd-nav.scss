@@ -1,6 +1,6 @@
-/**
- * Common Design Navigation in header.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Main Navigation
+//——————————————————————————————————————————————————————————————————————————————
 
 .cd-site-header__nav-holder {
   float: left;
@@ -93,7 +93,7 @@
   button {
     background: none;
     border: 0;
-    font-size: map-get($cd-font-sizes, default);
+    @include font-size($cd-font-size-tiny);
     text-align: left;
     width: 100%;
   }

@@ -90,18 +90,12 @@ $cd-bright-blue-text-color: $cd-bright-blue;
 // Fonts
 //——————————————————————————————————————————————————————————————————————————————
 
-$cd-font: sans-serif; //Same as helvetica, arial, sans-serif;
+$cd-font: helvetica, arial, sans-serif;
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // Font sizes
 //——————————————————————————————————————————————————————————————————————————————
-
-$cd-font-sizes: (
-  default: 12px,
-  medium: 14px,
-  large: 16px
-);
 
 $cd-font-size-tiny: 12;
 $cd-font-size-small: 14;
