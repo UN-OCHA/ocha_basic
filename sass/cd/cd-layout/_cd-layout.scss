@@ -1,12 +1,16 @@
-/**
- * Common Design Layout styles.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Layout
+//——————————————————————————————————————————————————————————————————————————————
 
 html {
   background: $cd-site-bg-color;
   height: 100%;
   margin: 0;
   margin-left: calc(100vw - 100%); //prevents scrollbar changing page width in IE.
+
+  @include desktop {
+    padding: 0 $cd-site-padding;
+  }
 }
 
 body {
@@ -28,22 +32,14 @@ body {
   padding: 0 $cd-container-padding;
   margin: 0 auto;
   max-width: $cd-max-width;
-}
 
-@include tablet {
-  .cd-container {
+  @include tablet {
     padding: 0 $cd-container-padding-tablet;
   }
-}
 
-@include desktop {
-  html {
-    padding: 0 $cd-site-padding;
-  }
-}
-
-@include xlarge {
-  .cd-container {
+  @include xlarge {
     padding: 0 $cd-container-padding-xlarge;
   }
 }
+
+
