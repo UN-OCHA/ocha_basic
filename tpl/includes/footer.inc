@@ -23,9 +23,9 @@
     ); ?>
   <?php endif; ?>
 
-  <?php include 'includes/cd-social-menu.html'; ?>
-  <?php include 'includes/cd-mandate.html'; ?>
-  <?php include 'includes/cd-copyright.html'; ?>
+  <?php include 'cd-social-menu.html'; ?>
+  <?php include 'cd-mandate.html'; ?>
+  <?php include 'cd-copyright.html'; ?>
 
   <?php if ($page['footer_license']) : ?>
     <div class="cd-footer-copyright__message">
