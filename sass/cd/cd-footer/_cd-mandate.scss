@@ -7,14 +7,14 @@
 }
 
 .cd-mandate__logo {
-  background: url('../logos/ocha-logo-white.svg') 0 center no-repeat;
+  background: url('../img/logos/ocha-logo-white.svg') 0 center no-repeat;
   display: block;
   height: 33px;
   width: 135px;
   margin: 0 auto;
 
   .no-svg & {
-    background: url('../logos/ocha-logo-white.png') 0 center no-repeat;
+    background: url('../img/logos/ocha-logo-white.png') 0 center no-repeat;
   }
 }
 
