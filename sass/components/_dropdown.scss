@@ -1,6 +1,6 @@
-/**
- * Bootstrap dropdown styles
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Bootstrap dropdown styles
+//——————————————————————————————————————————————————————————————————————————————
 
 .dropdown-menu {
   position: absolute;
@@ -8,12 +8,12 @@
   left: 0;
   z-index: map-get($zindex, dropdown);
   display: none;
-  min-width: $base-unit*12;
+  min-width: $cd-base-unit*12;
   margin: 2px 0 0;
   text-align: left;
   list-style: none;
   background-color: #fff;
-  border: 1px solid $border-color;
+  border: 1px solid $cd-mid-bluey-grey;
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.25);
 
   .open & {
@@ -34,15 +34,15 @@
 
     a, button {
       display: block;
-      padding: $base-unit*1.5;
+      padding: $cd-base-unit*1.5;
       text-decoration: none;
-      color: $default-text-color;
+      color: $cd-dark-grey;
       word-break: break-word;
       transition: background 0.3s ease;
 
       &:hover, &:focus {
-        background: $primary-bg-color;
-        color: $white-text-color;
+        background: $cd-ocha-blue;
+        color: $cd-white;
       }
     }
   }

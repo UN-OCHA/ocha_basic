@@ -6,18 +6,23 @@ A minimal starter theme for OCHA sites.
 
 * Common Header
 * Common Footer
+* Common Icons
+* Variables for breakpoints, colours, font-sizes, fonts, measurements and z-index
+* Mixins for clearfix, REM font sizes and media queries
+* Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
+
+**Optional components:**
+
 * Grid (simplified version of Bootstrap v4 grid, https://v4-alpha.getbootstrap.com/layout/overview/)
 * Typography
-* Mixins for clearfix, REM font sizes and media queries
-* Variables for breakpoints, colours, font-sizes, fonts, measurements and z-index
-* Icons
 * Basic table styles
 * Basic form styles
 * Favicons
-* Sass
-* Autoprefixer
-* Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
-* Optional: gulp.js workflow for frontend development
+* gulp.js workflow for frontend development
+  * Sass
+  * Sourcemaps (see which specific Sass file contains styles during local development)
+  * Autoprefixer
+  * JS linting
 
 ## Integrations with other Drupal modules
 
@@ -29,11 +34,14 @@ A minimal starter theme for OCHA sites.
 
 1. Copy this theme into your `sites/all/themes/custom` folder
 2. If you want to renamne the theme, change the folder name, the filename of the .info file and find and replace for `ocha_basic` in the theme folder.
-3. In the theme folder:
-4. Install the dependencies: `npm install`
-5. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
-6. Run the simple gulp task to build the CSS: `gulp build`
-7. In the Drupal Admin, go to Appearance, find 'OCHA Basic Starter Theme' (or whatever you've renamed it to), and select 'Enable and set default'
+3. In the Drupal Admin, go to Appearance, find 'OCHA Basic Starter Theme' (or whatever you've renamed it to), and select **Enable and set default**
+
+**To contribute to `ocha_basic` development:**
+
+1. Install the dependencies: `npm install`
+2. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
+3. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
+4. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
 
 ## CSS
 

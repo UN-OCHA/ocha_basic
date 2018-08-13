@@ -1,0 +1,35 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: CSS Resets
+//——————————————————————————————————————————————————————————————————————————————
+
+.cd-header,
+.cd-footer {
+  // Setup font
+  font-family: $cd-font;
+  @include font-size($cd-font-size-tiny);
+
+  // Set box-sizing
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+
+  // box-sizing on all child elements
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  // Reset button styles.
+  button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: $cd-font;
+  }
+}
+
+// Screen reader only text.
+.cd-sr-only {
+  @include hide;
+}
