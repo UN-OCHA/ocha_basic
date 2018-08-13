@@ -6,6 +6,6 @@
 ?>
 
 <header class="cd-header" role="banner">
-  <?php include 'cd-global-header.inc'; ?>
-  <?php include 'cd-site-header.inc'; ?>
+  <?php include 'cd-global-header.html'; ?>
+  <?php include 'cd-site-header.html'; ?>
 </header>

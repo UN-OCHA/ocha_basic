@@ -10,7 +10,9 @@
 ?>
 <div class="page-wrapper">
   <a href="#main-content" class="skip-link element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  <?php include 'includes/header.inc'; ?>
+
+  <?php include 'includes/cd-header/cd-header.inc'; ?>
+
   <?php if($messages): ?>
     <div class="cd-container">
       <?php print $messages; ?>
@@ -18,7 +20,6 @@
   <?php endif; ?>
 
   <div class="cd-container" id="main-content">
-
     <?php if($tabs): ?>
       <?php print render($tabs); ?>
     <?php endif; ?>
@@ -31,7 +32,7 @@
     <?php if ($page['sidebar_first']): ?>
       <?php print render($page['sidebar_first']); ?>
     <?php endif; ?>
-
   </div>
 </div>
-<?php include 'includes/footer.inc'; ?>
+
+<?php include 'includes/cd-footer/cd-footer.inc'; ?>
