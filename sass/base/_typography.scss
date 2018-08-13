@@ -18,11 +18,11 @@ h1, h2 ,h3 ,h4 ,h5, p, ol, ul, dl {
 }
 
 h4, h5 {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 h1, h2 ,h3 ,h4 ,h5 {
-	color: $cd-ocha-blue;
+  color: $cd-ocha-blue;
 }
 
 h1.page-heading {
@@ -58,7 +58,7 @@ li {
 }
 
 strong {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 em {
@@ -71,27 +71,27 @@ u {
 }
 
 dt {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 dd {
-	margin-bottom: $cd-base-unit;
+  margin-bottom: $cd-base-unit;
 }
 
 @include min-width(sm) {
-	h1 {
-		@include font-size($cd-font-size-xlarge);
-	}
+  h1 {
+    @include font-size($cd-font-size-xlarge);
+  }
 
-	p, ul, ol, dl {
-  	@include font-size($cd-font-size-base);
+  p, ul, ol, dl {
+    @include font-size($cd-font-size-base);
   }
 
   li {
-		margin-bottom: $cd-base-unit/2;
-	}
+    margin-bottom: $cd-base-unit/2;
+  }
 
-	h2 {
+  h2 {
     @include font-size($cd-font-size-medium);
     font-weight: normal;
   }
