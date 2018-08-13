@@ -1,7 +1,6 @@
-/**
- * Resets to defaults required for Common Design
- * These may already be included in your theme, in which case can be removed.
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: CSS Resets
+//——————————————————————————————————————————————————————————————————————————————
 
 .cd-header,
 .cd-footer {
@@ -13,10 +12,10 @@
   // Set box-sizing
   box-sizing: border-box;
 
-  * {
-    box-sizing: border-box;
-  }
-  &:before, &:after {
+  // box-sizing on all child elements
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
