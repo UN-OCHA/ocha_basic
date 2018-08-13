@@ -1,5 +1,8 @@
 //——————————————————————————————————————————————————————————————————————————————
-// Drupal: Skip link
+// Common Design: Skip to main content
+//
+// Style the `.skip-link` element. The a11y aspects are provided by standard
+// classes from D7: `.element-invisible` and `.element-focusable`
 //——————————————————————————————————————————————————————————————————————————————
 
 .skip-link {
@@ -25,6 +28,10 @@
   border-radius: 0 0 10px 10px;
 }
 
+//
+// Our styles are only visible when the element has focus, so the default
+// outline is not necessary. We are forcibly overriding it.
+//
 .skip-link.element-invisible.element-focusable {
   &:hover,
   &:active,
