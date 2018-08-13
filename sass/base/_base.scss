@@ -1,13 +1,12 @@
-/**
- * Base styles
- */
+//——————————————————————————————————————————————————————————————————————————————
+// Base styles
+//——————————————————————————————————————————————————————————————————————————————
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  &:before, &:after {
-    box-sizing: border-box;
-  }
 }
 
 html, input {
