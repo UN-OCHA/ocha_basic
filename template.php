@@ -51,7 +51,7 @@ function ocha_basic_preprocess_html(&$vars) {
   $apple = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() . '/apple-touch-icon.png',
+      'href' => base_path() . path_to_theme() . '/img/apple-touch-icon.png',
       'rel' => 'apple-touch-icon',
       'sizes' => '180x180',
     ),
@@ -60,7 +60,7 @@ function ocha_basic_preprocess_html(&$vars) {
   $fav_32 = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() . '/favicon-32x32.png',
+      'href' => base_path() . path_to_theme() . '/img/favicon-32x32.png',
       'rel' => 'icon',
       'sizes' => '32x32',
       'type' => 'image/png',
@@ -70,7 +70,7 @@ function ocha_basic_preprocess_html(&$vars) {
   $fav_16 = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() . '/favicon-16x16.png',
+      'href' => base_path() . path_to_theme() . '/img/favicon-16x16.png',
       'rel' => 'icon',
       'sizes' => '16x16',
       'type' => 'image/png',
@@ -80,7 +80,7 @@ function ocha_basic_preprocess_html(&$vars) {
   $safari_pinned_tab = array(
     '#tag' => 'link',
     '#attributes' => array(
-      'href' => base_path() . path_to_theme() . '/safari-pinned-tab.svg',
+      'href' => base_path() . path_to_theme() . '/img/safari-pinned-tab.svg',
       'rel' => 'mask-icon',
       'color' => '#5bbad5',
     ),
@@ -120,12 +120,12 @@ function ocha_basic_pwa_manifest_alter(&$manifest) {
   // to your heart's content.
   $manifest['icons'] = [
     [
-      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/android-chrome-512x512.png'),
+      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/img/android-chrome-512x512.png'),
       'sizes' => '512x512',
       'type' => 'image/png',
     ],
     [
-      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/android-chrome-192x192.png'),
+      'src' => url(drupal_get_path('theme', 'ocha_basic') . '/img/android-chrome-192x192.png'),
       'sizes' => '192x192',
       'type' => 'image/png',
     ],
