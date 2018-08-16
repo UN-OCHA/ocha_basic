@@ -29,8 +29,3 @@
     font-weight: 300;
   }
 }
-
-// Screen reader only text.
-.cd-sr-only {
-  @include hide;
-}
