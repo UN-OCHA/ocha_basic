@@ -9,8 +9,8 @@
 .cd-mandate__logo {
   background: url('../img/logos/ocha-logo-white.svg') 0 center no-repeat;
   display: block;
-  height: 33px;
-  width: 135px;
+  height: 37px;
+  width: 149px;
   margin: 0 auto;
 
   .no-svg & {
@@ -43,7 +43,7 @@
   .cd-mandate__logo {
     box-sizing: content-box;
     float: left;
-    margin: 16px $cd-container-padding 0 auto;
+    margin: 9px $cd-container-padding 0 auto;
     padding-right: $cd-container-padding;
     border-right: 1px solid $cd-border-color;
   }
