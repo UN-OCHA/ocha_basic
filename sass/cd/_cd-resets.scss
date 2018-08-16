@@ -26,6 +26,8 @@
     border-radius: 0;
     box-shadow: none;
     font-family: $cd-font;
+    @include font-size($cd-font-size-tiny);
+    font-weight: 300;
   }
 }
 
