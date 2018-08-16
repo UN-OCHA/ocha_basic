@@ -6,11 +6,11 @@
   </a>
 </li>
 <li>
-  <button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-lang-toggle">
+  <button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">
     <span class="cd-user-menu__label"><?php print $language->language; ?></span>
     <span class="icon-arrow-down" aria-hidden="true"></span>
   </button>
-  <ul class="cd-global-header__dropdown cd-dropdown cd-user-menu__dropdown" id="cd-lang-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-lang-toggle">
+  <ul class="cd-global-header__dropdown cd-dropdown cd-user-menu__dropdown" id="cd-language-dropdown" role="menu" aria-hidden="true" aria-labelledby="cd-language-toggle">
     <?php foreach($available_languages as $avail_lang): ?>
       <li>
         <a href="<?php print $avail_lang->language; ?>" class="cd-user-menu__dropdown-link <?php if ($avail_lang->language == $language->language) { print 'active'; } ?>">
