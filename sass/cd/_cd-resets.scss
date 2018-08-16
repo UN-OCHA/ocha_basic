@@ -7,17 +7,16 @@
   // Setup font
   font-family: $cd-font;
   @include font-size($cd-font-size-tiny);
+  font-weight: 300;
 
   // Set box-sizing
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
 
   // box-sizing on all child elements
   *,
   *::before,
   *::after {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
   }
 
   // Reset button styles.
