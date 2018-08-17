@@ -19,19 +19,20 @@
 }
 
 .cd-mandate__heading,
+.cd-mandate__logo,
 .cd-mandate__text {
   display: block;
   margin-bottom: 16px;
 }
 
 .cd-mandate__heading {
-  padding: 16px $cd-container-padding;
+  padding: 0 $cd-container-padding;
 }
 
 .cd-mandate__text {
   padding: 0 $cd-container-padding;
   max-width: 540px;
-  margin: 0 auto 1em;
+  margin: 0 auto;
 }
 
 @include desktop {
