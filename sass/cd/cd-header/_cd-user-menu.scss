@@ -83,9 +83,9 @@ button.cd-user-menu__item {
 
   .icon-arrow-down {
     position: absolute;
-    margin-top: -6px;
     right: 12px;
     top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -206,12 +206,12 @@ button.cd-user-menu__item {
 }
 
 // Language switcher button
-#cd-lang-toggle {
+#cd-language-toggle {
   .cd-user-menu__label {
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
 }
-#cd-lang-dropdown {
+#cd-language-dropdown {
   .cd-user-menu__dropdown-link {
     &::after {
       content: none;
