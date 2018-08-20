@@ -20,14 +20,15 @@
 }
 
 .cd-footer-menu__item {
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 12px;
 
   @include tablet {
     display: inline-block;
-    margin: 0 16px 8px;
+    margin-right: 16px;
   }
   @include desktop {
-    margin: 0 35px 8px 0;
+    margin-right: 32px;
   }
 }
 
