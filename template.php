@@ -98,11 +98,39 @@ function ocha_basic_preprocess_html(&$vars) {
  * Implements template_preprocess_page().
  */
 function ocha_basic_preprocess_page(&$vars) {
-  // Assemble list of active languages in this installation.
-  $lang_list = language_list('enabled');
-  foreach($lang_list['1'] as $avail_lang) {
-    $vars['available_languages'][] = $avail_lang;
+  // Bail out if function is not available.
+  if (!function_exists('language_negotiation_get_switch_links')) {
+    return;
   }
+
+  // Add language links.
+  global $language;
+  $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
+  $links = language_negotiation_get_switch_links('language', $path);
+  $render = array(
+    'links' => $links->links,
+    'attributes' => array(
+      'class' => [
+        'cd-global-header__dropdown',
+        'cd-dropdown',
+        'cd-user-menu__dropdown',
+      ],
+      'role' => 'menu',
+      'id' => 'cd-language',
+      'aria-labelledby' => 'cd-language-toggle',
+    ),
+  );
+
+  $output = '';
+  $output .= '<div class="language-switcher">';
+  $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">';
+  $output .= $language->language;
+  $output .= '<i class="icon-arrow-down" aria-hidden="true"></i>';
+  $output .= '</button>';
+  $output .= theme('links__locale_block', $render);
+  $output .= '</div>';
+
+  $vars['page']['language_switcher'] = $output;
 }
 
 
