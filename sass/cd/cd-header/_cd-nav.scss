@@ -16,12 +16,15 @@
   border-left: 1px solid $cd-border-color;
   border-right: 1px solid $cd-border-color;
   @include font-size($cd-font-size-small);
-  font-weight: bold;
   color: $cd-default-text-color;
   height: $cd-site-header-height;
   padding: 0 20px;
   text-transform: uppercase;
   transition: background 0.3s ease;
+
+  .cd-site-header__nav-label {
+    font-weight: 600;
+  }
 
   .icon-arrow-down {
     margin-left: 2px;
