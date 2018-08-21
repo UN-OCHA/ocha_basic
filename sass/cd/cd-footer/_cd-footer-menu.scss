@@ -42,12 +42,12 @@
   @extend .element-invisible;
 }
 
-// Apply Menu container styles to Drupal Menu
+// Apply menu container styles to Drupal Menu
 .region-footer-navigation .menu {
   @extend .cd-footer-menu;
 }
 
-// Apple Menu item styles to Drpual Menu items
+// Apply menu item styles to Drupal Menu items
 .region-footer-navigation .menu > li {
   @extend .cd-footer-menu__item;
 }
