@@ -57,6 +57,21 @@
   padding: 0 4px 0 0;
 }
 
+.cd-search_btn svg {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  fill: $cd-blue-text-color;
+  stroke: $cd-blue-text-color;
+  padding: 0 4px 0 0;
+
+  &:hover,
+  &:focus {
+    fill: $cd-highlight-red;
+    stroke: $cd-highlight-red;
+  }
+}
+
 .cd-search_btn-text {
   font-size: 12px;
   font-weight: bold;
