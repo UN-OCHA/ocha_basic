@@ -39,7 +39,6 @@
 
 .cd-sites-btn__label {
   @include hide;
-  border-bottom: 1px solid transparent;
 }
 
 .cd-sites-dropdown {
@@ -88,7 +87,7 @@
   &:hover,
   &:focus {
     .cd-sites-dropdown__link-label {
-      border-color: $cd-bright-border-color;
+      text-decoration: underline;
     }
   }
 }
@@ -158,7 +157,7 @@
     &:hover,
     &:focus {
       .cd-sites-btn__label {
-        border-bottom: 1px solid $cd-bright-border-color;
+        text-decoration: underline;
       }
     }
   }
