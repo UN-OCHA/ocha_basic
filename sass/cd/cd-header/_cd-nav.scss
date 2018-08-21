@@ -28,6 +28,11 @@
     color: $cd-highlight-red;
   }
 
+  .arrow-down {
+    margin-left: 2px;
+    fill: $cd-highlight-red;
+  }
+
   .open & {
     position: relative;
     z-index: 101;
