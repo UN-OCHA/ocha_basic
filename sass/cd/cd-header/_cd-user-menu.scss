@@ -184,11 +184,18 @@
     position: relative;
 
     &:after {
-      color: $cd-bright-blue-text-color;
-      content: "\e944";
-      font-family: 'unocha-icons';
+      //color: $cd-bright-blue-text-color;
+      //content: "\e944";
+      //font-family: 'unocha-icons';
       position: absolute;
       right: 0;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-image: url(../img/icons/check.svg);
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 14px 14px;
     }
   }
 }
