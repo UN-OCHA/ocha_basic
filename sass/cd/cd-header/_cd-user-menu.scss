@@ -70,10 +70,10 @@
 // Log in / Log out menu item, based on placement.
 .cd-user-menu > li:last-child {
   a {
-    padding: 0 12px 0 20px;
+    padding: 0 12px 0 26px;
 
     @include tablet {
-      padding: 0 20px 0 28px;
+      padding: 0 20px 0 34px;
     }
   }
   &:before {
@@ -81,14 +81,14 @@
     content: "";
     height: $cd-global-header-height;
     width: 14px;
-    left: 3px;
+    left: 7px;
     background-image: url(../img/icons/user.svg);
     background-repeat: no-repeat;
     background-position: 0 46%;
     background-size: 14px 14px;
 
     @include tablet {
-      left: 9px;
+      left: 11px;
     }
   }
 }

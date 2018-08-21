@@ -10,6 +10,9 @@
 #cd-language-toggle {
   font-weight: 600;
   padding-right: 14px;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
 
   // Lanaguage switcher is always on the far edge of the global header.
   // Cancel the border that we render for other elements.
@@ -29,6 +32,16 @@
     padding-right: 30px;
 
     .icon-arrow-down {
+      right: 16px;
+    }
+  }
+
+  // Place toggle indicator on edge of Global Header
+  .arrow-down {
+    position: absolute;
+    right: 0;
+
+    @include tablet {
       right: 16px;
     }
   }
