@@ -9,11 +9,10 @@
 // Language switcher button
 #cd-language-toggle {
   font-weight: 600;
-
-  // Lanaguage switcher is always on the far edge of the global header. Cancel
-  // out the padding/border that we render for other elements.
   padding-right: 14px;
 
+  // Lanaguage switcher is always on the far edge of the global header.
+  // Cancel the border that we render for other elements.
   &::after {
     content: none;
   }
@@ -24,6 +23,14 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  @include tablet {
+    padding-right: 30px;
+
+    .icon-arrow-down {
+      right: 16px;
+    }
   }
 }
 
@@ -49,7 +56,7 @@
   right: $cd-container-padding;
 
   @include xl {
-    right: 44px;
+    right: 50px;
   }
 
   li a {

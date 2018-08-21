@@ -47,6 +47,11 @@
   transition: background 0.3s ease;
   white-space: nowrap;
 
+  @include tablet {
+    max-width: none;
+    padding: 0 16px;
+  }
+
   &:after {
     color: $cd-light-blue-border-color;
     content: '|';
@@ -134,33 +139,9 @@
       right: 0;
     }
   }
-
-  &:hover,
-  &:focus {
-    .cd-user-menu__dropdown-link-label {
-      border-color: $cd-bright-border-color;
-    }
-  }
-}
-
-.cd-user-menu__dropdown-link-label {
-  border-bottom: 1px solid transparent;
 }
 
 @include tablet {
-  .cd-user-menu__item {
-    max-width: none;
-    padding: 0 16px;
-  }
-
-  button.cd-user-menu__item {
-    padding-right: 30px;
-
-    .icon-arrow-down {
-      right: 16px;
-    }
-  }
-
   .cd-user-menu__item--small {
     max-width: 70px;
 
@@ -170,7 +151,6 @@
   }
 
   .cd-user-menu__item--mobile-icon {
-
     .cd-user-menu__icon {
       border-bottom: 0;
     }
