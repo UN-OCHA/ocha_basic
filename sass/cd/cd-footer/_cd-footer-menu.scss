@@ -25,10 +25,10 @@
 
   @include tablet {
     display: inline-block;
-    margin-right: 16px;
+    margin: 0 8px;
   }
   @include desktop {
-    margin-right: 32px;
+    margin: 0 32px 0 0;
   }
 }
 
