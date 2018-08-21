@@ -21,6 +21,36 @@
   padding: 0 20px;
   transition: background 0.3s ease;
 
+  svg {
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    fill: $cd-blue-text-color;
+    stroke: $cd-blue-text-color;
+    padding: 0 4px 0 0;
+  }
+
+  &:hover,
+  &:focus {
+    background: $cd-white-bg-color;
+    outline: none;
+    color: $cd-bright-blue-text-color;
+
+    svg {
+      fill: $cd-bright-blue-text-color;
+      stroke: $cd-bright-blue-text-color;
+    }
+  }
+
+  &:focus {
+    color: $cd-highlight-red;
+
+    svg {
+      fill: $cd-highlight-red;
+      stroke: $cd-highlight-red;
+    }
+  }
+
   .open & {
     color: $cd-highlight-red;
     position: relative;
@@ -37,17 +67,18 @@
       left: 50%;
       margin-left: -6px;
     }
-  }
 
-  &:hover,
-  &:focus {
-    background: $cd-white-bg-color;
-    outline: none;
-    color: $cd-bright-blue-text-color;
-  }
+    svg {
+      fill: $cd-highlight-red;
+      stroke: $cd-highlight-red;
+    }
 
-  &:focus {
-    color: $cd-highlight-red;
+    &:hover,
+    &:focus {
+      background: $cd-white-bg-color;
+      outline: none;
+      color: $cd-bright-blue-text-color;
+    }
   }
 }
 
@@ -55,21 +86,6 @@
   font-size: 24px;
   font-weight: bold;
   padding: 0 4px 0 0;
-}
-
-.cd-search_btn svg {
-  box-sizing: content-box;
-  width: 20px;
-  height: 20px;
-  fill: $cd-blue-text-color;
-  stroke: $cd-blue-text-color;
-  padding: 0 4px 0 0;
-
-  &:hover,
-  &:focus {
-    fill: $cd-highlight-red;
-    stroke: $cd-highlight-red;
-  }
 }
 
 .cd-search_btn-text {
@@ -108,10 +124,14 @@
   box-shadow: none;
   color: $cd-default-text-color;
   @include font-size($cd-font-size-base);
-  height: $cd-site-header-height;
-  height: calc(#{$cd-site-header-height} - 16px); //padding
+  height: calc(#{$cd-site-header-height} - 16px); //Padding.
   padding: 0 45px 0 25px;
   width: 100%;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 4px rgba($cd-mid-grey, 0.7);
+  }
 }
 
 .cd-search__input::-webkit-input-placeholder {
@@ -155,6 +175,15 @@
   .icon-search {
     font-size: 24px;
     font-weight: bold;
+    padding: 0 10px;
+  }
+
+  svg {
+    box-sizing: content-box;
+    width: 24px;
+    height: 24px;
+    fill: $cd-white-text-color;
+    stroke: $cd-white-text-color;
     padding: 0 10px;
   }
 
