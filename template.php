@@ -122,7 +122,7 @@ function ocha_basic_preprocess_page(&$vars) {
   );
 
   $output = '';
-  $output .= '<div class="language-switcher">';
+  $output .= '<div class="cd-language-switcher">';
   $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">';
   $output .= $language->language;
   $output .= '<i class="icon-arrow-down" aria-hidden="true"></i>';
