@@ -12,7 +12,6 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 .cd-user-menu {
-  float: right;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -20,21 +19,19 @@
   li {
     float: left;
     position: relative;
+  }
 
-    &:last-child {
-      li,
-      .cd-user-menu__item {
-        padding-right: 0;
+  &--no-language-switcher {
+    li.last a {
+      padding-right: 0;
 
-        &:after {
-          content: none;
-        }
+      &:after {
+        content: none;
       }
     }
   }
 }
 
-.cd-user-menu > li a,
 .cd-user-menu__item {
   background: transparent;
   color: $cd-white-text-color;
@@ -50,6 +47,11 @@
   transition: background 0.3s ease;
   white-space: nowrap;
 
+  @include tablet {
+    max-width: none;
+    padding: 0 20px;
+  }
+
   &:after {
     color: $cd-light-blue-border-color;
     content: '|';
@@ -60,32 +62,14 @@
 
   &:hover,
   &:focus {
-    .cd-user-menu__label {
-      border-color: $cd-bright-border-color;
-    }
-  }
-
-  &:focus {
-    outline: 0; // outline is replaced by bright underline.
+    text-decoration: underline;
+    outline: 0; // outline is replaced by text-decoration
   }
 }
 
 .cd-user-menu__label {
-
   .cd-user-menu__item--small & {
     max-width: 60px;
-  }
-}
-
-// button menu items have extra padding to allow space for the arrow icon.
-button.cd-user-menu__item {
-  padding-right: 26px;
-
-  .icon-arrow-down {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
 
@@ -118,13 +102,12 @@ button.cd-user-menu__item {
 }
 
 
-.cd-user-menu__dropdown  {
-  left: auto;
-  right: 0;
+.cd-user-menu__dropdown {
   list-style: none;
   margin: 0;
   width: 125px;
   padding: 12px 24px;
+  left: auto;
 
   li {
     display: block;
@@ -132,9 +115,6 @@ button.cd-user-menu__item {
   }
 
   .cd-user-menu__item--small + & {
-    left: -35px;
-    right: auto;
-
     &:before {
       left: 55px;
     }
@@ -159,33 +139,9 @@ button.cd-user-menu__item {
       right: 0;
     }
   }
-
-  &:hover,
-  &:focus {
-    .cd-user-menu__dropdown-link-label {
-      border-color: $cd-bright-border-color;
-    }
-  }
-}
-
-.cd-user-menu__dropdown-link-label {
-  border-bottom: 1px solid transparent;
 }
 
 @include tablet {
-  .cd-user-menu__item {
-    max-width: none;
-    padding: 0 16px;
-  }
-
-  button.cd-user-menu__item {
-    padding-right: 30px;
-
-    .icon-arrow-down {
-      right: 16px;
-    }
-  }
-
   .cd-user-menu__item--small {
     max-width: 70px;
 
@@ -195,7 +151,6 @@ button.cd-user-menu__item {
   }
 
   .cd-user-menu__item--mobile-icon {
-
     .cd-user-menu__icon {
       border-bottom: 0;
     }
@@ -205,23 +160,25 @@ button.cd-user-menu__item {
   }
 }
 
-// Language switcher button
-#cd-language-toggle {
-  .cd-user-menu__label {
-    text-transform: lowercase;
-  }
+
+//——————————————————————————————————————————————————————————————————————————————
+// Drupal selectors
+//——————————————————————————————————————————————————————————————————————————————
+
+// Hide default block titles
+.region-header-top .block-locale h2,
+.region-header-top .block-menu h2 {
+  @extend .element-invisible;
 }
-#cd-language-dropdown {
-  .cd-user-menu__dropdown-link {
-    &::after {
-      content: none;
-    }
-    &.active::after {
-      color: $cd-bright-blue-text-color;
-      content: '\e944';
-      font-family: 'unocha-icons';
-      position: absolute;
-      right: 0;
-    }
-  }
+
+.region-header-top .menu {
+  @extend .cd-user-menu;
+
+  // If there's no language switcher in the Global Header, uncomment this line
+  // to apply special treatment to the last link in the list.
+  // @extend .cd-user-menu--no-language-switcher;
+}
+
+.region-header-top .menu > li a {
+  @extend .cd-user-menu__item;
 }

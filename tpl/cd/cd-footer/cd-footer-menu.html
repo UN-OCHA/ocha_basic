@@ -6,16 +6,6 @@
  */
 ?>
 
-<?php print render($page['footer_navigation']); ?>
-
-<?php if ($secondary_menu): ?>
-  <?php print theme('links__menu_footer_menu',
-    array(
-      'links' => menu_navigation_links('menu-footer-menu'),
-      'attributes' => array(
-        'id' => 'footer-menu',
-        'class' => array('cd-footer-menu cd-footer__section'),
-      ),
-    )
-  ); ?>
-<?php endif; ?>
+<div class="cd-footer-menu cd-footer__section">
+  <?php print render($page['footer_navigation']); ?>
+</div>
