@@ -107,6 +107,12 @@ function ocha_basic_preprocess_page(&$vars) {
   global $language;
   $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
   $links = language_negotiation_get_switch_links('language', $path);
+
+  // Bail out if links is not enumerable
+  if (!$links) {
+    return;
+  }
+
   $render = array(
     'links' => $links->links,
     'attributes' => array(
