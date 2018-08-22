@@ -67,34 +67,9 @@
   }
 }
 
-// Placeholder menu item with + icon, based on placement
-//.logged-in .cd-user-menu > li:first-child {
-//  a {
-//    padding: 0 12px 0 26px;
-//
-//    @include tablet {
-//      padding: 0 20px 0 34px;
-//    }
-//  }
-//  &:before {
-//    position: absolute;
-//    content: "";
-//    height: $cd-global-header-height;
-//    width: 14px;
-//    left: 7px;
-//    background-image: url(../img/icons/plus.svg);
-//    background-repeat: no-repeat;
-//    background-position: 0 46%;
-//    background-size: 14px 14px;
-//
-//    @include tablet {
-//      left: 11px;
-//    }
-//  }
-//}
-
-// Log in / Log out menu item, based on placement.
-.cd-user-menu > li:last-child {
+// Menu item with icon
+[class^="cd-user-menu__icon-"],
+[class*="icon-"] {
   a {
     padding: 0 12px 0 26px;
 
@@ -108,7 +83,6 @@
     height: $cd-global-header-height;
     width: 14px;
     left: 7px;
-    background-image: url(../img/icons/user.svg);
     background-repeat: no-repeat;
     background-position: 0 46%;
     background-size: 14px 14px;
@@ -116,6 +90,20 @@
     @include tablet {
       left: 11px;
     }
+  }
+}
+
+// Menu item with plus icon
+.cd-user-menu__icon-plus {
+  &:before {
+    background-image: url(../img/icons/plus.svg);
+  }
+}
+
+// Menu item with user icon
+.cd-user-menu__icon-login {
+  &:before {
+    background-image: url(../img/icons/user.svg);
   }
 }
 
@@ -184,9 +172,6 @@
     position: relative;
 
     &:after {
-      //color: $cd-bright-blue-text-color;
-      //content: "\e944";
-      //font-family: 'unocha-icons';
       position: absolute;
       right: 0;
       content: "";
@@ -240,4 +225,14 @@
 
 .region-header-top .menu > li a {
   @extend .cd-user-menu__item;
+}
+
+// Login/Logout item as last item in user menu
+.region-header-top .menu > li:last-child {
+  @extend .cd-user-menu__icon-login;
+}
+
+// Add content menu item as first item in user menu
+.logged-in .region-header-top .menu > li:first-child {
+  @extend .cd-user-menu__icon-plus;
 }
