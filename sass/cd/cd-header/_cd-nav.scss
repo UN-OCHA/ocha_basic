@@ -26,11 +26,6 @@
     font-weight: 600;
   }
 
-  .icon-arrow-down {
-    margin-left: 2px;
-    color: $cd-highlight-red;
-  }
-
   .arrow-down {
     margin-left: 2px;
     fill: $cd-highlight-red;
@@ -129,11 +124,6 @@
     &:before {
       background: $cd-highlight-red;
     }
-  }
-
-  .icon-arrow-down {
-    margin-left: 2px;
-    color: $cd-highlight-red;
   }
 }
 
