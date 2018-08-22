@@ -143,6 +143,7 @@ ul.cd-nav__child-nav {
 
   a,
   button {
+    display: flex;
     color: $cd-dark-text-color;
     font-weight: 600;
 
