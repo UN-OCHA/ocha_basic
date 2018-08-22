@@ -26,10 +26,8 @@ svg.arrow-down {
 }
 
 .open {
-  & > [data-toggle="dropdown"] {
-    & > svg.arrow-down {
-      transform: rotate(180deg);
-    }
+  [data-toggle="dropdown"] > svg.arrow-down {
+    transform: rotate(180deg);
   }
 }
 
