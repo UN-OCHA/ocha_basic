@@ -40,6 +40,7 @@
   .arrow-down {
     position: absolute;
     right: 0;
+    min-height: 100%; // IE11 fix.
 
     @include tablet {
       right: 16px;
