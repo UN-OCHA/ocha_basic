@@ -57,9 +57,6 @@
     }
 
     &.active::after {
-      //color: $cd-bright-blue-text-color;
-      //content: '\e944';
-      //font-family: 'unocha-icons';
       position: absolute;
       right: 0;
       content: "";
