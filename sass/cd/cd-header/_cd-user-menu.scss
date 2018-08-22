@@ -3,12 +3,6 @@
 //
 // Includes user-centered settings and/or actions.
 //
-// Notes:
-// - menu items can be links or buttons with dropdowns
-// - dropdown menu items can be given the class .cd-user-menu__item--small to
-//   restrict their width and centre the dropdown
-// - add class .cd-user-menu__item--mobile-icon to menu items to only show the
-//   icon on mobile.
 //——————————————————————————————————————————————————————————————————————————————
 
 .cd-user-menu {
@@ -67,7 +61,7 @@
   }
 }
 
-// Menu item with icon
+// Menu list item with icon
 .cd-user-menu__icon {
   a {
     padding: 0 12px 0 26px;
@@ -114,34 +108,9 @@
   }
 }
 
-// Only icon shows on mobile
-.cd-user-menu__item--mobile-icon {
-
-  .cd-user-menu__label {
-    @include hide;
-  }
-
-  .cd-user-menu__icon {
-    border-bottom: 1px solid transparent;
-  }
-
-  &:hover,
-  &:focus {
-    .cd-user-menu__icon {
-      border-color: $cd-bright-border-color;
-    }
-  }
-}
-
 .cd-user-menu__label {
   border-bottom: 1px solid transparent;
 }
-
-.cd-user-menu__icon {
-  font-size: 14px;
-  vertical-align: text-top;
-}
-
 
 .cd-user-menu__dropdown {
   list-style: none;
@@ -192,15 +161,6 @@
 
     .cd-user-menu__dropdown {
       left: 30px;
-    }
-  }
-
-  .cd-user-menu__item--mobile-icon {
-    .cd-user-menu__icon {
-      border-bottom: 0;
-    }
-    .cd-user-menu__label {
-      @include unhide;
     }
   }
 }
