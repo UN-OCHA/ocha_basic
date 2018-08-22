@@ -1,0 +1,134 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Sites Menu ('OCHA Services')
+//——————————————————————————————————————————————————————————————————————————————
+
+.cd-ocha {
+  float: left;
+}
+
+.cd-ocha-btn {
+  align-items: center;
+  background: transparent;
+  color: $cd-white-text-color;
+  display: flex;
+  @include font-size($cd-font-size-tiny);
+  height: $cd-global-header-height;
+  padding: 0;
+  position: relative;
+  transition: background 0.3s ease;
+
+  &:focus {
+    outline: 0; // outline is replaced by bright underline.
+  }
+
+  @include tablet {
+    display: flex;
+    width: auto;
+
+    &:hover,
+    &:focus {
+      .cd-ocha-btn__label {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.cd-ocha-btn__logo {
+  background: url('../img/logos/ocha-logo-white.svg') center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  flex-shrink: 0;
+  height: 18px;
+  margin-right: 4px;
+  width: 21px;
+}
+
+.cd-ocha-btn__label {
+  @include max-width(md) {
+    @include hide;
+  }
+}
+
+.cd-ocha-dropdown {
+  padding: 22px 0;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.cd-ocha-dropdown__inner {
+  padding: 0 $cd-container-padding;
+  max-width: $cd-max-width;
+
+  @include tablet {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 12px 2fr 12px 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 12px;
+    margin: 0 auto;
+    padding: 0 $cd-container-padding-tablet;
+  }
+  @include xlarge {
+    -ms-grid-columns: 1fr 120px 2fr 120px 1fr;
+    grid-gap: 120px;
+    padding: 0 $cd-container-padding-xlarge;
+  }
+}
+
+.cd-ocha-dropdown__section {
+  @include clearfix;
+  margin-bottom: $cd-base-unit;
+  position: relative; // to position see-all
+}
+
+.cd-ocha-dropdown__heading {
+  margin: 0 0 10px 0;
+  padding-bottom: 2px;
+}
+
+.cd-ocha-dropdown__link {
+  display: block;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  padding: 0;
+
+  a {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      border-color: $cd-light-blue-border-color;
+    }
+  }
+
+  .cd-ocha-dropdown__section--2x & {
+    float: left;
+    width: 50%;
+    min-width: 168px;
+  }
+}
+
+// @TODO: remove generic `a` selector that requires the tag-based override.
+a.cd-ocha-dropdown__see-all {
+  display: block;
+  @include font-size($cd-font-size-small);
+  padding: 12px;
+  background: $cd-bright-blue;
+  color: $cd-dark-blue;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include tablet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
