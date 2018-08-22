@@ -84,6 +84,17 @@
   @include clearfix;
   margin-bottom: $cd-base-unit;
   position: relative; // to position see-all
+
+  &:nth-child(1) {
+    -ms-grid-column: 1;
+  }
+  &:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+  }
+  &:nth-child(3) {
+    -ms-grid-column: 4;
+  }
 }
 
 .cd-ocha-dropdown__heading {
@@ -130,5 +141,6 @@ a.cd-ocha-dropdown__see-all {
     bottom: 0;
     left: 0;
     right: 0;
+    min-width: 180px; // IE11 couldn't handle pos:abs inside a grid-area
   }
 }
