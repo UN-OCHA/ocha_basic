@@ -35,7 +35,10 @@
   }
 }
 
-.cd-footer-copyright__link {
+// To override `.cd-footer a` we must use tag in selector
+a.cd-footer-copyright__link {
+  border-bottom: 0;
+
   &:hover {
     border-bottom: 0;
   }
