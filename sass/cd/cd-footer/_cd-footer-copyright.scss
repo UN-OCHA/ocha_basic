@@ -23,6 +23,13 @@
   margin: 0 auto 0 auto;
 }
 
+.cd-footer-copyright svg {
+  margin: 0 auto;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+}
+
 .cd-footer-copyright__message {
   align-items: center;
   display: flex;
@@ -54,7 +61,7 @@
     flex-shrink: 1;
   }
 
-  .cd-footer-copyright__icon {
+  .cd-footer-copyright svg {
     margin: 0 0 0 20px;
   }
 }
