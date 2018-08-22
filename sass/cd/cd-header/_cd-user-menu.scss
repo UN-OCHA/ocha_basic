@@ -68,8 +68,7 @@
 }
 
 // Menu item with icon
-[class^="cd-user-menu__icon-"],
-[class*="icon-"] {
+.cd-user-menu__icon {
   a {
     padding: 0 12px 0 26px;
 
@@ -95,6 +94,7 @@
 
 // Menu item with plus icon
 .cd-user-menu__icon-plus {
+  @extend .cd-user-menu__icon;
   &:before {
     background-image: url(../img/icons/plus.svg);
   }
@@ -102,6 +102,7 @@
 
 // Menu item with user icon
 .cd-user-menu__icon-login {
+  @extend .cd-user-menu__icon;
   &:before {
     background-image: url(../img/icons/user.svg);
   }
@@ -233,6 +234,6 @@
 }
 
 // Add content menu item as first item in user menu
-.logged-in .region-header-top .menu > li:first-child {
-  @extend .cd-user-menu__icon-plus;
-}
+//.logged-in .region-header-top .menu > li:first-child {
+//  @extend .cd-user-menu__icon-plus;
+//}
