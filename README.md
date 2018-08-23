@@ -6,7 +6,7 @@ A minimal starter theme for OCHA sites.
 
 * Common Header
 * Common Footer
-* Common Icons
+* Common SVG Icons
 * Variables for breakpoints, colours, font-sizes, fonts, measurements and z-index
 * Mixins for clearfix, REM font sizes and media queries
 * Bootstrap dropdowns (requires jQuery 1.9.1 or higher)
@@ -57,9 +57,11 @@ Javascript files should be added to `js/` and to the scripts section of `ocha_ba
 
 ## Icons
 
-This site uses a subset of the OCHA icon set as an icon font.
+This site uses a subset of the OCHA icon set as SVG icons. There are two techniques used, depending on context. 
+1. Inline SVGs direct in markup with associated CSS rules to control dimension and fill
+2. SVG as a background-image value where the fill is added as an attribute in the SVG file.
 
-Follow the instructions at https://un-ocha.github.io/styleguide/icons/ to add more icons to the set.
+For legacy information about UNOCHA fonticons, see https://un-ocha.github.io/styleguide/icons
 
 ## Logo
 

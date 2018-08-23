@@ -16,16 +16,19 @@
   border-left: 1px solid $cd-border-color;
   border-right: 1px solid $cd-border-color;
   @include font-size($cd-font-size-small);
-  font-weight: bold;
   color: $cd-default-text-color;
   height: $cd-site-header-height;
   padding: 0 20px;
   text-transform: uppercase;
   transition: background 0.3s ease;
 
-  .icon-arrow-down {
+  .cd-site-header__nav-label {
+    font-weight: 600;
+  }
+
+  .arrow-down {
     margin-left: 2px;
-    color: $cd-highlight-red;
+    fill: $cd-highlight-red;
   }
 
   .open & {
@@ -78,7 +81,7 @@
   a,
   button {
     color: $cd-default-text-color;
-    display: block;
+    display: flex;
     padding: 15px 30px;
     text-decoration: none;
 
@@ -122,11 +125,6 @@
       background: $cd-highlight-red;
     }
   }
-
-  .icon-arrow-down {
-    margin-left: 2px;
-    color: $cd-highlight-red;
-  }
 }
 
 .cd-nav > ul > li > ul,
@@ -135,6 +133,7 @@ ul.cd-nav__child-nav {
 
   a,
   button {
+    display: flex;
     color: $cd-dark-text-color;
     font-weight: 600;
 

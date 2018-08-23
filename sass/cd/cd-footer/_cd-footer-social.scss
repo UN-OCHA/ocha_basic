@@ -3,23 +3,27 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 a.cd-footer-social__link {
-  background: transparent;
-  border: 1px solid $cd-white-border;
-  border-radius: 100%;
+  border: 0 none;
   display: inline-block;
-  font-size: 25px;
-  height: 26px;
-  line-height: 0;
   margin: 0 10px;
-  position: relative;
-  transition: background 0.3s ease;
-  width: 26px;
+
+  svg {
+    height: 26px;
+    width: 26px;
+    fill: $cd-white;
+    &.hover-style {
+      display: none;
+    }
+  }
 
   &:hover,
   &:focus {
-    background: $cd-white-bg-color;
-    border-color: $cd-white-border;
-    color: $cd-blue-text-color;
+    svg {
+      display: none;
+    }
+    .hover-style {
+      display: inline-block;
+    }
   }
 }
 

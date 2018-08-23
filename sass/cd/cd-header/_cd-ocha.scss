@@ -32,6 +32,12 @@
       }
     }
   }
+
+  .arrow-down {
+    @include tablet {
+      margin-left: 2px;
+    }
+  }
 }
 
 .cd-ocha-btn__logo {

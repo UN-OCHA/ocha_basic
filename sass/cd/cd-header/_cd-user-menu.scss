@@ -3,12 +3,6 @@
 //
 // Includes user-centered settings and/or actions.
 //
-// Notes:
-// - menu items can be links or buttons with dropdowns
-// - dropdown menu items can be given the class .cd-user-menu__item--small to
-//   restrict their width and centre the dropdown
-// - add class .cd-user-menu__item--mobile-icon to menu items to only show the
-//   icon on mobile.
 //——————————————————————————————————————————————————————————————————————————————
 
 .cd-user-menu {
@@ -67,40 +61,56 @@
   }
 }
 
+// Menu list item with icon
+.cd-user-menu__icon {
+  a {
+    padding: 0 12px 0 26px;
+
+    @include tablet {
+      padding: 0 20px 0 34px;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    height: $cd-global-header-height;
+    width: 14px;
+    left: 7px;
+    background-repeat: no-repeat;
+    background-position: 0 46%;
+    background-size: 14px 14px;
+
+    @include tablet {
+      left: 11px;
+    }
+  }
+}
+
+// Menu item with plus icon
+.cd-user-menu__icon-plus {
+  @extend .cd-user-menu__icon;
+  &:before {
+    background-image: url(../img/icons/plus.svg);
+  }
+}
+
+// Menu item with user icon
+.cd-user-menu__icon-login {
+  @extend .cd-user-menu__icon;
+  &:before {
+    background-image: url(../img/icons/user.svg);
+  }
+}
+
 .cd-user-menu__label {
   .cd-user-menu__item--small & {
     max-width: 60px;
   }
 }
 
-// Only icon shows on mobile
-.cd-user-menu__item--mobile-icon {
-
-  .cd-user-menu__label {
-    @include hide;
-  }
-
-  .cd-user-menu__icon {
-    border-bottom: 1px solid transparent;
-  }
-
-  &:hover,
-  &:focus {
-    .cd-user-menu__icon {
-      border-color: $cd-bright-border-color;
-    }
-  }
-}
-
 .cd-user-menu__label {
   border-bottom: 1px solid transparent;
 }
-
-.cd-user-menu__icon {
-  font-size: 14px;
-  vertical-align: text-top;
-}
-
 
 .cd-user-menu__dropdown {
   list-style: none;
@@ -132,11 +142,15 @@
     position: relative;
 
     &:after {
-      color: $cd-bright-blue-text-color;
-      content: "\e944";
-      font-family: 'unocha-icons';
       position: absolute;
       right: 0;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-image: url(../img/icons/check.svg);
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 14px 14px;
     }
   }
 }
@@ -147,15 +161,6 @@
 
     .cd-user-menu__dropdown {
       left: 30px;
-    }
-  }
-
-  .cd-user-menu__item--mobile-icon {
-    .cd-user-menu__icon {
-      border-bottom: 0;
-    }
-    .cd-user-menu__label {
-      @include unhide;
     }
   }
 }
@@ -182,3 +187,13 @@
 .region-header-top .menu > li a {
   @extend .cd-user-menu__item;
 }
+
+// Login/Logout item as last item in user menu
+.region-header-top .menu > li:last-child {
+  @extend .cd-user-menu__icon-login;
+}
+
+// Add content menu item as first item in user menu
+//.logged-in .region-header-top .menu > li:first-child {
+//  @extend .cd-user-menu__icon-plus;
+//}

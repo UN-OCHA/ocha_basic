@@ -9,13 +9,15 @@
   }
 }
 
+svg.arrow-down {
+  width: 12px;
+  height: 12px;
+  fill: $cd-white;
+}
+
 .open {
-  & > [data-toggle="dropdown"] {
-    & > .icon-arrow-down {
-      &:before {
-        content: "\e957"
-      }
-    }
+  [data-toggle="dropdown"] > svg.arrow-down {
+    transform: rotate(180deg);
   }
 }
 

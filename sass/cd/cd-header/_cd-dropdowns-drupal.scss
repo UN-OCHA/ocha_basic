@@ -5,34 +5,48 @@
   .expanded {
 
     // Hide child nav.
-    & > ul {
+    > ul {
       display: none;
     }
 
     // Add down arrow.
-    & > a {
+    > a {
       position: relative;
       &:after {
-        margin-left: 2px;
-        color: #EB5C6D;
-        content: '\e958';
-        display: inline-block;
-        font-family: 'unocha-icons';
+        position: relative;
+        content: "";
+        height: 12px;
+        width: 12px;
         margin-left: 4px;
+        background-image: url(../img/icons/arrow-down--highlight-red.svg);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        background-size: 12px 12px;
+      }
+    }
+    // IE11 specific styles.
+    @media all and (-ms-high-contrast:none) {
+      > a {
+        padding-right: 24px;
+        &:after {
+          position: absolute;
+          right: 10px;
+          margin-left: 0;
+        }
       }
     }
 
     &.open {
 
-      & > ul {
+      > ul {
         display: block;
         z-index: map-get($zindex, dropdown);
       }
 
       // Change to up arrow.
-      & > a {
+      > a {
         &:after {
-          content: '\e957';
+          background-image: url(../img/icons/arrow-up--highlight-red.svg);
         }
       }
     }

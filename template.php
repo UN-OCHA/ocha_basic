@@ -16,9 +16,10 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['placeholder'] = t('What are you looking for?');
     $form['search_block_form']['#attributes']['autocomplete'][] = 'off';
     $form['search_block_form']['#attributes']['class'][] = 'cd-search__input';
+    $form['search_block_form']['#attributes']['id'][] = 'cd-search';
     $form['actions']['submit'] = array(
       '#type' => 'submit',
-      '#prefix' => '<button type="submit" id="edit-submit" name="op" class="cd-search__submit form-submit"><span class="icon-search" aria-hidden="true"></span><span class="element-invisible">Search</span>',
+      '#prefix' => '<button type="submit" name="op" class="cd-search__submit form-submit"><svg width="34" height="34" viewBox="0 0 34 34"><title>search</title><path d="M19.427 20.427c-1.39 0.99-3.090 1.573-4.927 1.573-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5c4.694 0 8.5 3.806 8.5 8.5 0 2.347-0.951 4.472-2.49 6.010l5.997 5.997c0.275 0.275 0.268 0.716-0.008 0.992-0.278 0.278-0.72 0.28-0.992 0.008l-6.081-6.081zM14.5 21c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5v0z" stroke-width="1"></path></svg><span class="element-invisible">Search</span>',
       '#suffix' => '</button>',
       '#markup' => '',
       '#weight' => 1000,
@@ -131,7 +132,7 @@ function ocha_basic_preprocess_page(&$vars) {
   $output .= '<div class="cd-language-switcher">';
   $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">';
   $output .= $language->language;
-  $output .= '<i class="icon-arrow-down" aria-hidden="true"></i>';
+  $output .= '<svg width="32" height="32" viewBox="0 0 32 32" class="arrow-down" aria-hidden="true"><path d="M26.2 11.7c0 0.4-0.2 0.6-0.3 0.7l-8.4 8.4c-0.4 0.4-0.9 0.6-1.5 0.6s-1.1-0.2-1.5-0.6l-8.4-8.4c-0.2-0.2-0.3-0.4-0.3-0.7s0.1-0.5 0.3-0.7c0.2-0.2 0.4-0.3 0.7-0.3s0.5 0.1 0.7 0.3l8.4 8.4c0 0 0 0 0 0s0 0 0.1 0 0.1 0 0.2 0l8.3-8.4c0.4-0.4 1-0.4 1.4 0 0.1 0.1 0.3 0.3 0.3 0.7z"></path></svg>';
   $output .= '</button>';
   $output .= theme('links__locale_block', $render);
   $output .= '</div>';
