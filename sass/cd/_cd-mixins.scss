@@ -65,7 +65,7 @@
 
 @mixin max-width($breakpoint) {
   @if map-has-key($grid-breakpoints, $breakpoint) {
-    @media (max-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+    @media (max-width: #{map-get($grid-breakpoints, $breakpoint)-1}) {
       @content;
     }
   }
