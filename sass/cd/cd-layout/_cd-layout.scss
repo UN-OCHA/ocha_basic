@@ -6,7 +6,6 @@ html {
   background: $cd-site-bg-color;
   height: 100%;
   margin: 0;
-  margin-left: calc(100vw - 100%); //prevents scrollbar changing page width in IE.
 
   @include desktop {
     padding: 0 $cd-site-padding;
