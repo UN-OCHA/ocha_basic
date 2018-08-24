@@ -80,11 +80,18 @@
 
 .cd-ocha-dropdown__section {
   @include clearfix;
-  margin-bottom: $cd-base-unit;
-  position: relative; // For the see-all link
 
-  // on column layout, ensure a min-height for IE11
+  // On mobile the link sections need space.
+  margin-bottom: $cd-base-unit*3;
+
+  // For the see-all link
+  position: relative;
+
   @include tablet {
+    // remove space between sections
+    margin-bottom: 0;
+
+    // ensure a min-height for IE11
     min-height: 120px;
   }
 
@@ -149,6 +156,7 @@
 // @TODO: remove generic `a` selector that requires the tag-based override.
 a.cd-ocha-dropdown__see-all {
   display: block;
+  width: 100%;
   @include font-size($cd-font-size-small);
   font-weight: 700;
   padding: 12px;
@@ -157,7 +165,6 @@ a.cd-ocha-dropdown__see-all {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  max-width: 200px; // don't get too big on mobile.
 
   @include tablet {
     position: absolute;
