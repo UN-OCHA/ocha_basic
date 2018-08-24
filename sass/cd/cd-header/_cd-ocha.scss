@@ -59,11 +59,6 @@
 .cd-ocha-dropdown {
   padding: 22px 0;
   width: 100%;
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .cd-ocha-dropdown__inner {
@@ -71,16 +66,13 @@
   max-width: $cd-max-width;
 
   @include tablet {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 12px 2fr 12px 1fr;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 12px;
     margin: 0 auto;
     padding: 0 $cd-container-padding-tablet;
   }
   @include xlarge {
-    -ms-grid-columns: 1fr 120px 2fr 120px 1fr;
     grid-gap: 120px;
     padding: 0 $cd-container-padding-xlarge;
   }
@@ -89,23 +81,51 @@
 .cd-ocha-dropdown__section {
   @include clearfix;
   margin-bottom: $cd-base-unit;
-  position: relative; // to position see-all
+  position: relative; // For the see-all link
 
-  &:nth-child(1) {
-    -ms-grid-column: 1;
+  // on column layout, ensure a min-height for IE11
+  @include tablet {
+    min-height: 120px;
   }
+
+  // on mobile, the two middle columns should look like one list.
   &:nth-child(2) {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
+    @include max-width(md) {
+      margin-bottom: 0;
+    }
   }
-  &:nth-child(3) {
-    -ms-grid-column: 4;
+
+  //
+  // IE 11 stuff
+  //
+  .no-cssgrid & {
+    float: left;
+    width: 21.25%;
+    margin-right: 5%;
+  }
+  .no-cssgrid &:last-child {
+    margin-right: 0;
   }
 }
 
 .cd-ocha-dropdown__heading {
   margin: 0 0 10px 0;
   padding-bottom: 2px;
+
+  // there's an invisible heading in the third column to keep the links inside
+  // column 2/3 in line with each other. it's hidden on mobile.
+  .cd-ocha-dropdown__section:nth-child(3) & {
+    @include max-width(md) {
+      @include hide;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.cd-ocha-dropdown__list {
+  margin: 0;
+  padding: 0;
 }
 
 .cd-ocha-dropdown__link {
@@ -123,30 +143,25 @@
       border-color: $cd-bright-blue;
     }
   }
-
-  .cd-ocha-dropdown__section--2x & {
-    float: left;
-    width: 50%;
-    min-width: 184px;
-  }
 }
 
 // @TODO: remove generic `a` selector that requires the tag-based override.
 a.cd-ocha-dropdown__see-all {
   display: block;
   @include font-size($cd-font-size-small);
+  font-weight: 700;
   padding: 12px;
   background: $cd-bright-blue;
   color: $cd-dark-blue;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  max-width: 200px; // don't get too big on mobile.
 
   @include tablet {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    min-width: 180px; // IE11 couldn't handle pos:abs inside a grid-area
   }
 }
