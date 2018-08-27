@@ -1,9 +1,9 @@
 <?php
+
 /**
  * @file
  * Template overrides, preprocess, and alter hooks for the OCHA Basic theme.
  */
-
 
 /**
  * Implements hook_form_alter().
@@ -28,14 +28,12 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
-
 /**
  * Implements hook_preprocess_search_block_form().
  */
 function ocha_basic_preprocess_search_block_form(&$vars) {
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
-
 
 /**
  * Implements hook_preprocess_html().
@@ -94,7 +92,6 @@ function ocha_basic_preprocess_html(&$vars) {
   drupal_add_html_head($safari_pinned_tab, 'safari_pinned_tab');
 }
 
-
 /**
  * Implements template_preprocess_page().
  */
@@ -109,7 +106,7 @@ function ocha_basic_preprocess_page(&$vars) {
   $path = drupal_is_front_page() ? '<front>' : $_GET['q'];
   $links = language_negotiation_get_switch_links('language', $path);
 
-  // Bail out if links is not enumerable
+  // Bail out if links is not enumerable.
   if (!$links) {
     return;
   }
@@ -139,7 +136,6 @@ function ocha_basic_preprocess_page(&$vars) {
 
   $vars['page']['language_switcher'] = $output;
 }
-
 
 /**
  * Implements hook_pwa_manifest_alter().
