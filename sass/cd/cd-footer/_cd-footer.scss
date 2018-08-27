@@ -17,6 +17,7 @@
 
     &:hover,
     &:focus {
+      color: $cd-white;
       border-color: $cd-bright-border-color;
     }
   }
