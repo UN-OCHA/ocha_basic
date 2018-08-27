@@ -31,8 +31,10 @@ try {
   localConfig = require('./localConfig.json');
 }
 catch (err) {
-  log(c.bgRed.white('localConfig.json is missing'));
-  log(c.red('Copy localConfig.example.json to localConfig.json and configure for your Drupal environment.'));
+  if (process.env.NODE_ENV !== 'production') {
+    log(c.bgRed.white('localConfig.json is missing'));
+    log(c.red('Copy localConfig.example.json to localConfig.json and configure for your Drupal environment.'));
+  }
 }
 
 
