@@ -73,7 +73,7 @@
     padding: 0 $cd-container-padding-tablet;
   }
   @include xlarge {
-    grid-gap: 120px;
+    grid-gap: 100px;
     padding: 0 $cd-container-padding-xlarge;
   }
 }
@@ -150,6 +150,10 @@
     &:focus {
       border-color: $cd-bright-blue;
     }
+  }
+
+  @include xlarge {
+    white-space: nowrap;
   }
 }
 
