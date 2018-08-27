@@ -41,7 +41,9 @@ a.cd-footer-copyright__link {
   border-bottom: 0;
 
   &:hover {
+    opacity: .8;
     border-bottom: 0;
+    transition: opacity .1666s ease-in-out;
   }
 }
 
