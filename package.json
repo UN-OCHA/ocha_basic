@@ -5,7 +5,7 @@
   "repository": "git@github.com:UN-OCHA/ocha_basic.git",
   "author": "UN OCHA",
   "license": "GPL-2.0",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^8.6.5",
     "browser-sync": "^2.24.5",
     "chalk": "^2.4.1",
@@ -31,5 +31,9 @@
   "engines": {
     "node": "^8.11.3",
     "npm": "^6.4.0"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build"
   }
 }
