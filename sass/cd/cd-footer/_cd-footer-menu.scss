@@ -9,14 +9,6 @@
   margin: 0;
   padding-left: 0;
   text-transform: uppercase;
-
-  @include tablet {
-    flex: 1 0 100%;
-  }
-  @include desktop {
-    text-align: left;
-    flex: 1 0 70%;
-  }
 }
 
 .cd-footer-menu__item {
