@@ -79,11 +79,13 @@
   @include desktop {
     max-width: 780px;
     flex: 1 1 50%;
+    margin: 0;
   }
 }
 
 .cd-footer__section--copyright {
   @include desktop {
     flex: 0 1 350px;
+    margin: 0;
   }
 }
