@@ -103,15 +103,17 @@
   }
 
   //
-  // IE 11 stuff
+  // Grid not supported, fall back to floats on desktop
   //
-  .no-cssgrid & {
-    float: left;
-    width: 21.25%;
-    margin-right: 5%;
-  }
-  .no-cssgrid &:last-child {
-    margin-right: 0;
+  @include desktop {
+    .no-cssgrid & {
+      float: left;
+      width: 21.25%;
+      margin-right: 5%;
+    }
+    .no-cssgrid &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
