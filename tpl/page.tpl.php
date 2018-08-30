@@ -35,4 +35,8 @@
   </div>
 </div>
 
+<?php if ($page['footer_soft']): ?>
+  <?php print render($page['footer_soft']); ?>
+<?php endif; ?>
+
 <?php include 'cd/cd-footer/cd-footer.inc'; ?>
