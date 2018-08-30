@@ -25,6 +25,14 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
       '#weight' => 1000,
     );
     $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
+
+
+    if ($form_id == 'views_exposed_form') {
+      $form['#attributes']['role'] = 'search';
+      $form['#attributes']['class'][] = 'cd-search--inline__form';
+      $form['#attributes']['aria-labelledby'][] = 'cd-search-btn';
+      $form['views_exposed_form']['#attributes']['placeholder'] = t('What are you looking for?');
+    }
   }
 }
 
@@ -135,6 +143,14 @@ function ocha_basic_preprocess_page(&$vars) {
   $output .= '</div>';
 
   $vars['page']['language_switcher'] = $output;
+
+
+  // Set variable based on path alias to include inline-search.
+  $path = drupal_get_path_alias();
+  if ($path == 'inline-search') {
+    $vars['inline_search'] = TRUE;
+  }
+
 }
 
 /**
