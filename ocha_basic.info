@@ -20,6 +20,7 @@ stylesheets[all][] = css/styles.css
 scripts[] = js/bootstrap-dropdown.js
 scripts[] = js/custom-menu.js
 scripts[] = js/custom-search.js
+scripts[] = js/custom-search--inline.js
 
 ; ========================================
 ; Regions
@@ -29,6 +30,7 @@ regions[header_search] = Header search
 regions[header_navigation] = Header navigation
 regions[content] = Content
 regions[sidebar_first] = First sidebar
+regions[footer_soft] = Soft footer
 regions[footer_navigation] = Footer navigation
 regions[footer_logos] = Footer logos
 regions[footer_info] = Footer info
