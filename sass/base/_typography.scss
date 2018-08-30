@@ -13,9 +13,13 @@ h1 {
   font-weight: normal;
 }
 
-h1, h2 ,h3 ,h4 ,h5, p, ol, ul, dl {
+h1, h2 ,h3 ,h4 ,h5, ol, dl {
   margin-bottom: $cd-base-unit;
 }
+
+//p, ul {
+//  margin-bottom: $cd-base-unit;
+//}
 
 h4, h5 {
   font-weight: 400;
@@ -44,18 +48,18 @@ a {
   }
 }
 
-ol, ul {
-  list-style: initial;
-  margin-left: $cd-base-unit*3;
-}
+//ol, ul {
+//  list-style: initial;
+//  margin-left: $cd-base-unit*3;
+//}
 
 ol {
   list-style: decimal;
 }
 
-li {
-  margin-bottom: $cd-base-unit/4;
-}
+//li {
+//  margin-bottom: $cd-base-unit/4;
+//}
 
 strong {
   font-weight: 400;
@@ -83,20 +87,28 @@ dd {
     @include font-size($cd-font-size-xlarge);
   }
 
-  p, ul, ol, dl {
+  //p, ul {
+  //  @include font-size($cd-font-size-base);
+  //}
+
+  ol, dl {
     @include font-size($cd-font-size-base);
   }
 
-  li {
-    margin-bottom: $cd-base-unit/2;
-  }
+  //li {
+  //  margin-bottom: $cd-base-unit/2;
+  //}
 
   h2 {
     @include font-size($cd-font-size-medium);
     font-weight: normal;
   }
 
-  h1, h2 ,h3 ,h4 ,h5, p, ol, ul, dl {
+  h1, h2 ,h3 ,h4 ,h5, ol, dl {
     margin-bottom: $cd-base-unit*2;
   }
+
+  //p, ul {
+  //  margin-bottom: $cd-base-unit*2;
+  //}
 }
