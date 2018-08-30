@@ -9,14 +9,6 @@
   margin: 0;
   padding-left: 0;
   text-transform: uppercase;
-
-  @include tablet {
-    flex: 1 0 100%;
-  }
-  @include desktop {
-    text-align: left;
-    flex: 1 0 70%;
-  }
 }
 
 .cd-footer-menu__item {
@@ -37,17 +29,7 @@
 // Drupal selectors
 //——————————————————————————————————————————————————————————————————————————————
 
-// Visually hide default Block Title
-.region-footer-navigation .block-menu h2 {
-  @extend .element-invisible;
-}
-
-// Apply menu container styles to Drupal Menu
-.region-footer-navigation .menu {
-  @extend .cd-footer-menu;
-}
-
 // Apply menu item styles to Drupal Menu items
-.region-footer-navigation .menu > li {
+.cd-footer-menu > li {
   @extend .cd-footer-menu__item;
 }
