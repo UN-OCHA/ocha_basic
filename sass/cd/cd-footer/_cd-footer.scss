@@ -21,25 +21,26 @@
       border-color: $cd-bright-border-color;
     }
   }
+
+  @include desktop {
+    padding-bottom: 0;
+  }
+}
+
+.cd-footer__inner {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .cd-footer__section {
   padding-bottom: 48px;
-}
 
-@include tablet {
-  .cd-footer__inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .cd-footer__section {
-    padding-bottom: 48px;
-  }
-}
-
-@include desktop {
-  .cd-footer {
+  // When we know a section contains no content, we can set an empty variant
+  // to collapse it to zero-height which helps especially on mobile, without
+  // disrupting the layout on larger viewport widths.
+  &--empty {
     padding-bottom: 0;
   }
 }
