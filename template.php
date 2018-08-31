@@ -150,7 +150,8 @@ function ocha_basic_preprocess_page(&$vars) {
   // Set variable based on path alias to include inline-search.
   $path = drupal_get_path_alias();
   if ($path == 'inline-search') {
-    $vars['inline_search'] = TRUE;
+    $inline_search = TRUE;
+    $vars['inline_search'] = $inline_search;
   }
 
 }
