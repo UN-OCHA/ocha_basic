@@ -138,11 +138,11 @@
 //——————————————————————————————————————————————————————————————————————————————
 // Common Design: z-index
 //
-// syntactic sugar for common z-index values
+// Provides syntactic sugar for common z-index values.
 //
-// Usage: @include z(dropdown);
+// Usage: @include z-index(dropdown);
 //——————————————————————————————————————————————————————————————————————————————
-@mixin z($value: 0) {
+@mixin z-index($value: 0) {
   @if map-has-key($zindex, $value) {
     z-index: #{map-get($zindex, $value)};
   }
