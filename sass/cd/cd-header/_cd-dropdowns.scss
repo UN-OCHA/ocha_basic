@@ -29,7 +29,7 @@ svg.arrow-down {
   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.30);
   left: 0;
   position: absolute;
-  z-index: 1;
+  @include z-index(dropdown);
 
   a {
     color: $cd-white-text-color;
