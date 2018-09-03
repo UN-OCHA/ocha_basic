@@ -40,7 +40,7 @@
 
       > ul {
         display: block;
-        z-index: map-get($zindex, dropdown);
+        @include z-index(dropdown);
       }
 
       // Change to up arrow.
