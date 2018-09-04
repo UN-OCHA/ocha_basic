@@ -1,0 +1,59 @@
+//——————————————————————————————————————————————————————————————————————————————
+// Common Design: Main Navigation active items
+//——————————————————————————————————————————————————————————————————————————————
+
+// Active trail for mobile menu.
+@include max-width(lg) {
+
+  .cd-nav > ul > li {
+
+    a {
+      &.active,
+      &.active-trail {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          background: transparent;
+          width: 3px;
+          top: 3px;
+          height: 42px; // Height of menu item - 6px for space at top and bottom.
+          left: 15px; // Half of the left padding.
+          transition: background 0.3s ease;
+        }
+      }
+    }
+    // Grandchild items have different padding and therefore height.
+    > ul > li > ul > li a.active:before {
+      height: 32px; // Height of menu item - 6px for space at top and bottom.
+    }
+
+    a {
+      &.active-trail:before {
+        background: $cd-mid-light-grey;
+      }
+      &.active:before {
+        background: $cd-highlight-red;
+      }
+    }
+
+  }
+}
+
+// Active trail for desktop.
+@include desktop {
+
+  .cd-nav > ul > li > ul {
+    a {
+      &.active-trail {
+        border-left: 3px solid $cd-mid-light-grey;
+        padding-left: 27px; // Anchor padding - width of border.
+      }
+
+      &.active {
+        border-left: 3px solid $cd-highlight-red;
+      }
+    }
+  }
+
+}
