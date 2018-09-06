@@ -18,7 +18,7 @@
         height: 12px;
         width: 12px;
         margin-left: 4px;
-        background-image: url(../img/icons/arrow-down--highlight-red.svg);
+        background-image: url(../img/icons--old/arrow-down--highlight-red.svg);
         background-repeat: no-repeat;
         background-position: 0 50%;
         background-size: 12px 12px;
@@ -46,7 +46,7 @@
       // Change to up arrow.
       > a {
         &:after {
-          background-image: url(../img/icons/arrow-up--highlight-red.svg);
+          background-image: url(../img/icons--old/arrow-up--highlight-red.svg);
         }
       }
     }
