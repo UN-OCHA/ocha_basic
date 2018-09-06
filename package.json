@@ -1,6 +1,6 @@
 {
   "name": "unocha-basic",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "OCHA Basic theme. Use as a starterkit and apply customizations directly your copy.",
   "repository": "git@github.com:UN-OCHA/ocha_basic.git",
   "author": "UN OCHA",
@@ -34,6 +34,7 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "icon-rename": "rename -c -s _ - -s icon- '' img/icons/*"
   }
 }

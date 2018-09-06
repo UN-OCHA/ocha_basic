@@ -43,6 +43,7 @@ A minimal starter theme for OCHA sites.
 3. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
 4. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
 
+
 ## CSS
 
 This project uses [Sass](http://sass-lang.com/). To make changes edit the `.scss` files in the `sass/` folder, do NOT edit the files in `css/` directly.
@@ -51,28 +52,39 @@ Run `gulp dev` in the theme folder to have gulp watch for changes and automatica
 
 Preferably use Jenkins to run the Gulp task on build to generate the CSS. If this is possible on your project, add the `css/` folder to the `.gitignore` file and delete generated CSS from the repo.
 
+
 ## JS
 
 Javascript files should be added to `js/` and to the scripts section of `ocha_basic.info`
 
+
 ## Icons
 
-This site uses a subset of the OCHA icon set as SVG icons. There are two techniques used, depending on context. 
+This site uses a subset of the OCHA icon set as SVG icons. There are two techniques used, depending on context.
+
 1. Inline SVGs direct in markup with associated CSS rules to control dimension and fill
-2. SVG as a background-image value where the fill is added as an attribute in the SVG file.
+2. SVG as a background-image value where the fill is added as an attribute in the SVG file. Fill/stroke color should be defined in the filename.
 
-For legacy information about UNOCHA fonticons, see https://un-ocha.github.io/styleguide/icons
+When importing a new version of the Common Icons, there is a bulk-renaming command in `package.json` that can be invoked by running the following:
 
-## Logo
+```
+# first, cd to repo root
+npm run icon-rename
+```
 
-Two versions of your logo are required, in SVG format with PNG for fallback.
+This assumes that you have a tool compatible with http://brewformulas.org/Rename — you can install it on OSX using Homebrew:
 
-1. Mobile version: 40x40px
-2. Desktop version: height 60px, width will depend on your logo design
+```
+brew install rename
+```
+
+The icons are black by default. If you need another color, it's best to copy the icon and manually adjust the fill/stroke inside the icon to suit your needs. Rename the copy to include the color in the filename.
+
 
 ## Browser support
 
 See https://un-ocha.github.io/styleguide/common-design/
+
 
 ## Favicons
 
@@ -80,15 +92,18 @@ OCHA default favicons are provided. Update these with your logo.
 
 http://realfavicongenerator.net/ is a good tool for generating favicons.
 
+
 ## Modernizr
 
 We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
 
 After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
 
+
 ## Add to Homescreen / manifest.json
 
 We support the [PWA Drupal module](https://www.drupal.org/project/pwa) instead of providing our own manifest.json file. The `hook_pwa_manifest_alter()` hook is implemented in `template.php` with our default colors/icons, which can be overridden using the normal PWA admin UI.
+
 
 ## Using with panels
 
@@ -96,6 +111,7 @@ Use with the Omega base theme to enable panels:
 
 * Add `base theme = omega` to ocha_basic.info
 * Create your layouts using page.tpl.php as a basis
+
 
 ## Styleguide
 
