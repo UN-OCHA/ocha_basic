@@ -28,3 +28,11 @@ label {
 .form-item select.error {
   border-color: $cd-highlight-red;
 }
+
+//
+// Minor overrides to D7 defaults per Chrome Lighthouse a11y audit.
+//
+.form-required {
+  font-weight: 700;
+  color: $cd-contrast-red;
+}

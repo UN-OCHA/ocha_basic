@@ -64,10 +64,10 @@
 // Menu list item with icon
 .cd-user-menu__icon {
   a {
-    padding: 0 12px 0 26px;
+    padding-left: 26px;
 
     @include tablet {
-      padding: 0 20px 0 34px;
+      padding-left: 34px;
     }
   }
   &:before {

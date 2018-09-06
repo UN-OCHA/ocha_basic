@@ -1,13 +1,13 @@
 <div class="cd-site-header__nav-holder">
-  <button type="button" id="cd-nav-toggle" class="cd-site-header__nav-toggle" data-toggle="dropdown">
-    <span class="cd-site-header__nav-label">Menu</span>
-    <svg width="32" height="32" viewBox="0 0 32 32" class="arrow-down" aria-hidden="true">
-      <path d="M26.2 11.7c0 0.4-0.2 0.6-0.3 0.7l-8.4 8.4c-0.4 0.4-0.9 0.6-1.5 0.6s-1.1-0.2-1.5-0.6l-8.4-8.4c-0.2-0.2-0.3-0.4-0.3-0.7s0.1-0.5 0.3-0.7c0.2-0.2 0.4-0.3 0.7-0.3s0.5 0.1 0.7 0.3l8.4 8.4c0 0 0 0 0 0s0 0 0.1 0 0.1 0 0.2 0l8.3-8.4c0.4-0.4 1-0.4 1.4 0 0.1 0.1 0.3 0.3 0.3 0.7z"></path>
-    </svg>
-    <span class="element-invisible">Close menu</span>
-  </button>
-
   <?php if($page['header_navigation']): ?>
+    <button type="button" id="cd-nav-toggle" class="cd-site-header__nav-toggle" data-toggle="dropdown">
+      <span class="cd-site-header__nav-label">Menu</span>
+      <svg width="32" height="32" viewBox="0 0 32 32" class="arrow-down" aria-hidden="true">
+        <path d="M26.2 11.7c0 0.4-0.2 0.6-0.3 0.7l-8.4 8.4c-0.4 0.4-0.9 0.6-1.5 0.6s-1.1-0.2-1.5-0.6l-8.4-8.4c-0.2-0.2-0.3-0.4-0.3-0.7s0.1-0.5 0.3-0.7c0.2-0.2 0.4-0.3 0.7-0.3s0.5 0.1 0.7 0.3l8.4 8.4c0 0 0 0 0 0s0 0 0.1 0 0.1 0 0.2 0l8.3-8.4c0.4-0.4 1-0.4 1.4 0 0.1 0.1 0.3 0.3 0.3 0.7z"></path>
+      </svg>
+      <span class="element-invisible">Close menu</span>
+    </button>
+
     <nav role="navigation" id="cd-nav" class="cd-nav cd-dropdown" aria-labelledby="cd-nav-toggle">
       <?php print render($page['header_navigation']); ?>
     </nav>
