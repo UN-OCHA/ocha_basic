@@ -108,7 +108,7 @@
   padding: 8px $cd-container-padding;
 }
 
-.cd-search--inline__input {
+.cd-search--inline__input[type=search]  {
   -webkit-appearance: none;
   background: $cd-white-bg-color;
   border: 0;
@@ -222,7 +222,7 @@
     }
   }
 
-  .cd-search--inline__input {
+  .cd-search--inline__input[type=search]  {
     -webkit-appearance: none;
     background: $cd-white-bg-color;
     border: 0;
