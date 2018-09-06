@@ -110,7 +110,7 @@
   padding: 8px $cd-container-padding;
 }
 
-.cd-search__input {
+.cd-search__input[type=search] {
   -webkit-appearance: none;
   background: $cd-white-bg-color;
   border: 0;
