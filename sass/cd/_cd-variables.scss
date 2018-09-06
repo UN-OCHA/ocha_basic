@@ -66,6 +66,9 @@ $cd-highlight-red: #EB5C6D;
 $cd-white: #FFFFFF;
 $cd-black: #000000;
 
+// This shade of red has been selected based on WCAG AAA requirements for contrast.
+$cd-contrast-red: #E00000;
+
 // Background colours
 $cd-site-bg-color: $cd-mid-bluey-grey;
 $cd-white-bg-color: $cd-white;
