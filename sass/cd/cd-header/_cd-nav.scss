@@ -261,16 +261,11 @@ ul.cd-nav__grandchild-nav {
       }
 
       &.active,
+      &.active-trail,
+      &.active-trail.active,
       &:focus {
         &:before {
           background: $cd-highlight-red;
-        }
-      }
-
-      &.active-trail,
-      &.active-trail.active {
-        &:before {
-          background: rgba($cd-highlight-red, 0.6);
         }
       }
     }

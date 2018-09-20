@@ -25,6 +25,16 @@
       background: $cd-highlight-red;
     }
 
+    // First level menu item with children.
+    // Classes based on Drupal menu configuration.
+    &.collapsed,
+    &.expanded {
+      > a.active:before,
+      > a.active.active-trail:before {
+        background: rgba($cd-highlight-red, 0.2);
+      }
+    }
+
     &.active-trail {
 
       a {
@@ -48,7 +58,7 @@
     > ul > li.active-trail {
 
       a:before {
-          background: rgba($cd-highlight-red, 0.6);
+        background: rgba($cd-highlight-red, 0.6);
       }
 
       a.active:before {
@@ -58,7 +68,7 @@
 
   }
 
-  // Grandchild items have different padding and therefore height.
+  // Grandchild items have different top/bottom padding and therefore height.
   .cd-nav > ul > li.active-trail > ul > li > ul > li a:before,
   .cd-nav > ul > li > ul > li.active-trail > ul > li a:before {
     height: 38px; // Height of menu item.
@@ -67,6 +77,21 @@
 
 // Active trail for desktop.
 @include desktop {
+
+  // First level menu item with children.
+  // Classes based on Drupal menu configuration.
+  .cd-nav > ul > li.collapsed,
+  .cd-nav > ul > li.expanded {
+    a {
+      &.active,
+      &.active-trail,
+      &.active-trail.active {
+        &:before {
+          background: rgba($cd-highlight-red, 0.6);
+        }
+      }
+    }
+  }
 
   .cd-nav > ul > li > ul {
     a {
