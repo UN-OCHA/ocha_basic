@@ -7,6 +7,24 @@
 
   .cd-nav > ul > li {
 
+      a {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 3px;
+          top: 0;
+          height: 48px; // Height of menu item.
+          left: 15px; // Half of the left padding.
+          background: transparent;
+        }
+      }
+
+    > a.active:before,
+    > a.active.active-trail:before {
+      background: $cd-highlight-red;
+    }
+
     &.active-trail {
 
       a {
@@ -20,7 +38,6 @@
           left: 15px; // Half of the left padding.
           background: rgba($cd-highlight-red, 0.2);
         }
-
 
         a.active:before {
           background: $cd-highlight-red;
@@ -42,7 +59,8 @@
   }
 
   // Grandchild items have different padding and therefore height.
-  .cd-nav > ul > li > ul > li a.active:before {
+  .cd-nav > ul > li.active-trail > ul > li > ul > li a:before,
+  .cd-nav > ul > li > ul > li.active-trail > ul > li a:before {
     height: 38px; // Height of menu item.
   }
 }
@@ -66,12 +84,11 @@
       border-left: 3px solid rgba($cd-highlight-red, 0.2);
 
       &.active {
-        border-left: 3px solid rgba($cd-highlight-red, 0.6);
+        border-left: 3px solid $cd-highlight-red;
       }
 
     }
 
   }
-
 
 }
