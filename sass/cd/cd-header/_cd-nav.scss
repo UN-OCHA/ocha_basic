@@ -262,6 +262,7 @@ ul.cd-nav__grandchild-nav {
 
       &.active,
       &.active-trail,
+      &.active-trail.active,
       &:focus {
         &:before {
           background: $cd-highlight-red;
