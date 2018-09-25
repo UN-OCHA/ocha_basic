@@ -173,6 +173,80 @@ ul.cd-nav__grandchild-nav {
   }
 }
 
+// Active trail for mobile menu.
+@include max-width(lg) {
+
+  .cd-nav > ul > li {
+
+    a {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 3px;
+        top: 0;
+        height: 48px; // Height of menu item.
+        left: 15px; // Half of the left padding.
+        background: transparent;
+      }
+    }
+
+    > a.active:before,
+    > a.active.active-trail:before {
+      background: $cd-highlight-red;
+    }
+
+    // First level menu item with children.
+    // Classes based on Drupal menu item configuration.
+    &.collapsed,
+    &.expanded {
+      > a.active:before,
+      > a.active.active-trail:before {
+        background: rgba($cd-highlight-red, 0.2);
+      }
+    }
+
+    &.active-trail {
+
+      a {
+        position: relative;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 3px;
+          top: 0;
+          height: 48px; // Height of menu item.
+          left: 15px; // Half of the left padding.
+          background: rgba($cd-highlight-red, 0.2);
+        }
+
+        a.active:before {
+          background: $cd-highlight-red;
+        }
+      }
+    }
+
+    > ul > li.active-trail {
+
+      a:before {
+        background: rgba($cd-highlight-red, 0.6);
+      }
+
+      a.active:before {
+        background: $cd-highlight-red;
+      }
+    }
+
+  }
+
+  // Grandchild items have different top/bottom padding and therefore height.
+  .cd-nav > ul > li.active-trail > ul > li > ul > li a:before,
+  .cd-nav > ul > li > ul > li.active-trail > ul > li a:before {
+    height: 38px; // Height of menu item.
+  }
+}
+
+
 @include desktop {
   .cd-site-header__nav-toggle {
     display: none;
@@ -287,6 +361,22 @@ ul.cd-nav__grandchild-nav {
     button {
       &:hover {
         background: $cd-mid-bg-color;
+      }
+      &.active-trail {
+        border-left: 3px solid rgba($cd-highlight-red, 0.6);
+        padding-left: 27px; // Anchor padding - width of border.
+      }
+
+      &.active {
+        border-left: 3px solid rgba($cd-highlight-red, 0.2);
+      }
+    }
+
+    > li.active-trail a {
+      border-left: 3px solid rgba($cd-highlight-red, 0.2);
+
+      &.active {
+        border-left: 3px solid $cd-highlight-red;
       }
     }
   }
