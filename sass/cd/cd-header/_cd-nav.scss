@@ -317,6 +317,7 @@ ul.cd-nav__grandchild-nav {
       &:before {
         bottom: -3px;
         content: '';
+        background: transparent;
         height: 3px;
         left: -1px;
         position: absolute;
@@ -331,6 +332,15 @@ ul.cd-nav__grandchild-nav {
 
       &:focus {
         background: $cd-white-bg-color;
+      }
+
+      &.active,
+      &.active-trail,
+      &.active-trail.active,
+      &:focus {
+        &:before {
+          background: $cd-highlight-red;
+        }
       }
     }
   }
@@ -364,6 +374,10 @@ ul.cd-nav__grandchild-nav {
 
     > li.active-trail a {
       border-left: 3px solid rgba($cd-highlight-red, 0.2);
+
+      &.active {
+        border-left: 3px solid $cd-highlight-red;
+      }
     }
   }
 
