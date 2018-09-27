@@ -76,14 +76,20 @@
 }
 
 .cd-footer__section--mandate {
+  @include tablet {
+    flex: 1 0 100%;
+  }
   @include desktop {
     max-width: 780px;
-    flex: 1 1 50%;
+    flex: 1 0 50%;
     margin: 0;
   }
 }
 
 .cd-footer__section--copyright {
+  @include tablet {
+    flex: 1 0 100%;
+  }
   @include desktop {
     flex: 0 1 350px;
     margin: 0;

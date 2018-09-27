@@ -72,7 +72,7 @@ gulp.task('dev:sass', () => {
     .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
     .pipe(postcss([
       prefix({
-        browsers: ['>0.333%', 'iOS 8'],
+        browsers: ['>1%', 'iOS 9'],
         cascade: false,
       }),
       cssnano(),

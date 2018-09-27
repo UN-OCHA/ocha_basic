@@ -3,7 +3,10 @@
 //——————————————————————————————————————————————————————————————————————————————
 
 .cd-language-switcher {
-
+  
+  &.open {
+    position: relative;
+  }
 }
 
 // Language switcher button
@@ -21,30 +24,10 @@
   }
 
   // Place toggle indicator on edge of Global Header
-  .icon-arrow-down {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  @include tablet {
-    padding-right: 30px;
-
-    .icon-arrow-down {
-      right: 16px;
-    }
-  }
-
-  // Place toggle indicator on edge of Global Header
   .arrow-down {
     position: absolute;
     right: 0;
     min-height: 100%; // IE11 fix.
-
-    @include tablet {
-      right: 16px;
-    }
   }
 }
 
@@ -71,13 +54,15 @@
 }
 
 #cd-language {
-  right: $cd-container-padding;
-
-  @include xl {
-    right: 50px;
-  }
+  right: 0;
 
   li a {
     @extend .cd-user-menu__dropdown-link;
+    color: $cd-white;
+
+    &:hover,
+    &:focus {
+      color: $cd-bright-blue;
+    }
   }
 }
