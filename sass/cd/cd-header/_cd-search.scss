@@ -23,11 +23,9 @@
   transition: background 0.3s ease;
 
   svg {
-    box-sizing: content-box;
     width: 26px;
     height: 26px;
     fill: $cd-blue-text-color;
-    stroke: $cd-blue-text-color;
   }
 
   &:hover,
@@ -38,7 +36,6 @@
 
     svg {
       fill: $cd-bright-blue-text-color;
-      stroke: $cd-bright-blue-text-color;
     }
   }
 
