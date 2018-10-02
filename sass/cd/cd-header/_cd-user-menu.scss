@@ -90,7 +90,10 @@
 .cd-user-menu__icon-plus {
   @extend .cd-user-menu__icon;
   &:before {
-    background-image: url(../img/icons--old/plus.svg);
+    background-image: url(../img/icons/add--white.svg);
+    background-size: 12px 12px;
+    height: 33px;
+    left: 15px;
   }
 }
 
@@ -98,7 +101,7 @@
 .cd-user-menu__icon-login {
   @extend .cd-user-menu__icon;
   &:before {
-    background-image: url(../img/icons--old/user.svg);
+    background-image: url(../img/icons/user--white.svg);
   }
 }
 
@@ -147,7 +150,7 @@
       content: "";
       width: 14px;
       height: 14px;
-      background-image: url(../img/icons--old/check.svg);
+      background-image: url(../img/icons/selected--highlighted.svg);
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 14px 14px;

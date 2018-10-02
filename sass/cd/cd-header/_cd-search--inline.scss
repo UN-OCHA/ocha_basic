@@ -26,7 +26,6 @@
     width: 26px;
     height: 26px;
     fill: $cd-ocha-blue;
-    stroke: $cd-ocha-blue;
   }
 
   &:hover,
@@ -37,7 +36,6 @@
 
     svg {
       fill: $cd-highlight-red;
-      stroke: $cd-highlight-red;
     }
   }
 
@@ -46,7 +44,6 @@
 
     svg {
       fill: $cd-highlight-red;
-      stroke: $cd-highlight-red;
     }
   }
 
@@ -69,7 +66,6 @@
 
     svg {
       fill: $cd-highlight-red;
-      stroke: $cd-highlight-red;
     }
 
     &:hover,
@@ -170,7 +166,6 @@
     width: 26px;
     height: 26px;
     fill: $cd-white-text-color;
-    stroke: $cd-white-text-color;
     margin: 0 auto;
   }
 
@@ -283,7 +278,6 @@
       width: 26px;
       height: 26px;
       fill: $cd-mid-grey;
-      stroke: $cd-mid-grey;
       padding: 0 16px;
     }
 
@@ -296,7 +290,6 @@
 
       svg {
         fill: $cd-highlight-red;
-        stroke: $cd-highlight-red;
       }
     }
   }

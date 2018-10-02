@@ -24,9 +24,13 @@
   }
 
   // Place toggle indicator on edge of Global Header
-  .arrow-down {
+  .icon--arrow-down {
+    fill: $cd-white;
+    width: 9px;
+    height: 9px;
     position: absolute;
     right: 0;
+    top: -1px;
     min-height: 100%; // IE11 fix.
   }
 }
@@ -45,7 +49,7 @@
       content: "";
       width: 14px;
       height: 14px;
-      background-image: url(../img/icons--old/check.svg);
+      background-image: url(../img/icons/selected--highlighted.svg);
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 14px 14px;
