@@ -26,7 +26,7 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 
-  <?php echo file_get_contents( drupal_get_path('theme',$GLOBALS['theme']) . '/img/icons/icons-sprite.svg'); ?>
+  <?php echo file_get_contents( 'sites/all/themes/contrib/ocha_basic/img/icons/icons-sprite.svg'); ?>
 
 </body>
 </html>
