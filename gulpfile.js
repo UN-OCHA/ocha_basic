@@ -109,12 +109,7 @@ gulp.task('sprite-page', function() {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('sprite-shortcut', function() {
-  return gulp.src('img/icons/icons-sprite.svg')
-    .pipe(gulp.dest('.'));
-});
-
-gulp.task('sprites', ['sprite-page', 'sprite-shortcut']);
+gulp.task('sprites', ['sprite-page']);
 
 //——————————————————————————————————————————————————————————————————————————————
 // JS Linting
