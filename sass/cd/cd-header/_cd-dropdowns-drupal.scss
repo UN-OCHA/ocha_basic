@@ -15,17 +15,23 @@
       &:after {
         position: relative;
         content: "";
-        height: 12px;
-        width: 12px;
+        height: 10px;
+        width: 10px;
         margin-left: 4px;
-        background-image: url(../img/icons/arrow-down--highlight-red.svg);
+        top: 3px;
+        background-image: url(../img/icons/arrow-down--highlighted.svg);
         background-repeat: no-repeat;
         background-position: 0 50%;
-        background-size: 12px 12px;
+        background-size: 10px 10px;
+
+        @include desktop {
+          top: -2px;
+        }
       }
     }
+
     // IE11 specific styles.
-    @media all and (-ms-high-contrast:none) {
+    @media all and (-ms-high-contrast: none) {
       > a {
         padding-right: 24px;
         &:after {
@@ -46,9 +52,25 @@
       // Change to up arrow.
       > a {
         &:after {
-          background-image: url(../img/icons/arrow-up--highlight-red.svg);
+          background-image: url(../img/icons/arrow-up--highlighted.svg);
+        }
+      }
+
+      // Change to up arrow.
+      > a {
+        &:after {
+          background-image: url(../img/icons/arrow-up--highlighted.svg);
         }
       }
     }
+
+    // Second level.
+    .expanded {
+      // Add down arrow.
+      > a:after {
+        top: 3px;
+      }
+    }
   }
+
 }

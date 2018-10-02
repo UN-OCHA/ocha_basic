@@ -43,6 +43,7 @@ A minimal starter theme for OCHA sites.
 3. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
 4. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
 
+
 ## CSS
 
 This project uses [Sass](http://sass-lang.com/). To make changes edit the `.scss` files in the `sass/` folder, do NOT edit the files in `css/` directly.
@@ -51,28 +52,55 @@ Run `gulp dev` in the theme folder to have gulp watch for changes and automatica
 
 Preferably use Jenkins to run the Gulp task on build to generate the CSS. If this is possible on your project, add the `css/` folder to the `.gitignore` file and delete generated CSS from the repo.
 
+
 ## JS
 
 Javascript files should be added to `js/` and to the scripts section of `ocha_basic.info`
 
+
 ## Icons
 
-This site uses a subset of the OCHA icon set as SVG icons. There are two techniques used, depending on context. 
-1. Inline SVGs direct in markup with associated CSS rules to control dimension and fill
-2. SVG as a background-image value where the fill is added as an attribute in the SVG file.
+The available icons can be found in `img/icons`
 
-For legacy information about UNOCHA fonticons, see https://un-ocha.github.io/styleguide/icons
+There are two techniques used, depending on context.
 
-## Logo
+1. SVG as a background-image value, usually on a pseudo element. The SVG fill colour is added as an attribute in the SVG file. We use this technique when using technique 2 isn't possible.
+The icons are black by default. If you need another color, it's best to copy the icon and manually adjust the fill/stroke to suit your needs. Rename the copy to include the color in the filename eg. `arrow-down--white.svg`.
 
-Two versions of your logo are required, in SVG format with PNG for fallback.
+2. SVG symbol sprite using the `<use>` element. The SVG sprite is loaded as a single asset in the `html.tpl.php` before the closing body tag. Each icon within the sprite can be referenced by its ID eg. 
+```
+<svg class="icon icon--arrow-down">
+  <use xlink:href="#arrow-down"></use>
+</svg>
+```
+Each icon should have the class `icon` and a BEM selector if needed eg. `icon--arrow-down`. We can create associated CSS rules to control dimension and fill. See https://una.im/svg-icons for more details.
 
-1. Mobile version: 40x40px
-2. Desktop version: height 60px, width will depend on your logo design
+###Generating the icons sprite
+As defined in the gulp task, all new icons should be placed in the `img/icons` directory.
+Run `gulp sprites` to generate a new sprite.
+This generates the sprite SVG and places it in `img/icons/icons-sprite.svg` and it creates an html page with all SVGs for reference `img/icons/sprite.symbol.html`.
+
+
+###Renaming icons
+When importing a new version of the Common Icons, there is a bulk-renaming command in `package.json` that can be invoked by running the following:
+
+```
+# first, cd to repo root
+npm run icon-rename
+```
+
+This assumes that you have a tool compatible with http://brewformulas.org/Rename — you can install it on OSX using Homebrew:
+
+```
+brew install rename
+```
+
+
 
 ## Browser support
 
 See https://un-ocha.github.io/styleguide/common-design/
+
 
 ## Favicons
 
@@ -80,15 +108,18 @@ OCHA default favicons are provided. Update these with your logo.
 
 http://realfavicongenerator.net/ is a good tool for generating favicons.
 
+
 ## Modernizr
 
 We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
 
 After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
 
+
 ## Add to Homescreen / manifest.json
 
 We support the [PWA Drupal module](https://www.drupal.org/project/pwa) instead of providing our own manifest.json file. The `hook_pwa_manifest_alter()` hook is implemented in `template.php` with our default colors/icons, which can be overridden using the normal PWA admin UI.
+
 
 ## Using with panels
 
@@ -96,6 +127,7 @@ Use with the Omega base theme to enable panels:
 
 * Add `base theme = omega` to ocha_basic.info
 * Create your layouts using page.tpl.php as a basis
+
 
 ## Styleguide
 

@@ -7,6 +7,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728208
  */
+
 ?>
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>">
@@ -24,5 +25,8 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+
+  <?php echo file_get_contents( 'sites/all/themes/contrib/ocha_basic/img/icons/icons-sprite.svg'); ?>
+
 </body>
 </html>

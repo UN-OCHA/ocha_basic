@@ -9,14 +9,14 @@
   }
 }
 
-svg.arrow-down {
-  width: 12px;
-  height: 12px;
+.icon--arrow-down {
   fill: $cd-white;
+  width: 9px;
+  height: 9px;
 }
 
 .open {
-  [data-toggle="dropdown"] > svg.arrow-down {
+  [data-toggle="dropdown"] > .icon--arrow-down {
     transform: rotate(180deg);
   }
 }
