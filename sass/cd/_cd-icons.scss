@@ -10,4 +10,5 @@ svg:not(:root) {
 
 svg.icon {
   pointer-events: none;
+  display: inline-block;
 }
