@@ -60,11 +60,28 @@ Javascript files should be added to `js/` and to the scripts section of `ocha_ba
 
 ## Icons
 
-This site uses a subset of the OCHA icon set as SVG icons. There are two techniques used, depending on context.
+The available icons can be found in `img/icons`
 
-1. Inline SVGs direct in markup with associated CSS rules to control dimension and fill
-2. SVG as a background-image value where the fill is added as an attribute in the SVG file. Fill/stroke color should be defined in the filename.
+There are two techniques used, depending on context.
 
+1. SVG as a background-image value, usually on a pseudo element. The SVG fill colour is added as an attribute in the SVG file. We use this technique when using technique 2 isn't possible.
+The icons are black by default. If you need another color, it's best to copy the icon and manually adjust the fill/stroke to suit your needs. Rename the copy to include the color in the filename eg. `arrow-down--white.svg`.
+
+2. SVG symbol sprite using the `<use>` element. The SVG sprite is loaded as a single asset in the `html.tpl.php` before the closing body tag. Each icon within the sprite can be referenced by its ID eg. 
+```
+<svg class="icon icon--arrow-down">
+  <use xlink:href="#arrow-down"></use>
+</svg>
+```
+Each icon should have the class `icon` and a BEM selector if needed eg. `icon--arrow-down`. We can create associated CSS rules to control dimension and fill. See https://una.im/svg-icons for more details.
+
+###Generating the icons sprite
+As defined in the gulp task, all new icons should be placed in the `img/icons` directory.
+Run `gulp sprites` to generate a new sprite.
+This generates the sprite SVG and places it in `img/icons/icons-sprite.svg` and it creates an html page with all SVGs for reference `img/icons/sprite.symbol.html`.
+
+
+###Renaming icons
 When importing a new version of the Common Icons, there is a bulk-renaming command in `package.json` that can be invoked by running the following:
 
 ```
@@ -78,7 +95,6 @@ This assumes that you have a tool compatible with http://brewformulas.org/Rename
 brew install rename
 ```
 
-The icons are black by default. If you need another color, it's best to copy the icon and manually adjust the fill/stroke inside the icon to suit your needs. Rename the copy to include the color in the filename.
 
 
 ## Browser support
