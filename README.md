@@ -73,15 +73,15 @@ The icons are black by default. If you need another color, it's best to copy the
   <use xlink:href="#arrow-down"></use>
 </svg>
 ```
-Each icon should have the class `icon` and a BEM selector if needed eg. `icon--arrow-down`. We can create associated CSS rules to control dimension and fill. See https://una.im/svg-icons for more details.
+Each icon should have the class `icon` and a BEM selector if needed eg. `icon--arrow-down`. We can create associated CSS rules to control dimension and fill. We're using https://github.com/jkphl/gulp-svg-sprite. See https://una.im/svg-icons for more details.
 
-###Generating the icons sprite
+### Generating the icons sprite
 As defined in the gulp task, all new icons should be placed in the `img/icons` directory.
 Run `gulp sprites` to generate a new sprite.
 This generates the sprite SVG and places it in `img/icons/icons-sprite.svg` and it creates an html page with all SVGs for reference `img/icons/sprite.symbol.html`.
 
 
-###Renaming icons
+### Renaming icons
 When importing a new version of the Common Icons, there is a bulk-renaming command in `package.json` that can be invoked by running the following:
 
 ```
