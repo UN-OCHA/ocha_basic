@@ -1,6 +1,12 @@
 # OCHA Basic Drupal 7 starter theme
 
 A minimal starter theme for OCHA sites built with Drupal 7. The markup and styles can also be used for non-Drupal sites.
+### See [OCHA basic demo](https://ochabasic.demo.ahconu.org)
+
+## For developers
+See [OCHA basic dev site](https://ochabasic.dev.ahconu.org) for documentation and examples. View via web inspector to see Drupal template suggestions. This will help understand where the markup is coming from (some comes from Drupal, some is custom). This is especially relevant for implementations not using Drupal as the markup might be copied instead of used directly from the repo.
+
+
 
 ## This theme contains
 
@@ -127,7 +133,3 @@ Use with the Omega base theme to enable panels:
 * Add `base theme = omega` to ocha_basic.info
 * Create your layouts using page.tpl.php as a basis
 
-
-## Styleguide
-
-See https://un-ocha.github.io/styleguide/ocha/ for documentation and examples of the styles used.
