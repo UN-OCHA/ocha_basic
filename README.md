@@ -1,6 +1,6 @@
-# OCHA Basic starter theme
+# OCHA Basic Drupal 7 starter theme
 
-A minimal starter theme for OCHA sites.
+A minimal starter theme for OCHA sites built with Drupal 7. The markup and styles can also be used for non-Drupal sites.
 
 ## This theme contains
 
@@ -17,7 +17,6 @@ A minimal starter theme for OCHA sites.
 * Typography
 * Basic table styles
 * Basic form styles
-* Favicons
 * gulp.js workflow for frontend development
   * Sass
   * Sourcemaps (see which specific Sass file contains styles during local development)
