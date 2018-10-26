@@ -184,7 +184,7 @@ function ocha_basic_pwa_manifest_alter(&$manifest) {
 
 // Bootstrap Dropdown menu.
 // from https://github.com/drupalprojects/bootstrap/blob/7.x-3.x/templates/menu/menu-link.func.php.
-// and https://www.drupalgeeks.com/drupal-blog/how-render-bootstrap-sub-menus for second level dropdown.
+// See https://www.drupalgeeks.com/drupal-blog/how-render-bootstrap-sub-menus for second level dropdown.
 function ocha_basic_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
@@ -203,25 +203,20 @@ function ocha_basic_menu_link(array $variables) {
     if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
       $sub_menu = drupal_render($element['#below']);
     }
-    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] > 1)) {
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
       unset($element['#below']['#theme_wrappers']);
-      $sub_menu = '<ul class="menu cd-nav__grandchild-nav cd-dropdown">' . drupal_render($element['#below']) . '</ul>';
-      $element['#title'] .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
-      $element['#localized_options']['html'] = TRUE;
-      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-      $element['#localized_options']['attributes']['aria-expanded'] = 'false';
-      $element['#localized_options']['attributes']['aria-haspopup'] = 'true';
-    } else {
-      unset($element['#below']['#theme_wrappers']);
-      $sub_menu = '<ul class="menu cd-nav__child-nav cd-dropdown">' . drupal_render($element['#below']) . '</ul>';
-      $element['#title'] .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
-      $element['#localized_options']['html'] = TRUE;
-      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-      $element['#localized_options']['attributes']['aria-expanded'] = 'false';
-      $element['#localized_options']['attributes']['aria-haspopup'] = 'true';
+      $sub_menu = '<ul class="menu">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      $title .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $options['attributes']['data-target'] = '#';
+      $options['attributes']['data-toggle'] = 'dropdown';
+      $options['attributes']['aria-expanded'] = 'false';
+      $options['attributes']['aria-haspopup'] = 'true';
     }
   }
 
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
