@@ -7,7 +7,7 @@
   Drupal.behaviors.cdMenu = {
     attach: function (context, settings) {
 
-      // media query event handler
+      // Media query event handler.
       if (matchMedia) {
         const mq = window.matchMedia("(max-width: 1023px)");
         // Add event listener to media query that fires when a change in viewport width is detected.
@@ -17,19 +17,27 @@
       }
 
       function WidthChange(mq) {
+
         if (mq.matches) {
+
+          console.log('mobile');
+
           // Toggle mobile menu.
           $('.cd-site-header__nav-toggle', context).once('cdMenu').on('click', function() {
             $('.cd-site-header__nav-holder').toggleClass('open');
           });
 
-          // Close mobile menu when another dropdown is opened.
-          if ($('.cd-ocha, .cd-global-header__language-switcher, .cd-search').hasClass('open')) {
-            if ($('.cd-nav:visible').length > 0 ) {
-              $('.cd-site-header__nav-holder').removeClass('open');
-            }
-          }
+          // When bootstrap dropdown elements are clicked, close mobile menu.
+          $('.cd-global-header__dropdown-btn, .cd-search_btn').on('click.bs.dropdown', function(e) {
+                console.log(e.target);
+                console.log('dropdown');
+            $('.cd-site-header__nav-holder').removeClass('open');
+          });
+
         } else {
+
+          console.log('desktop');
+
           // Remove class on desktop.
           $('.cd-site-header__nav-holder').removeClass('open');
         }
