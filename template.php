@@ -181,3 +181,42 @@ function ocha_basic_pwa_manifest_alter(&$manifest) {
     ],
   ];
 }
+
+// Bootstrap Dropdown menu.
+// from https://github.com/drupalprojects/bootstrap/blob/7.x-3.x/templates/menu/menu-link.func.php.
+// See https://www.drupalgeeks.com/drupal-blog/how-render-bootstrap-sub-menus for second level dropdown.
+function ocha_basic_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+  $options = !empty($element['#localized_options']) ? $element['#localized_options'] : array();
+  // Check plain title if "html" is not set, otherwise, filter for XSS attacks.
+  $title = empty($options['html']) ? check_plain($element['#title']) : filter_xss_admin($element['#title']);
+  // Ensure "html" is now enabled so l() doesn't double encode. This is now
+  // safe to do since both check_plain() and filter_xss_admin() encode HTML
+  // entities. See: https://www.drupal.org/node/2854978
+  $options['html'] = TRUE;
+  $href = $element['#href'];
+  $attributes = !empty($element['#attributes']) ? $element['#attributes'] : array();
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="menu">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      $title .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $options['attributes']['data-target'] = '#';
+      $options['attributes']['data-toggle'] = 'dropdown';
+      $options['attributes']['aria-expanded'] = 'false';
+      $options['attributes']['aria-haspopup'] = 'true';
+    }
+  }
+
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+}

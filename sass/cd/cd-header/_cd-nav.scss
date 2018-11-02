@@ -51,6 +51,10 @@
     &:focus {
       background: $cd-white-bg-color;
     }
+
+    .icon--arrow-down {
+      transform: rotate(180deg);
+    }
   }
 
   &:hover,
@@ -250,6 +254,12 @@ ul.cd-nav__grandchild-nav {
   }
 }
 
+.cd-nav {
+  display: none;
+  .open & {
+    display: block;
+  }
+}
 
 @include desktop {
   .cd-site-header__nav-toggle {
