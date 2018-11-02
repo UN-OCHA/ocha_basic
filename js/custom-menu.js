@@ -7,10 +7,12 @@
   Drupal.behaviors.cdMenu = {
     attach: function (context, settings) {
 
-      // Media query event handler.
+      // media query event handler
       if (matchMedia) {
         const mq = window.matchMedia("(max-width: 1023px)");
+        // Add event listener to media query that fires when a change in viewport width is detected.
         mq.addListener(WidthChange);
+        // Call handler to initialise on page load.
         WidthChange(mq);
       }
 
@@ -28,6 +30,7 @@
             }
           }
         } else {
+          // Remove class on desktop.
           $('.cd-site-header__nav-holder').removeClass('open');
         }
       }
