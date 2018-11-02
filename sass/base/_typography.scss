@@ -41,12 +41,15 @@ h2, h3 {
 
 a {
   color: $cd-dark-blue;
-  word-break: break-all;
 
   &:hover, &:focus {
     color: $cd-ocha-blue;
     text-decoration: none;
   }
+}
+
+a[href^="mailto"] {
+  word-break: break-all;
 }
 
 //ol, ul {
