@@ -67,7 +67,7 @@
 
 .cd-nav {
   background: $cd-white-bg-color;
-  min-height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
+  height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
   padding: 20px 0 36px 0;
   position: absolute;
   right: 0;
@@ -82,7 +82,7 @@
     padding: 0;
   }
 
-  .cd-nav > ul {
+  > ul {
     background: $cd-white-bg-color;
   }
 
