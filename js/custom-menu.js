@@ -24,7 +24,7 @@
           });
 
           // Close mobile menu when another dropdown is opened.
-          if ($('.cd-ocha, .cd-global-header__language-switcher, .cd-search').hasClass('open') {
+          if ($('.cd-ocha, .cd-global-header__language-switcher, .cd-search').hasClass('open')) {
             if ($('.cd-nav:visible').length > 0 ) {
               $('.cd-site-header__nav-holder').removeClass('open');
             }
