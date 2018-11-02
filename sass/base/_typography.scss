@@ -36,7 +36,7 @@ h1.page-heading {
 }
 
 h2, h3 {
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 a {
@@ -46,6 +46,10 @@ a {
     color: $cd-ocha-blue;
     text-decoration: none;
   }
+}
+
+a[href^="mailto"] {
+  word-break: break-all;
 }
 
 //ol, ul {
