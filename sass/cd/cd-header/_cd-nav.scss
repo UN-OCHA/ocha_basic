@@ -67,7 +67,7 @@
 
 .cd-nav {
   background: $cd-white-bg-color;
-  height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
+  min-height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
   padding: 20px 0 36px 0;
   position: absolute;
   right: 0;
@@ -80,6 +80,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .cd-nav > ul {
+    background: $cd-white-bg-color;
   }
 
   a,
@@ -273,6 +277,10 @@ ul.cd-nav__grandchild-nav {
     top: auto;
     width: auto;
     z-index: 0;
+  }
+
+  .cd-nav > ul {
+    background: transparent;
   }
 
   .cd-nav > ul > li,
