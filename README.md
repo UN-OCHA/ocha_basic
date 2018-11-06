@@ -6,6 +6,9 @@ A minimal starter theme for OCHA sites built with Drupal 7. The markup and style
 ## For developers
 See [OCHA basic dev site](https://ochabasic.dev.ahconu.org) for documentation and examples. View via web inspector to see Drupal template suggestions. This will help understand where the markup is coming from (some comes from Drupal, some is custom). This is especially relevant for implementations not using Drupal as the markup might be copied instead of used directly from the repo.
 
+**Releases**
+
+Refer to [Github releases](https://github.com/UN-OCHA/ocha_basic/releases) for latest updates. We use [npm-version](https://docs.npmjs.com/cli/version) and [sematantic versioning](https://semver.org/)
 
 
 ## This theme contains
