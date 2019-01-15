@@ -144,6 +144,11 @@
   right: 10px;
 }
 
+// Safari fix.
+.cd-search--inline__input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 .cd-search--inline__submit {
   align-items: center;
   background: $cd-dark-grey;
@@ -255,6 +260,11 @@
   .cd-search--inline__input:-moz-placeholder {
     color: $cd-mid-grey;
     font-style: italic;
+  }
+
+  // Safari fix.
+  .cd-search--inline__input::-webkit-search-decoration {
+    -webkit-appearance: none;
   }
 
   .cd-search--inline__submit {
