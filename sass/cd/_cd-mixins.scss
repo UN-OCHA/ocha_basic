@@ -32,19 +32,6 @@
   width: 1px;
 }
 
-//
-// Un-hide content.
-//
-// @TODO: just remove this outright, it shouldn't even exist. If something should
-//        be hidden at only a certain breakpoint, just write a more specific MQ.
-//
-@mixin unhide {
-  height: auto;
-  margin: 0;
-  position: static;
-  width: auto;
-}
-
 
 //——————————————————————————————————————————————————————————————————————————————
 // Breakpoints
