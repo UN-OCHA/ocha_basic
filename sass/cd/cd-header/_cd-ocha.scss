@@ -51,8 +51,9 @@
 }
 
 .cd-ocha-btn__label {
-  @include max-width(md) {
-    @include hide;
+  display: none;
+  @include tablet {
+    display: block;
   }
 }
 
@@ -126,7 +127,7 @@
   // column 2/3 in line with each other. it's hidden on mobile.
   .cd-ocha-dropdown__section:nth-child(3) & {
     @include max-width(md) {
-      @include hide;
+      display: none;
       margin: 0;
       padding: 0;
     }
