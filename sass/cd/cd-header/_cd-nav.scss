@@ -36,7 +36,7 @@
     z-index: 101;
     color: $cd-dark-text-color;
 
-    &:before {
+    &::before {
       bottom: -3px;
       content: '';
       background: $cd-highlight-red;
@@ -68,13 +68,18 @@
 .cd-nav {
   background: $cd-white-bg-color;
   height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
-  padding: 20px 0 36px 0;
+  padding: 20px 0 36px;
   position: absolute;
   right: 0;
   left: 0;
   top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
   width: 100vw;
   z-index: 100; // arbitrary high zindex, may need adjusting depending on other site content.
+  display: none;
+
+  .open & {
+    display: block;
+  }
 
   ul {
     list-style: none;
@@ -117,11 +122,11 @@
 
     > button {
       color: $cd-dark-text-color;
+    }
 
-      &:hover,
-      &:focus {
-        background: $cd-mid-bg-color;
-      }
+    > button:hover,
+    > button:focus {
+      background: $cd-mid-bg-color;
     }
   }
 
@@ -129,7 +134,8 @@
   > button {
     font-weight: bold;
     text-transform: uppercase;
-    &:before {
+
+    &::before {
       background: $cd-highlight-red;
     }
   }
@@ -154,6 +160,7 @@ ul.cd-nav__child-nav {
 .cd-nav > ul > li > ul > li > ul,
 ul.cd-nav__grandchild-nav {
   padding-bottom: 5px;
+
   a,
   button {
     font-weight: 200;
@@ -185,10 +192,10 @@ ul.cd-nav__grandchild-nav {
 @include max-width(lg) {
 
   .cd-nav > ul > li {
-
     a {
       position: relative;
-      &:before {
+
+      &::before {
         position: absolute;
         content: '';
         width: 3px;
@@ -199,8 +206,8 @@ ul.cd-nav__grandchild-nav {
       }
     }
 
-    > a.active:before,
-    > a.active.active-trail:before {
+    > a.active::before,
+    > a.active.active-trail::before {
       background: $cd-highlight-red;
     }
 
@@ -208,17 +215,17 @@ ul.cd-nav__grandchild-nav {
     // Classes based on Drupal menu item configuration.
     &.collapsed,
     &.expanded {
-      > a.active:before,
-      > a.active.active-trail:before {
+      > a.active::before,
+      > a.active.active-trail::before {
         background: rgba($cd-highlight-red, 0.2);
       }
     }
 
     &.active-trail {
-
       a {
         position: relative;
-        &:before {
+
+        &::before {
           position: absolute;
           content: '';
           width: 3px;
@@ -228,19 +235,18 @@ ul.cd-nav__grandchild-nav {
           background: rgba($cd-highlight-red, 0.2);
         }
 
-        a.active:before {
+        a.active::before {
           background: $cd-highlight-red;
         }
       }
     }
 
     > ul > li.active-trail {
-
-      a:before {
+      a::before {
         background: rgba($cd-highlight-red, 0.6);
       }
 
-      a.active:before {
+      a.active::before {
         background: $cd-highlight-red;
       }
     }
@@ -248,16 +254,9 @@ ul.cd-nav__grandchild-nav {
   }
 
   // Grandchild items have different top/bottom padding and therefore height.
-  .cd-nav > ul > li.active-trail > ul > li > ul > li a:before,
-  .cd-nav > ul > li > ul > li.active-trail > ul > li a:before {
+  .cd-nav > ul > li.active-trail > ul > li > ul > li a::before,
+  .cd-nav > ul > li > ul > li.active-trail > ul > li a::before {
     height: 38px; // Height of menu item.
-  }
-}
-
-.cd-nav {
-  display: none;
-  .open & {
-    display: block;
   }
 }
 
@@ -306,7 +305,7 @@ ul.cd-nav__grandchild-nav {
       > a,
       > button {
 
-        &:before {
+        &::before {
           background: $cd-highlight-red;
         }
 
@@ -315,7 +314,7 @@ ul.cd-nav__grandchild-nav {
         }
 
         &:focus {
-          &:before {
+          &::before {
             background: $cd-highlight-red;
           }
         }
@@ -332,7 +331,7 @@ ul.cd-nav__grandchild-nav {
       position: relative;
       transition: background 0.3s ease;
 
-      &:before {
+      &::before {
         bottom: -3px;
         content: '';
         background: transparent;
@@ -356,7 +355,7 @@ ul.cd-nav__grandchild-nav {
       &.active-trail,
       &.active-trail.active,
       &:focus {
-        &:before {
+        &::before {
           background: $cd-highlight-red;
         }
       }
@@ -380,6 +379,7 @@ ul.cd-nav__grandchild-nav {
       &:hover {
         background: $cd-mid-bg-color;
       }
+
       &.active-trail {
         border-left: 3px solid rgba($cd-highlight-red, 0.6);
         padding-left: 27px; // Anchor padding - width of border.
