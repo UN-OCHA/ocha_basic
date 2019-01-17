@@ -21,7 +21,7 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['id'][] = 'cd-search';
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#prefix' => '<button type="submit" name="op" class="cd-search__submit form-submit"><svg class="icon icon--search"><use xlink:href="#search"></use></svg><span class="element-invisible">Search</span>',
+      '#prefix' => '<button type="submit" name="op" class="cd-search__submit form-submit"><svg class="icon icon--search"><use xlink:href="#search"></use></svg>',
       '#suffix' => '</button>',
       '#markup' => '',
       '#weight' => 1000,
