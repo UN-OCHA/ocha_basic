@@ -27,6 +27,7 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
       '#weight' => 1000,
     ];
     $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
+    $form['actions']['submit']['#attributes']['value'][] = 'Search';
   }
 
   // This is for a Views exposed form search block.
