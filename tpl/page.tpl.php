@@ -19,7 +19,7 @@
     </div>
   <?php endif; ?>
 
-  <div class="cd-container" id="main-content">
+  <div class="cd-container" id="main-content" role="main">
     <?php if($tabs): ?>
       <?php print render($tabs); ?>
     <?php endif; ?>
