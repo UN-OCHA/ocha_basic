@@ -38,6 +38,7 @@
     "icon-rename": "rename -c -s _ - -s icon- '' img/icons/*"
   },
   "devDependencies": {
+    "gulp-sass-lint": "^1.4.0",
     "gulp-svg-sprite": "^1.5.0"
   }
 }
