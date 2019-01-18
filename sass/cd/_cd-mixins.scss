@@ -8,8 +8,8 @@
 // Drupal 7.59 system.base.css
 //
 @mixin clearfix {
-  &:after {
-    content: ".";
+  &::after {
+    content: '.';
     display: block;
     height: 0;
     clear: both;
@@ -23,7 +23,7 @@
 // @TODO: remove and replace all uses with `@extend .element-invisible`
 //
 @mixin hide {
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -57,9 +57,8 @@
     @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
       @content;
     }
-  }
-  @else {
-    @warn "`#{$breakpoint}` not found in `$grid-breakpoints` map.";
+  } @else {
+    @warn '`#{$breakpoint}` not found in `$grid-breakpoints` map.';
   }
 }
 
@@ -68,9 +67,8 @@
     @media (max-width: #{map-get($grid-breakpoints, $breakpoint)-1}) {
       @content;
     }
-  }
-  @else {
-    @warn "`#{$breakpoint}` not found in `$grid-breakpoints` map.";
+  } @else {
+    @warn '`#{$breakpoint}` not found in `$grid-breakpoints` map.';
   }
 }
 
@@ -145,9 +143,8 @@
 @mixin z-index($value: 0) {
   @if map-has-key($zindex, $value) {
     z-index: #{map-get($zindex, $value)};
-  }
-  @else {
-    @warn "`#{$value}` not found in `$zindex` map.";
+  } @else {
+    @warn '`#{$value}` not found in `$zindex` map.';
   }
 }
 
