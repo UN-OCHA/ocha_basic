@@ -17,35 +17,6 @@
   }
 }
 
-//
-// Hide content offscreen accessibly.
-//
-// @TODO: remove and replace all uses with `@extend .element-invisible`
-//
-@mixin hide {
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-//
-// Un-hide content.
-//
-// @TODO: just remove this outright, it shouldn't even exist. If something should
-//        be hidden at only a certain breakpoint, just write a more specific MQ.
-//
-@mixin unhide {
-  height: auto;
-  margin: 0;
-  position: static;
-  width: auto;
-}
-
-
 //——————————————————————————————————————————————————————————————————————————————
 // Breakpoints
 //
