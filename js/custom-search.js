@@ -9,9 +9,9 @@
 
       // Apply focus to input when dropdown is shown.
       $('.cd-search').on('shown.bs.dropdown', function () {
-        $(this).find('#cd-search').focus();
+        $(this).find('.cd-search__input').focus();
       }).on('hidden.bs.dropdown', function () {
-        $(this).find('#cd-search').blur();
+        $(this).find('.cd-search__input').blur();
       });
 
       $('.cd-search__input').on('focus', function (e) {

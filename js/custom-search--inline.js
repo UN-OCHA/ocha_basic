@@ -9,9 +9,9 @@
 
       // Apply focus to input when dropdown is shown, remove when closed.
       $('.cd-search--inline').on('shown.bs.dropdown', function () {
-        $(this).find('#edit-search-api-views-fulltext').focus();
+        $(this).find('.cd-search--inline__input').focus();
       }).on('hidden.bs.dropdown', function () {
-        $(this).find('#edit-search-api-views-fulltext').blur();
+        $(this).find('.cd-search--inline__input').blur();
       });
 
       // Add class on submit button when input has focus, remove on blur.
