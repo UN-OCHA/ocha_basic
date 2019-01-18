@@ -2,9 +2,14 @@
 // Typography
 //——————————————————————————————————————————————————————————————————————————————
 
-h1, h2 ,h3 ,h4 ,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   line-height: 1.2;
   font-weight: bold;
+  color: $cd-ocha-blue;
 }
 
 h1 {
@@ -13,46 +18,56 @@ h1 {
   font-weight: normal;
 }
 
-h1, h2 ,h3 ,h4 ,h5, ol, dl {
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+dl {
   margin-bottom: $cd-base-unit;
+  @include min-width(sm) {
+    margin-bottom: $cd-base-unit * 2;
+  }
 }
 
-//p, ul {
+//p,
+// ul {
 //  margin-bottom: $cd-base-unit;
 //}
 
-h4, h5 {
+h4,
+h5 {
   font-weight: 400;
 }
 
-h1, h2 ,h3 ,h4 ,h5 {
-  color: $cd-ocha-blue;
-}
-
 h1.page-heading {
-  padding-bottom: $cd-base-unit*1.5;
+  padding-bottom: $cd-base-unit * 1.5;
   border-bottom: 1px solid $cd-mid-bluey-grey;
   font-weight: 300;
 }
 
-h2, h3 {
+h2,
+h3 {
   text-transform: uppercase;
 }
 
 a {
   color: $cd-dark-blue;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $cd-ocha-blue;
     text-decoration: none;
   }
 }
 
-a[href^="mailto"] {
+a[href^='mailto'] {
   word-break: break-all;
 }
 
-//ol, ul {
+//ol,
+// ul {
 //  list-style: initial;
 //  margin-left: $cd-base-unit*3;
 //}
@@ -91,11 +106,13 @@ dd {
     @include font-size($cd-font-size-xlarge);
   }
 
-  //p, ul {
+  //p,
+  // ul {
   //  @include font-size($cd-font-size-base);
   //}
 
-  ol, dl {
+  ol,
+  dl {
     @include font-size($cd-font-size-base);
   }
 
@@ -108,11 +125,8 @@ dd {
     font-weight: normal;
   }
 
-  h1, h2 ,h3 ,h4 ,h5, ol, dl {
-    margin-bottom: $cd-base-unit*2;
-  }
-
-  //p, ul {
+  //p,
+  // ul {
   //  margin-bottom: $cd-base-unit*2;
   //}
 }
