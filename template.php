@@ -138,7 +138,7 @@ function ocha_basic_preprocess_page(&$vars) {
 
   $output = '';
   $output .= '<div class="cd-language-switcher">';
-  $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">';
+  $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle" aria-label="Language">';
   $output .= $language->language;
   $output .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
   $output .= '</button>';
