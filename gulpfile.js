@@ -23,6 +23,7 @@ const uglify = require('gulp-uglify');
 const taskListing = require('gulp-task-listing');
 const changed = require('gulp-changed');
 const concat = require('gulp-concat');
+const sassLint = require('gulp-sass-lint');
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -65,7 +66,7 @@ gulp.task('dev:bs', () => {
 //——————————————————————————————————————————————————————————————————————————————
 // Sass
 //——————————————————————————————————————————————————————————————————————————————
-gulp.task('dev:sass', () => {
+gulp.task('dev:sass-compile', () => {
   bs.notify(`Compiling Sass...`);
 
   return gulp.src(['sass/styles.scss'])
@@ -83,6 +84,22 @@ gulp.task('dev:sass', () => {
     .pipe(gulp.dest('css/'))
     .pipe(reload({stream: true}));
 });
+
+//——————————————————————————————————————————————————————————————————————————————
+// Sass Linting
+//——————————————————————————————————————————————————————————————————————————————
+gulp.task('dev:sass-lint', function () {
+  return gulp.src('sass/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+});
+
+//——————————————————————————————————————————————————————————————————————————————
+// Sass
+//——————————————————————————————————————————————————————————————————————————————
+gulp.task('dev:sass', ['dev:sass-compile','dev:sass-lint']);
+
 
 //——————————————————————————————————————————————————————————————————————————————
 // SVG Sprite generation

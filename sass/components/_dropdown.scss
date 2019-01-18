@@ -8,13 +8,13 @@
   left: 0;
   @include z-index(dropdown);
   display: none;
-  min-width: $cd-base-unit*12;
+  min-width: $cd-base-unit * 12;
   margin: 2px 0 0;
   text-align: left;
   list-style: none;
   background-color: #fff;
   border: 1px solid $cd-mid-bluey-grey;
-  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25);
 
   .open & {
     display: block;
@@ -25,22 +25,24 @@
     margin: 0;
 
     &:last-child {
-      border: none;
+      border: 0 none;
     }
 
     a {
       display: block;
     }
 
-    a, button {
+    a,
+    button {
       display: block;
-      padding: $cd-base-unit*1.5;
+      padding: $cd-base-unit * 1.5;
       text-decoration: none;
       color: $cd-dark-grey;
       word-break: break-word;
       transition: background 0.3s ease;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: $cd-ocha-blue;
         color: $cd-white;
       }
@@ -48,7 +50,7 @@
   }
 
   button {
-    border: none;
+    border: 0 none;
     background: none;
   }
 }
