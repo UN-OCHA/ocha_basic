@@ -146,13 +146,12 @@
   padding: 0;
 
   a {
-    border-bottom: 1px solid transparent;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      border-color: $cd-bright-blue;
       color: $cd-white-text-color;
+      text-decoration: underline;
     }
   }
 
