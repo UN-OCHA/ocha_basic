@@ -34,7 +34,7 @@
   <?php $widget = $widgets['filter-search_api_views_fulltext']; ?>
   <div id="<?php print $widget->id; ?>-wrapper" class="cd-search--inline__form-inner">
 
-    <label for="cd-search" class="element-invisible"><?php print $widget->label; ?></label>
+    <label for="edit-search-api-views-fulltext" class="element-invisible"><?php print $widget->label; ?></label>
     <input type="search" placeholder="<?php print $widget->label; ?>" name="search" id="edit-search-api-views-fulltext" class="cd-search--inline__input" autocomplete="off">
 
     <button type="submit" class="cd-search--inline__submit">

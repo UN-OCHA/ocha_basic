@@ -21,12 +21,13 @@ function ocha_basic_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['id'][] = 'cd-search';
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#prefix' => '<button type="submit" name="op" class="cd-search__submit form-submit"><svg class="icon icon--search"><use xlink:href="#search"></use></svg><span class="element-invisible">Search</span>',
+      '#prefix' => '<button type="submit" name="op" class="cd-search__submit form-submit"><svg class="icon icon--search"><use xlink:href="#search"></use></svg>',
       '#suffix' => '</button>',
       '#markup' => '',
       '#weight' => 1000,
     ];
     $form['actions']['submit']['#attributes']['class'][] = 'element-invisible';
+    $form['actions']['submit']['#attributes']['value'][] = 'Search';
   }
 
   // This is for a Views exposed form search block.
@@ -137,7 +138,7 @@ function ocha_basic_preprocess_page(&$vars) {
 
   $output = '';
   $output .= '<div class="cd-language-switcher">';
-  $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle">';
+  $output .= '<button type="button" class="cd-user-menu__item cd-user-menu__item--small cd-global-header__dropdown-btn" data-toggle="dropdown" id="cd-language-toggle" aria-label="Language" aria-expanded="false">';
   $output .= $language->language;
   $output .= '<svg class="icon icon--arrow-down"><use xlink:href="#arrow-down"></use></svg>';
   $output .= '</button>';

@@ -17,10 +17,6 @@
   position: relative;
   transition: background 0.3s ease;
 
-  &:focus {
-    outline: 0; // outline is replaced by bright underline.
-  }
-
   @include tablet {
     display: flex;
     width: auto;
