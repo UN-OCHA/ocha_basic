@@ -46,10 +46,11 @@ Refer to [Github releases](https://github.com/UN-OCHA/ocha_basic/releases) for l
 
 **To contribute to `ocha_basic` development:**
 
-1. Install the dependencies: `npm install`
-2. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
-3. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
-4. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
+1. Run `nvm use` for correct node version as per .nvmrc file
+2. Install the dependencies: `npm install`
+3. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
+4. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
+5. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
 
 
 ## CSS
