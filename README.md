@@ -46,10 +46,11 @@ Refer to [Github releases](https://github.com/UN-OCHA/ocha_basic/releases) for l
 
 **To contribute to `ocha_basic` development:**
 
-1. Install the dependencies: `npm install`
-2. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
-3. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
-4. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
+1. Run `nvm use` for correct node version as per .nvmrc file
+2. Install the dependencies: `npm install`
+3. Copy `localConfig.example.json` to `localConfig.json` and specify the URL of your local Drupal environment.
+4. Run the simple gulp task to build the CSS and watch for new changes: `gulp dev`
+5. When you make commits, it will automatically run a "production" Sass build that excludes Sourcemaps
 
 
 ## CSS
@@ -120,6 +121,8 @@ http://realfavicongenerator.net/ is a good tool for generating favicons.
 ## Modernizr
 
 We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
+
+Find the [modernizr-custom.js](https://github.com/UN-OCHA/ocha-basic-site/blob/master/html/sites/all/libraries/modernizr/modernizr-custom.js) in the ocha-basic-site repo.
 
 After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
 
