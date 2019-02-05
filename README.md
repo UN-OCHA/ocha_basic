@@ -122,6 +122,8 @@ http://realfavicongenerator.net/ is a good tool for generating favicons.
 
 We support the [Modernizr Drupal module](https://www.drupal.org/project/modernizr) and the `ocha_basic.info` file contains the Modernizr tests we require.
 
+Find the [modernizr-custom.js](https://github.com/UN-OCHA/ocha-basic-site/blob/master/html/sites/all/libraries/modernizr/modernizr-custom.js) in the ocha-basic-site repo.
+
 After enabling the theme, go to `admin/configuration/development/modernizr` to rebuild Modernizr including the theme's feature detects: `svg`, `cssgrid`, `cssgridlegacy` and `mediaqueries`.
 
 
