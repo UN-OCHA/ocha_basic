@@ -116,7 +116,8 @@ var SVGconfig = {
   },
   svg: {
     xmlDeclaration: false, // strip out the XML attribute
-    doctypeDeclaration: false // don't include the !DOCTYPE declaration
+    doctypeDeclaration: false, // don't include the !DOCTYPE declaration
+    rootAttributes: { "class": "icons-sprite" }
   }
 };
 
