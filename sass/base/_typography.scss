@@ -16,6 +16,7 @@ h1 {
   @include font-size($cd-font-size-medium);
   color: $cd-ocha-blue;
   font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1,
