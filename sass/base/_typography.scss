@@ -12,11 +12,25 @@ h5 {
   color: $cd-ocha-blue;
 }
 
+@font-face {
+  font-family: "OpenSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Open_Sans/OpenSans-Light.woff2') format('woff2'),
+  url('../fonts/Open_Sans/OpenSans-Light.woff') format('woff'),
+  url('../fonts/Open_Sans/OpenSans-Light.ttf')  format('truetype');
+  //font-display: swap;
+}
+
 h1 {
   @include font-size($cd-font-size-medium);
   color: $cd-ocha-blue;
-  font-weight: normal;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.opensans h1 {
+  font-family: "OpenSans", sans-serif;
 }
 
 h1,
