@@ -59,6 +59,8 @@ This project uses [Sass](http://sass-lang.com/). To make changes edit the `.scss
 
 Run `gulp dev` in the theme folder to have gulp watch for changes and automatically rebuild the CSS.
 
+Run `gulp sass` to compile the CSS only.
+
 Preferably use Jenkins to run the Gulp task on build to generate the CSS. If this is possible on your project, add the `css/` folder to the `.gitignore` file and delete generated CSS from the repo.
 
 
