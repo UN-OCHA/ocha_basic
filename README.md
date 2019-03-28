@@ -66,6 +66,14 @@ Preferably use Jenkins to run the Gulp task on build to generate the CSS. If thi
 
 Javascript files should be added to `js/` and to the scripts section of `ocha_basic.info`
 
+## Gulp
+
+This project uses [Gulp 4](https://github.com/gulpjs/gulp#whats-new-in-40)
+
+If you'd like to see a task listing, run the following command:
+
+`gulp --tasks`
+
 
 ## Icons
 
