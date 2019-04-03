@@ -61,7 +61,7 @@ function bsTask() {
     port: '3000',
   });
 };
-exports.browserSync = bsTask;
+exports.bs = bsTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -85,7 +85,6 @@ function sassCompileTask() {
     .pipe(gulp.dest('css/'))
     .pipe(reload({stream: true}));
 };
-exports.sass = sassCompileTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -97,14 +96,13 @@ function sassLintTask() {
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError());
 };
-exports.sassLint = sassLintTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // Sass
 //——————————————————————————————————————————————————————————————————————————————
 const sassTask = gulp.series(sassLintTask, sassCompileTask);
-exports.sassTask = sassTask;
+exports.sass = sassTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -143,7 +141,6 @@ function jsLintTask() {
     .pipe(jshint())
     .pipe(jshint.reporter(stylish));
 };
-exports.jsLint = jsLintTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
@@ -158,14 +155,13 @@ function jsBundleTask() {
     .pipe(gulp.dest('js'))
     .pipe(reload({stream: true}));
 };
-exports.jsBundle = jsBundleTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
 // JS Lint + Bundle
 //——————————————————————————————————————————————————————————————————————————————
 const jsTask = gulp.series(jsLintTask, jsBundleTask);
-exports.jsTask = jsTask;
+exports.js = jsTask;
 
 
 //——————————————————————————————————————————————————————————————————————————————
