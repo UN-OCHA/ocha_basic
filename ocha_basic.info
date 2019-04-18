@@ -21,6 +21,7 @@ scripts[] = js/bootstrap-dropdown.js
 scripts[] = js/custom-menu.js
 scripts[] = js/custom-search.js
 scripts[] = js/custom-search--inline.js
+scripts[] = js/fontfaceobserver.js
 
 ; ========================================
 ; Regions
