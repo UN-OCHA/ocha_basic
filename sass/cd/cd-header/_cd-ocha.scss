@@ -30,6 +30,8 @@
   }
 
   .icon--arrow-down {
+    margin: auto; // Center vertically in macOS 10
+
     @include tablet {
       margin-left: 4px;
     }
