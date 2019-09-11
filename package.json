@@ -26,7 +26,8 @@
     "gulp-task-listing": "^1.1.0",
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.10.2",
-    "jshint-stylish": "^2.2.1"
+    "jshint-stylish": "^2.2.1",
+    "set-value": "^2.0.1"
   },
   "engines": {
     "node": "^8.11.3",
